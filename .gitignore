@@ -7,4 +7,7 @@
 *.iml
 out
 gen
+<<<<<<< HEAD
 /ishop-codegen/generatorConfig.xml
+=======
+>>>>>>> dd6ac4106a19a2de941ee62e8eb68729577de7c3
