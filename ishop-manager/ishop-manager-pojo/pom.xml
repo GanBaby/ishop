@@ -11,5 +11,12 @@
     <packaging>jar</packaging>
     <artifactId>ishop-manager-pojo</artifactId>
 
+    <dependencies>
+        <!-- Mybatis -->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
