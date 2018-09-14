@@ -10,13 +10,18 @@
     <context:component-scan base-package="com.ishop.controller" />
     <mvc:annotation-driven />
 
-    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
-        <!--<property name="prefix" value="/WEB-INF/jsp/" />-->
-        <!--<property name="suffix" value=".jsp" />-->
-    <!--</bean>-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
     <!-- 资源映射 -->
+
+    <mvc:default-servlet-handler/>
     <mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
     <mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>
+    <mvc:resources location="/WEB-INF/images/" mapping="/images/**"/>
+    <mvc:resources location="/WEB-INF/AmazeUI-2.4.2/" mapping="/AmazeUI-2.4.2/**"/>
+    <mvc:resources location="/WEB-INF/basic/" mapping="/basic/**"/>
 
     <!-- 定义文件上传解析器 -->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">

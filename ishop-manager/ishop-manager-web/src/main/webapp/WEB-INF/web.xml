@@ -5,12 +5,7 @@
          id="ishop" version="2.5">
   <display-name>ishop-manager</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>/WEB-INF/view/index.jsp</welcome-file>
   </welcome-file-list>
 
   <!-- 加载spring容器 -->
@@ -54,5 +49,10 @@
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
+
+  <error-page>
+    <error-code>404</error-code>
+    <location>/WEB-INF/view/error/404.jsp</location>
+  </error-page>
 
 </web-app>
