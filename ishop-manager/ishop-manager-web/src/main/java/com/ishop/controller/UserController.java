@@ -14,7 +14,7 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    UserService userServiceImpl;
+    private UserService userServiceImpl;
 
     @RequestMapping(value="selectList")
     @ResponseBody

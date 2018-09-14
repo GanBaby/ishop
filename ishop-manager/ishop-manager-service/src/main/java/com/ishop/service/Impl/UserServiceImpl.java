@@ -12,7 +12,7 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     @Resource
-    UsersMapper usersMapper;
+    private UsersMapper usersMapper;
 
     public List<Users> selectList() {
         return usersMapper.selectAll();
