@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [13/Sep/2018:17:33:49 +0800] "GET /user/selectList HTTP/1.1" 200 - http-bio-80-exec-1 496
+0:0:0:0:0:0:0:1 - - [13/Sep/2018:17:33:49 +0800] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-80-exec-3 4
