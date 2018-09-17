@@ -53,7 +53,7 @@
 
 	<div class="xy">
 
-		<img src="images/error/404.jpg" alt="" />
+		<img src="${pageContext.request.contextPath}/images/error/404.jpg" alt="" />
 
 	</div>
 
