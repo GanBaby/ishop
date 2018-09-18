@@ -10,25 +10,14 @@
     <context:component-scan base-package="com.ishop.controller" />
     <mvc:annotation-driven />
 
+    <!-- 资源映射 -->
+    <mvc:default-servlet-handler/>
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/" />
         <property name="suffix" value=".jsp" />
     </bean>
-    <!-- 资源映射 -->
 
-    <mvc:default-servlet-handler/>
-    <!--前端静态文件加载-->
-    <mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
-    <mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>
-    <mvc:resources location="/WEB-INF/images/" mapping="/images/**"/>
-    <mvc:resources location="/WEB-INF/AmazeUI-2.4.2/" mapping="/AmazeUI-2.4.2/**"/>
-    <mvc:resources location="/WEB-INF/basic/" mapping="/basic/**"/>
-    <!--后端管理页静态文件加载-->
-    <mvc:resources location="/WEB-INF/admin/css" mapping="/admin/css/**"/>
-    <mvc:resources location="/WEB-INF/admin/font" mapping="/admin/font/**"/>
-    <mvc:resources location="/WEB-INF/admin/images" mapping="/admin/images/**"/>
-    <mvc:resources location="/WEB-INF/admin/js" mapping="/admin/js/**"/>
-    <mvc:resources location="/WEB-INF/admin/skin" mapping="/admin/skin/**"/>
+
 
     <!-- 定义文件上传解析器 -->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">

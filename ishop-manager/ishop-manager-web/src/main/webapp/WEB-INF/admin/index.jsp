@@ -5,26 +5,26 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link href="/css/shop.css" type="text/css" rel="stylesheet" />
-<link href="skin/default/skin.css" rel="stylesheet" type="text/css" id="skin" />
-<link href="css/Sellerber.css" type="text/css"  rel="stylesheet" />
-<link href="css/bkg_ui.css" type="text/css" rel="stylesheet" />
-<link href="font/css/font-awesome.min.css"  rel="stylesheet" type="text/css" />
-<script src="js/jquery-1.9.1.min.js" type="text/javascript" ></script>
-<script src="js/layer/layer.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" type="text/javascript"></script>
-<script src="js/Sellerber.js" type="text/javascript"></script>
-<script src="js/shopFrame.js" type="text/javascript"></script>
-<script src="js/jquery.nicescroll.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/jquery.cookie.js"></script> 
+<link href="${pageContext.request.contextPath}/admin/css/shop.css" type="text/css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/admin/skin/default/skin.css" rel="stylesheet" type="text/css" id="skin" />
+<link href="${pageContext.request.contextPath}/admin/css/Sellerber.css" type="text/css"  rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/admin/css/bkg_ui.css" type="text/css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/admin/font/css/font-awesome.min.css"  rel="stylesheet" type="text/css" />
+<script src="${pageContext.request.contextPath}/admin/js/jquery-1.9.1.min.js" type="text/javascript" ></script>
+<script src="${pageContext.request.contextPath}/admin/js/layer/layer.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/admin/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/admin/js/Sellerber.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/admin/js/shopFrame.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/admin/js/jquery.nicescroll.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../admin/js/jquery.cookie.js"></script>
 <title>大气通用购物商城后台管理系统网站模板全套下载_在线演示_电脑网站模板_前端模板_js代码</title>
 <meta name="keywords" content="大气,通用,购物商城,后台管理,管理系统,网站模板,全套下载" />
 <meta name="description" content="大气通用购物商城后台管理系统网站模板全套下载。" />
 </head>
 <!--[if lt IE 9]>
-  <script src="js/html5shiv.js"></script>
-  <script src="js/respond.min.js"></script>
-  <script type="text/javascript" src="js/PIE/PIE_IE678.js"></script>
+  <script src="admin/js/html5shiv.js"></script>
+  <script src="admin/js/respond.min.js"></script>
+  <script type="text/javascript" src="admin/js/PIE/PIE_IE678.js"></script>
  <![endif]-->
 <body>
  <div class="Sellerber" id="Sellerber">
@@ -192,7 +192,7 @@
                         页签操作<i class="fa fa-caret-down" style="padding-left: 3px;"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right" id="dropdown_menu">
-                        <li><a class="tabReload" href="javascript:void();">刷新当前</a></li>
+                        <li><a class="tabReload" href="javascript:void();" >刷新当前</a></li>
                         <li><a class="tabCloseCurrent" href="javascript:void();">关闭当前</a></li>
                         <li><a class="tabCloseAll" href="javascript:void();">全部关闭</a></li>
                         <li><a class="tabCloseOther" href="javascript:void();">除此之外全部关闭</a></li>
