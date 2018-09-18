@@ -30,5 +30,9 @@ public class PageController {
         return "view/"+page;
     }
 
+    @RequestMapping("/admin")
+    public String showAdminPage(){
+        return "admin/index";
+    }
 
 }
