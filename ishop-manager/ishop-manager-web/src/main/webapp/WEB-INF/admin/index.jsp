@@ -3,270 +3,277 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link href="${pageContext.request.contextPath}/admin/css/shop.css" type="text/css" rel="stylesheet" />
-<link href="${pageContext.request.contextPath}/admin/skin/default/skin.css" rel="stylesheet" type="text/css" id="skin" />
-<link href="${pageContext.request.contextPath}/admin/css/Sellerber.css" type="text/css"  rel="stylesheet" />
-<link href="${pageContext.request.contextPath}/admin/css/bkg_ui.css" type="text/css" rel="stylesheet" />
-<link href="${pageContext.request.contextPath}/admin/font/css/font-awesome.min.css"  rel="stylesheet" type="text/css" />
-<script src="${pageContext.request.contextPath}/admin/js/jquery-1.9.1.min.js" type="text/javascript" ></script>
-<script src="${pageContext.request.contextPath}/admin/js/layer/layer.js" type="text/javascript"></script>
-<script src="${pageContext.request.contextPath}/admin/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="${pageContext.request.contextPath}/admin/js/Sellerber.js" type="text/javascript"></script>
-<script src="${pageContext.request.contextPath}/admin/js/shopFrame.js" type="text/javascript"></script>
-<script src="${pageContext.request.contextPath}/admin/js/jquery.nicescroll.js" type="text/javascript"></script>
-<script type="text/javascript" src="../../admin/js/jquery.cookie.js"></script>
-<title>大气通用购物商城后台管理系统网站模板全套下载_在线演示_电脑网站模板_前端模板_js代码</title>
-<meta name="keywords" content="大气,通用,购物商城,后台管理,管理系统,网站模板,全套下载" />
-<meta name="description" content="大气通用购物商城后台管理系统网站模板全套下载。" />
-</head>
-<!--[if lt IE 9]>
-  <script src="admin/js/html5shiv.js"></script>
-  <script src="admin/js/respond.min.js"></script>
-  <script type="text/javascript" src="admin/js/PIE/PIE_IE678.js"></script>
- <![endif]-->
-<body>
- <div class="Sellerber" id="Sellerber">
- <!--顶部-->
-  <div class="Sellerber_header apex clearfix" id="Sellerber_header">
-   <div class="l_f logo"><img src="images/logo_03.png" /></div>
-   <div class="r_f Columns_top clearfix">
-   <!--<div class="time_style"><i class="fa  fa-clock-o"></i><span id="time"></span></div>-->
-   <div class="news l_f"><a href="#" class="fa  fa-bell "></a><em>5</em></div>
-     <div class="administrator l_f">
-       <img src="images/avatar.png"  width="36px"/><span class="user-info">欢迎你,超级管理员</span><i class="glyph-icon fa  fa-caret-down"></i>
-       <ul class="dropdown-menu">
-        <li><a href="#"><i class="fa fa-user"></i>个人信息</a></li>
-        <li><a href="#"><i class="fa fa-cog"></i>系统设置</a></li>
-        <li><a href="javascript:void(0)" id="Exit_system"><i class="fa fa-user-times"></i>退出</a></li>
-       </ul>
-     </div>
-   </div>
-  </div>
-<!--左侧-->
-  <div class="Sellerber_left menu" id="menuBar">
-    <div class="show_btn" id="rightArrow"><span></span></div>
-    <div class="side_title"><a title="隐藏" class="close_btn"><span></span></a></div>
-    <div class="menu_style" id="menu_style">
-    <div class="list_content">
-    <div class="skin_select">
-      <ul class="dropdown-menu dropdown-caret">
-         <li><a class="colorpick-btn selected" href="javascript:ovid()"data-val="default"  id="default" style="background-color:#222A2D" ></a></li>
-         <li><a class="colorpick-btn" href="javascript:ovid()" data-val="blue" style="background-color:#438EB9;" ></a></li>
-         <li><a class="colorpick-btn" href="javascript:ovid()" data-val="green" style="background-color:#72B63F;" ></a></li>
-         <li><a class="colorpick-btn" href="javascript:ovid()" data-val="blue" style="background-color:#D0D0D0;" ></a></li>
-         <li><a class="colorpick-btn" href="javascript:ovid()" data-val="blue" style="background-color:#FF6868;" ></a></li>
-        </ul>     
-     </div>
-     <div class="search_style">
-        <form action="#" method="get" class="sidebar_form">
-                    <div class="input-group">
-                        <input type="text" name="q" class="form-control">
-                        <span class="input-group-btn">
-                            <a class="btn_flat" href="javascript:" onclick=""><i class="fa fa-search"></i></a>
-                        </span>
-                    </div>
-                </form>
-     </div>     
-    <dl class="nav nav-list" id="menu_list">
-     <dt class="shop_index nav_link " ><a href="javascript:void(0)" name="shop_index.html" class="iframeurl" title=""><i class="fa fa-home"></i><span class="menu-text">商城首页</span></a></dt>
-     <dd class="submenu" style="height:0px; border:0px;"></dd>
-     <dt class="nav_link ">
-     <a href="javascript:void(0)" class="dropdown-toggle title_nav"><i class="fa fa-desktop"></i><span class="menu-text"> 商品管理 </span><b class="arrow fa fa-angle-down"></b></a>
-     </dt>
-     <dd class="submenu">
-       <ul>
-         <li class="home"><a href="javascript:void(0)" name="Products.html" title="产品类表" class="iframeurl"><i class="fa fa-angle-double-right"></i>产品管理</a></li>
-         <li class="home"><a href="javascript:void(0)" name="Brand_Manage.html" title="品牌管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>品牌管理</a></li>
-         <li class="home"><a href="javascript:void(0)" name="Category_Manage.html" title="分类管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>分类管理</a></li>
-         </ul>
-         </dd>
-  <dt class="nav_link"><a href="#" class="dropdown-toggle title_nav"><i class="fa fa-database"></i><span class="menu-text"> 订单管理 </span><b class="arrow fa fa-angle-down"></b></a></dt>
-    <dd class="submenu">
-     <ul>
-       <li class="home"><a href="javascript:void(0)" name="Order.html" title="订单类表" class="iframeurl"><i class="fa fa-angle-double-right"></i>订单类表</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Brand_Manage.html" title="品牌管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>订单处理</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Order_Logistics.html" title="物流管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>物流管理</a></li>
-        <li class="home"><a href="javascript:void(0)" name="Category_Manage.html" title="分类管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>退款操作</a></li>
-       </ul>
-      </dd>
-       <dt class="nav_link"><a href="#" class="dropdown-toggle title_nav"><i class="fa fa-credit-card"></i><span class="menu-text"> 支付管理 </span><b class="arrow fa fa-angle-down"></b></a></dt>
-    <dd class="submenu">
-     <ul>
-       <li class="home"><a href="javascript:void(0)" name="Products_List.html" title="产品类表" class="iframeurl"><i class="fa fa-angle-double-right"></i>产品类表</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Brand_Manage.html" title="品牌管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>品牌</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Category_Manage.html" title="分类管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>分类管理</a></li>
-       </ul>
-      </dd>
-      <dt class="nav_link"><a href="#" class="dropdown-toggle title_nav"><i class="fa  fa-th-list"></i><span class="menu-text"> 店铺管理 </span><b class="arrow fa fa-angle-down"></b></a></dt>
-    <dd class="submenu">
-     <ul>
-       <li class="home"><a href="javascript:void(0)" name="Products_List.html" title="产品类表" class="iframeurl"><i class="fa fa-angle-double-right"></i>店铺列表</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Brand_Manage.html" title="品牌管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>店铺审核</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Category_Manage.html" title="分类管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>店铺分类</a></li>
-       </ul>
-      </dd>
-      <dt class="nav_link"><a href="#" class="dropdown-toggle title_nav"><i class="fa  fa-file-photo-o"></i><span class="menu-text"> 广告管理 </span><b class="arrow fa fa-angle-down"></b></a></dt>
-    <dd class="submenu">
-     <ul>
-       <li class="home"><a href="javascript:void(0)" name="Advertising_list.html" title="广告列表" class="iframeurl"><i class="fa fa-angle-double-right"></i>广告列表</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Advertising_sort.html" title="分类管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>分类管理</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Category_Manage.html" title="分类管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>分类管理</a></li>
-       </ul>
-      </dd>
-  <dt class="nav_link"><a href="#" class="dropdown-toggle title_nav"><i class="fa fa-bar-chart"></i><span class="menu-text"> 报表管理 </span><b class="arrow fa fa-angle-down"></b></a></dt>
-    <dd class="submenu">
-     <ul>
-       <li class="home"><a href="javascript:void(0)" name="system_info.html" title="订单报表" class="iframeurl"><i class="fa fa-angle-double-right"></i>订单报表</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Columns.html" title="产品销量" class="iframeurl"><i class="fa fa-angle-double-right"></i>产品销量</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Category_Manage.html" title="分类管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>交易量</a></li>
-       </ul>
-      </dd>
-        <dt class="nav_link"><a href="#" class="dropdown-toggle title_nav"><i class="fa fa-user"></i><span class="menu-text"> 会员管理 </span><b class="arrow fa fa-angle-down"></b></a></dt>
-    <dd class="submenu">
-     <ul>
-       <li class="home"><a href="javascript:void(0)" name="member_list.html" title="会员列表" class="iframeurl"><i class="fa fa-angle-double-right"></i>会员列表</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Columns.html" title="等级管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>等级管理</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Category_Manage.html" title="会员记录" class="iframeurl"><i class="fa fa-angle-double-right"></i>会员记录</a></li>
-       </ul>
-      </dd>
-      <dt class="nav_link"><a href="#" class="dropdown-toggle title_nav"><i class="fa fa-cogs"></i><span class="menu-text"> 系统管理 </span><b class="arrow fa fa-angle-down"></b></a></dt>
-    <dd class="submenu">
-     <ul>
-       <li class="home"><a href="javascript:void(0)" name="system_info.html" title="系统信息" class="iframeurl"><i class="fa fa-angle-double-right"></i>系统信息</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Columns.html" title="自定义导航栏" class="iframeurl"><i class="fa fa-angle-double-right"></i>自定义导航栏</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Category_Manage.html" title="分类管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>日志操作</a></li>
-       </ul>
-      </dd>
-       <dt class="nav_link"><a href="#" class="dropdown-toggle title_nav"><i class="fa fa-file-text-o"></i><span class="menu-text"> 文章管理 </span><b class="arrow fa fa-angle-down"></b></a></dt>
-    <dd class="submenu">
-     <ul>
-       <li class="home"><a href="javascript:void(0)" name="Article_list.html" title="文章列表" class="iframeurl"><i class="fa fa-angle-double-rightt"></i>文章列表</a></li>
-       </ul>
-      </dd>
-       <dt class="nav_link"><a href="#" class="dropdown-toggle title_nav"><i class="fa  fa-hdd-o "></i><span class="menu-text"> OTA管理 </span><b class="arrow fa fa-angle-down"></b></a></dt>
-    <dd class="submenu">
-     <ul>
-       <li class="home"><a href="javascript:void(0)" name="Article_list.html" title="文章列表" class="iframeurl"><i class="fa fa-angle-double-rightt"></i>门票列表</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Article_list.html" title="文章列表" class="iframeurl"><i class="fa fa-angle-double-rightt"></i>门票设置</a></li>
-       </ul>
-      </dd>
-        <dt class="nav_link"><a href="#" class="dropdown-toggle title_nav"><i class="fa fa-file-text-o"></i><span class="menu-text">单页面管理 </span><b class="arrow fa fa-angle-down"></b></a></dt>
-    <dd class="submenu">
-     <ul>
-       <li class="home"><a href="javascript:void(0)" name="page_list.html" title="页面列表" class="iframeurl"><i class="fa fa-angle-double-right"></i>页面列表</a></li>
-       </ul>
-      </dd>
-       <dt class="nav_link"><a href="#" class="dropdown-toggle title_nav"><i class="fa fa-users"></i><span class="menu-text">管理员管理 </span><b class="arrow fa fa-angle-down"></b></a></dt>
-    <dd class="submenu">
-     <ul>
-       <li class="home"><a href="javascript:void(0)" name="admin_Competence.html" title="权限设置" class="iframeurl"><i class="fa fa-angle-double-right"></i>权限设置</a></li>
-       <li class="home"><a href="javascript:void(0)" name="administrator_list.html" title="管理员列表" class="iframeurl"><i class="fa fa-angle-double-right"></i>管理员列表</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Personal_info.htm" title="个人信息" class="iframeurl"><i class="fa fa-angle-double-right"></i>个人信息</a></li>
-       </ul>
-      </dd>
-       <dt class="nav_link"><a href="#" class="dropdown-toggle title_nav"><i class="fa fa-wrench"></i><span class="menu-text">界面工具</span><b class="arrow fa fa-angle-down"></b></a></dt>
-    <dd class="submenu">
-     <ul>
-       <li class="home"><a href="javascript:void(0)" name="interface.html" title="界面模板" class="iframeurl"><i class="fa fa-angle-double-right"></i>界面模板</a></li>
-       <li class="home"><a href="javascript:void(0)" name="form_builder.html" title="表单构建器" class="iframeurl"><i class="fa fa-angle-double-right"></i>表单构建器</a></li>
-       </ul>
-      </dd>
-    </dl>  
-    </div>
-  </div>
- </div>
-<!--内容-->
-  <div class="Sellerber_content" id="contents">
-    <div class="breadcrumbs" id="breadcrumbs">
-       <a id="js-tabNav-prev" class="radius btn-default left_roll" href="javascript:;"><i class="fa fa-backward"></i></a>
-       <div class="breadcrumb_style clearfix">
-	  <ul class="breadcrumb clearfix" id="min_title_list">
-        <li class="active home"><span title="我的桌面" data-href="index.html"><i class="fa fa-home home-icon"></i>首页</span></li>
-      </ul>
-      </div>
-       <a id="js-tabNav-next" class="radius btn-default right_roll" href="javascript:;"><i class="fa fa-forward"></i></a>
-       <div class="btn-group radius roll-right">
-                    <a class="dropdown tabClose" data-toggle="dropdown" aria-expanded="false">
-                        页签操作<i class="fa fa-caret-down" style="padding-left: 3px;"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-right" id="dropdown_menu">
-                        <li><a class="tabReload" href="javascript:void();" >刷新当前</a></li>
-                        <li><a class="tabCloseCurrent" href="javascript:void();">关闭当前</a></li>
-                        <li><a class="tabCloseAll" href="javascript:void();">全部关闭</a></li>
-                        <li><a class="tabCloseOther" href="javascript:void();">除此之外全部关闭</a></li>
-                    </ul>
-                </div>
-                <a href="javascript:void()" class="radius roll-right fullscreen"><i class="fa fa-arrows-alt"></i></a>
-    </div>
-  <!--具体内容-->  
-  <div id="iframe_box" class="iframe_content">
-  <div class="show_iframe" id="show_iframe">
-       <iframe scrolling="yes" class="simei_iframe" frameborder="0" src="shop_index.html" name="iframepage" data-href="shop_index.html"></iframe>
-       </div>
-      </div>
-  </div>
-<!--底部-->
-  <div class="Sellerber_bottom info" id="bottom">
-  <span class="l_f">版权所有：南京思美软件系统有限公司</span>
-  </div>
- </div>
-</body>
-</html>
-<script>
-//设置框架
- $(function() { 
-	$("#Sellerber").frame({
-		float : 'left',
-		color_btn:'.skin_select',
-		header:70,//顶部高度
-		bottom:30,//底部高度
-		menu:200,//菜单栏宽度
-		Sellerber_menu:'.list_content',
-		Sellerber_header:'.Sellerber_header',
-	});
-});
-//时间设置
-  function currentTime(){ 
-   var weekday=new Array(7)
-	weekday[0]="星期一"
-	weekday[1]="星期二"
-	weekday[2]="星期三"
-	weekday[3]="星期四"
-	weekday[4]="星期五"
-	weekday[5]="星期六"
-	weekday[6]="星期日"	
-    var d=new Date(),str='';	
-    str+=d.getFullYear()+'年'; 
-    str+=d.getMonth() + 1+'月'; 
-    str+=d.getDate()+'日'; 
-    str+=d.getHours()+'时'; 
-    str+=d.getMinutes()+'分'; 
-    str+= d.getSeconds()+'秒'+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-	str+=weekday[d.getDay()-1]; 
-    return str; 
-} 
-setInterval(function(){$('#time').html(currentTime)},1000); 
-$('#Exit_system').on('click', function(){
-      layer.confirm('是否确定退出系统？', {
-     btn: ['是','否'] ,//按钮
-	 icon:2,
-    }, 
-	function(){
-	  location.href="login.html";
-        
-    });
-});
-</script>
-<script type="text/javascript">
-$("#menu_style").niceScroll({  
-	cursorcolor:"#888888",  
-	cursoropacitymax:1,  
-	touchbehavior:false,  
-	cursorwidth:"5px",  
-	cursorborder:"0",  
-	cursorborderradius:"5px"  
-}); 
-</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
 
+    <title>H+ 后台主题UI框架 - 主页</title>
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+    <link href="${pageContext.request.contextPath}/admin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/admin/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/admin/css/animate.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/admin/css/style.css?v=4.1.0" rel="stylesheet">
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+<div id="wrapper">
+    <!--左侧导航开始-->
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="nav-close"><i class="fa fa-times-circle"></i>
+        </div>
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <!--头像-->
+                        <span><img alt="image" class="img-circle" src="${pageContext.request.contextPath}/admin/img/head.jpg"/></span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                               <!--用户名-->
+                               <span class="block m-t-xs"><strong class="font-bold">Beaut-zihan</strong></span>
+                                <!--用户角色-->
+                                <span class="text-muted text-xs block">超级管理员<b class="caret"></b></span>
+                                </span>
+                        </a>
+                        <!--点击角色后弹出的选项-->
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a class="J_menuItem" href="#">修改头像</a>
+                            </li>
+                            <li><a class="J_menuItem" href="#">个人资料</a>
+                            </li>
+                            <li><a class="J_menuItem" href="#">联系我们</a>
+                            </li>
+                            <li><a class="J_menuItem" href="#">信箱</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">安全退出</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--左边收起来的时候的logo-->
+                    <div class="logo-element">H+
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-home"></i>
+                        <span class="nav-label">用户管理</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a class="J_menuItem" href="#" data-index="0">用户列表</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!--左侧导航结束-->
+    <!--右侧部分开始-->
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i
+                        class="fa fa-bars"></i> </a>
+                    <%--<form role="search" class="navbar-form-custom" method="post" action="search_results.html">--%>
+                        <%--<div class="form-group">--%>
+                            <%--<input type="text" placeholder="请输入您需要查找的内容 …" class="form-control" name="top-search"--%>
+                                   <%--id="top-search">--%>
+                        <%--</div>--%>
+                    <%--</form>--%>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> 您有16条未读消息
+                                        <span class="pull-right text-muted small">4分钟前</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-qq fa-fw"></i> 3条新回复
+                                        <span class="pull-right text-muted small">12分钟钱</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a class="J_menuItem" href="#">
+                                        <strong>查看所有 </strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown hidden-xs">
+                        <a class="right-sidebar-toggle" aria-expanded="false">
+                            <i class="fa fa-tasks"></i> 主题
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row content-tabs">
+            <button class="roll-nav roll-left J_tabLeft"><i class="fa fa-backward"></i>
+            </button>
+            <nav class="page-tabs J_menuTabs">
+                <div class="page-tabs-content">
+                    <a href="javascript:;" class="active J_menuTab" data-id="#">首页</a>
+                </div>
+            </nav>
+            <button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward"></i>
+            </button>
+            <div class="btn-group roll-nav roll-right">
+                <button class="dropdown J_tabClose" data-toggle="dropdown">关闭操作<span class="caret"></span>
+
+                </button>
+                <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                    <li class="J_tabShowActive"><a>定位当前选项卡</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="J_tabCloseAll"><a>关闭全部选项卡</a>
+                    </li>
+                    <li class="J_tabCloseOther"><a>关闭其他选项卡</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
+        </div>
+        <div class="row J_mainContent" id="content-main">
+            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="index_v1.html?v=4.0" frameborder="0"
+                    data-id="index_v1.html" seamless></iframe>
+        </div>
+        <div class="footer">
+            <div class="pull-right">&copy; 2014-2015 <a href="#" target="_blank">内容待定</a>
+            </div>
+        </div>
+    </div>
+    <!--右侧部分结束-->
+    <!--右侧边栏开始-->
+    <div id="right-sidebar">
+        <div class="sidebar-container">
+
+            <ul class="nav nav-tabs navs-3">
+
+                <li class="active">
+                    <a data-toggle="tab" href="#tab-1">
+                        <i class="fa fa-gear"></i> 主题
+                    </a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="tab-1" class="tab-pane active">
+                    <div class="sidebar-title">
+                        <h3><i class="fa fa-comments-o"></i> 主题设置</h3>
+                        <small><i class="fa fa-tim"></i> 你可以从这里选择和预览主题的布局和样式，这些设置会被保存在本地，下次打开的时候会直接应用这些设置。</small>
+                    </div>
+                    <div class="skin-setttings">
+                        <div class="title">主题设置</div>
+                        <div class="setings-item">
+                            <span>收起左侧菜单</span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox"
+                                           id="collapsemenu">
+                                    <label class="onoffswitch-label" for="collapsemenu">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                            <span>固定顶部</span>
+
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="fixednavbar" class="onoffswitch-checkbox"
+                                           id="fixednavbar">
+                                    <label class="onoffswitch-label" for="fixednavbar">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                                <span>
+                        固定宽度
+                    </span>
+
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="boxedlayout" class="onoffswitch-checkbox"
+                                           id="boxedlayout">
+                                    <label class="onoffswitch-label" for="boxedlayout">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title">皮肤选择</div>
+                        <div class="setings-item default-skin nb">
+                                <span class="skin-name ">
+                         <a href="#" class="s-skin-0">
+                             默认皮肤
+                         </a>
+                    </span>
+                        </div>
+                        <div class="setings-item blue-skin nb">
+                                <span class="skin-name ">
+                        <a href="#" class="s-skin-1">
+                            蓝色主题
+                        </a>
+                    </span>
+                        </div>
+                        <div class="setings-item yellow-skin nb">
+                                <span class="skin-name ">
+                        <a href="#" class="s-skin-3">
+                            黄色/紫色主题
+                        </a>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--右侧边栏结束-->
+</div>
+
+<!-- 全局js -->
+<script src="${pageContext.request.contextPath}/admin/js/jquery.min.js?v=2.1.4"></script>
+<script src="${pageContext.request.contextPath}/admin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="${pageContext.request.contextPath}/admin/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="${pageContext.request.contextPath}/admin/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="${pageContext.request.contextPath}/admin/js/plugins/layer/layer.min.js"></script>
+
+<!-- 自定义js -->
+<script src="${pageContext.request.contextPath}/admin/js/hplus.js?v=4.1.0"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/admin/js/contabs.js"></script>
+
+<!-- 第三方插件 -->
+<script src="${pageContext.request.contextPath}/admin/js/plugins/pace/pace.min.js"></script>
+
+</body>
+
+</html>
