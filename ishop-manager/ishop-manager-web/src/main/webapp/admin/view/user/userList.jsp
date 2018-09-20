@@ -49,30 +49,18 @@
                     <table class="table table-striped table-bordered table-hover userListTable">
                         <thead>
                         <tr>
-                            <th>渲染引擎</th>
-                            <th>浏览器</th>
-                            <th>平台</th>
-                            <th>引擎版本</th>
-                            <th>CSS等级</th>
+                            <th>账号</th>
+                            <th>用户类型</th>
+                            <th>性别</th>
+                            <th>用户名称</th>
+                            <th>真实姓名</th>
+                            <th>用户电话</th>
+                            <th>用户邮箱</th>
+                            <th>用户积分</th>
+                            <th>账号状态</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr class="gradeX">
-                            <td>Trident</td>
-                            <td>Internet Explorer 4.0
-                            </td>
-                            <td>Win 95+</td>
-                            <td class="center">4</td>
-                            <td class="center">X</td>
-                        </tr>
-                        <tr class="gradeC">
-                            <td>Trident</td>
-                            <td>Internet Explorer 5.0
-                            </td>
-                            <td>Win 95+</td>
-                            <td class="center">5</td>
-                            <td class="center">C</td>
-                        </tr>
                         </tbody>
                     </table>
 

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2018-09-13 14:57:27
+Date: 2018-09-20 09:24:27
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -190,7 +190,7 @@ CREATE TABLE `tc_areas` (
   KEY `isShow` (`isShow`,`dataFlag`),
   KEY `areaType` (`areaType`),
   KEY `parentId` (`parentId`)
-) ENGINE=InnoDB AUTO_INCREMENT=820305 DEFAULT CHARSET=utf8 COMMENT='区域表';
+) ENGINE=InnoDB AUTO_INCREMENT=820302 DEFAULT CHARSET=utf8 COMMENT='区域表';
 
 -- ----------------------------
 -- Records of tc_areas
@@ -4014,7 +4014,7 @@ CREATE TABLE `tc_carts` (
   `cartNum` int(11) NOT NULL DEFAULT '0' COMMENT '商品数量',
   PRIMARY KEY (`cartId`),
   KEY `userId` (`userId`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COMMENT='购物车表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='购物车表';
 
 -- ----------------------------
 -- Records of tc_carts
@@ -4065,7 +4065,7 @@ CREATE TABLE `tc_cash_draws` (
   PRIMARY KEY (`cashId`),
   KEY `targetType` (`targetType`,`targetId`),
   KEY `cashNo` (`cashNo`)
-) ENGINE=InnoDB AUTO_INCREMENT=10000000 DEFAULT CHARSET=utf8 COMMENT='提现记录表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='提现记录表';
 
 -- ----------------------------
 -- Records of tc_cash_draws
@@ -4412,7 +4412,7 @@ CREATE TABLE `tc_goods_appraises` (
   KEY `shopId` (`shopId`),
   KEY `goodsId` (`goodsId`,`goodsSpecId`,`dataFlag`,`isShow`) USING BTREE,
   KEY `userId` (`userId`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='商品评价表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品评价表';
 
 -- ----------------------------
 -- Records of tc_goods_appraises
@@ -6398,7 +6398,7 @@ CREATE TABLE `tc_log_sms` (
   PRIMARY KEY (`smsId`),
   KEY `smsPhoneNumber` (`smsPhoneNumber`),
   KEY `smsIP` (`smsIP`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='短信发送记录表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='短信发送记录表';
 
 -- ----------------------------
 -- Records of tc_log_sms
@@ -6416,7 +6416,7 @@ CREATE TABLE `tc_log_staff_logins` (
   PRIMARY KEY (`loginId`),
   KEY `loginTime` (`loginTime`),
   KEY `staffId` (`staffId`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COMMENT='职员登陆记录表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='职员登陆记录表';
 
 -- ----------------------------
 -- Records of tc_log_staff_logins
@@ -6436,7 +6436,7 @@ CREATE TABLE `tc_log_user_logins` (
   PRIMARY KEY (`loginId`),
   KEY `loginTime` (`loginTime`),
   KEY `userId` (`userId`)
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8 COMMENT='会员登录记录表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='会员登录记录表';
 
 -- ----------------------------
 -- Records of tc_log_user_logins
@@ -6539,7 +6539,7 @@ CREATE TABLE `tc_messages` (
   `createTime` datetime NOT NULL COMMENT '发送时间',
   PRIMARY KEY (`id`),
   KEY `receiveUserId` (`receiveUserId`,`dataFlag`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COMMENT='	\r\n商城信息表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='	\r\n商城信息表';
 
 -- ----------------------------
 -- Records of tc_messages
@@ -7004,7 +7004,7 @@ CREATE TABLE `tc_settlements` (
   PRIMARY KEY (`settlementId`),
   KEY `shopId` (`shopId`),
   KEY `settlementStatus` (`settlementStatus`)
-) ENGINE=InnoDB AUTO_INCREMENT=10000000 DEFAULT CHARSET=utf8 COMMENT='订单结算表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单结算表';
 
 -- ----------------------------
 -- Records of tc_settlements
@@ -7333,7 +7333,7 @@ CREATE TABLE `tc_shops` (
   `shopSn` varchar(20) NOT NULL COMMENT '门店编号',
   `userId` int(11) NOT NULL COMMENT '门店所有人ID',
   `areaIdPath` varchar(255) NOT NULL COMMENT '区域路径',
-  `areaId` int(11) NOT NULL COMMENT '最终所属区域ID	1:自营 0:非自营',
+  `areaId` int(11) NOT NULL COMMENT '最终所属区域ID',
   `isSelf` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否自营	1:自营 0:非自营',
   `shopName` varchar(100) NOT NULL COMMENT '门店名称',
   `shopkeeper` varchar(50) NOT NULL COMMENT '店主',
@@ -7704,36 +7704,36 @@ CREATE TABLE `tc_user_scores` (
 -- ----------------------------
 DROP TABLE IF EXISTS `tc_users`;
 CREATE TABLE `tc_users` (
-  `userId` int(11) NOT NULL AUTO_INCREMENT,
-  `loginName` varchar(20) NOT NULL COMMENT '账号',
-  `loginSecret` int(11) NOT NULL COMMENT '安全码',
-  `loginPwd` varchar(50) NOT NULL COMMENT '密码',
-  `userType` tinyint(4) NOT NULL DEFAULT '0' COMMENT '用户类型0:普通会员 1:门店用户',
-  `userSex` tinyint(4) DEFAULT '0' COMMENT '性别	0:保密 1：男 2：女',
-  `userName` varchar(20) DEFAULT NULL COMMENT '用户名称',
-  `trueName` varchar(100) DEFAULT NULL COMMENT '真实姓名',
-  `brithday` date DEFAULT NULL COMMENT '生日',
-  `userPhoto` varchar(150) DEFAULT '' COMMENT '会员头像',
-  `userQQ` varchar(20) DEFAULT NULL COMMENT '会员qq',
-  `userPhone` char(11) DEFAULT '' COMMENT '手机',
-  `userEmail` varchar(50) DEFAULT '' COMMENT '邮箱',
-  `userScore` int(11) DEFAULT '0' COMMENT '用户积分',
-  `userTotalScore` int(11) DEFAULT '0' COMMENT '用户历史消费积分	跟会员等级有关',
-  `lastIP` varchar(16) DEFAULT NULL COMMENT '最后登录IP',
-  `lastTime` datetime DEFAULT NULL COMMENT '最后登录时间',
-  `userFrom` tinyint(4) DEFAULT '0' COMMENT '第三方标识	0:系统本身；1:QQ登录',
-  `userMoney` decimal(11,2) DEFAULT '0.00' COMMENT '用户钱包金额',
-  `lockMoney` decimal(11,2) DEFAULT '0.00' COMMENT '冻结金额',
-  `userStatus` tinyint(4) NOT NULL DEFAULT '1' COMMENT '账号状态	0:停用 1:启用',
-  `dataFlag` tinyint(4) NOT NULL DEFAULT '1' COMMENT '删除标志	-1:删除 1:有效',
-  `createTime` datetime NOT NULL COMMENT '创建时间',
-  `payPwd` varchar(100) DEFAULT NULL COMMENT '支付密码',
-  PRIMARY KEY (`userId`),
-  KEY `userStatus` (`userStatus`,`dataFlag`),
-  KEY `loginName` (`loginName`),
-  KEY `userPhone` (`userPhone`),
-  KEY `userEmail` (`userEmail`),
-  KEY `userType` (`userType`,`dataFlag`)
+  `USER_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `LOGIN_NAME` varchar(20) NOT NULL COMMENT '账号',
+  `LOGIN_SECRET` int(11) NOT NULL COMMENT '安全码',
+  `LOGIN_PWD` varchar(50) NOT NULL COMMENT '密码',
+  `USER_TYPE` tinyint(4) NOT NULL DEFAULT '0' COMMENT '用户类型0:普通会员 1:门店用户',
+  `USER_SEX` tinyint(4) DEFAULT '0' COMMENT '性别	0:保密 1：男 2：女',
+  `USER_NAME` varchar(20) DEFAULT NULL COMMENT '用户名称',
+  `TRUE_NAME` varchar(100) DEFAULT NULL COMMENT '真实姓名',
+  `BRITHDAY` date DEFAULT NULL COMMENT '生日',
+  `USER_PHOTO` varchar(150) DEFAULT '' COMMENT '会员头像',
+  `USER_QQ` varchar(20) DEFAULT NULL COMMENT '会员qq',
+  `USER_PHONT` char(11) DEFAULT '' COMMENT '手机',
+  `USER_EMAIL` varchar(50) DEFAULT '' COMMENT '邮箱',
+  `USER_SCORE` int(11) DEFAULT '0' COMMENT '用户积分',
+  `USER_TOTAL_SCORE` int(11) DEFAULT '0' COMMENT '用户历史消费积分	跟会员等级有关',
+  `LAST_IP` varchar(16) DEFAULT NULL COMMENT '最后登录IP',
+  `LAST_TIME` datetime DEFAULT NULL COMMENT '最后登录时间',
+  `USER_FROM` tinyint(4) DEFAULT '0' COMMENT '第三方标识	0:系统本身；1:QQ登录',
+  `USER_MONEY` decimal(11,2) DEFAULT '0.00' COMMENT '用户钱包金额',
+  `LOCK_MONEY` decimal(11,2) DEFAULT '0.00' COMMENT '冻结金额',
+  `USER_STATUS` tinyint(4) NOT NULL DEFAULT '1' COMMENT '账号状态	0:停用 1:启用',
+  `DATA_FLAG` tinyint(4) NOT NULL DEFAULT '1' COMMENT '删除标志	-1:删除 1:有效',
+  `CREATE_TIME` datetime NOT NULL COMMENT '创建时间',
+  `PAY_PWD` varchar(100) DEFAULT NULL COMMENT '支付密码',
+  PRIMARY KEY (`USER_ID`),
+  KEY `userStatus` (`USER_STATUS`,`DATA_FLAG`),
+  KEY `loginName` (`LOGIN_NAME`),
+  KEY `userPhone` (`USER_PHONT`),
+  KEY `userEmail` (`USER_EMAIL`),
+  KEY `userType` (`USER_TYPE`,`DATA_FLAG`)
 ) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COMMENT='会员表';
 
 -- ----------------------------

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ishop.mapper.TcUsersMapper">
+  <resultMap id="BaseResultMap" type="com.ishop.entity.TcUsers">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="USER_ID" jdbcType="INTEGER" property="userId" />
+    <result column="LOGIN_NAME" jdbcType="VARCHAR" property="loginName" />
+    <result column="LOGIN_SECRET" jdbcType="INTEGER" property="loginSecret" />
+    <result column="LOGIN_PWD" jdbcType="VARCHAR" property="loginPwd" />
+    <result column="USER_TYPE" jdbcType="TINYINT" property="userType" />
+    <result column="USER_SEX" jdbcType="TINYINT" property="userSex" />
+    <result column="USER_NAME" jdbcType="VARCHAR" property="userName" />
+    <result column="TRUE_NAME" jdbcType="VARCHAR" property="trueName" />
+    <result column="BRITHDAY" jdbcType="DATE" property="brithday" />
+    <result column="USER_PHOTO" jdbcType="VARCHAR" property="userPhoto" />
+    <result column="USER_QQ" jdbcType="VARCHAR" property="userQq" />
+    <result column="USER_PHONE" jdbcType="CHAR" property="userPhone" />
+    <result column="USER_EMAIL" jdbcType="VARCHAR" property="userEmail" />
+    <result column="USER_SCORE" jdbcType="INTEGER" property="userScore" />
+    <result column="USER_TOTAL_SCORE" jdbcType="INTEGER" property="userTotalScore" />
+    <result column="LAST_IP" jdbcType="VARCHAR" property="lastIp" />
+    <result column="LAST_TIME" jdbcType="TIMESTAMP" property="lastTime" />
+    <result column="USER_FROM" jdbcType="TINYINT" property="userFrom" />
+    <result column="USER_MONEY" jdbcType="DECIMAL" property="userMoney" />
+    <result column="LOCK_MONEY" jdbcType="DECIMAL" property="lockMoney" />
+    <result column="USER_STATUS" jdbcType="TINYINT" property="userStatus" />
+    <result column="DATA_FLAG" jdbcType="TINYINT" property="dataFlag" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="PAY_PWD" jdbcType="VARCHAR" property="payPwd" />
+  </resultMap>
+</mapper>
