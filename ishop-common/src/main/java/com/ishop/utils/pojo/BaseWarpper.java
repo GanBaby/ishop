@@ -1,6 +1,6 @@
-package com.ishop.base;
+package com.ishop.utils.pojo;
 
-import com.ishop.utils.JsonUtils;
+import com.ishop.utils.util.JsonUtils;
 
 import java.util.List;
 import java.util.Map;

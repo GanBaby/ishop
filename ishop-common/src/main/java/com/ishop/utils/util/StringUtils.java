@@ -1,4 +1,6 @@
-package com.ishop.utils;
+package com.ishop.utils.util;
+
+import com.ishop.utils.controller.CollectionUtils;
 
 import java.io.File;
 import java.io.UnsupportedEncodingException;

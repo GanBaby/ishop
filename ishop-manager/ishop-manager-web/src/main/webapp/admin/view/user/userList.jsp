@@ -1,31 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
 
-
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <title>用户列表</title>
-    <%--网页头部的logo图片--%>
-    <link rel="shortcut icon" href="${pageContext.request.contextPath}/admin/H+/img/favicon.ico">
-    <%--bootstrap--%>
-    <link href="${pageContext.request.contextPath}/admin/H+/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <%--字体图标--%>
-    <link href="${pageContext.request.contextPath}/admin/H+/css/font-awesome.css?v=4.4.0" rel="stylesheet">
     <!-- bootstrap表格css -->
     <link href="${pageContext.request.contextPath}/admin/H+/css/plugins/dataTables/dataTables.bootstrap.css"
           rel="stylesheet">
-    <%--动画的css--%>
-    <link href="${pageContext.request.contextPath}/admin/H+/css/animate.css" rel="stylesheet">
-    <%--H+的CSS样式--%>
-    <link href="${pageContext.request.contextPath}/admin/H+/css/style.css?v=4.1.0" rel="stylesheet">
-
-</head>
-
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
@@ -58,6 +35,7 @@
                             <th>用户邮箱</th>
                             <th>用户积分</th>
                             <th>账号状态</th>
+                            <th>注册时间</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -69,21 +47,13 @@
         </div>
     </div>
 </div>
-<!-- 全局js -->
-<script src="${pageContext.request.contextPath}/admin/H+/js/jquery.min.js?v=2.1.4"></script>
-<script src="${pageContext.request.contextPath}/admin/H+/js/bootstrap.min.js?v=3.3.6"></script>
 
-<script src="${pageContext.request.contextPath}/admin/H+/js/plugins/jeditable/jquery.jeditable.js"></script>
-
+<%--动态引入全局js与css--%>
+<jsp:include page="${pageContext.request.contextPath}/admin/view/main/admin_main.jsp" flush="true" />
 <!-- bootstrap表格js -->
 <script src="${pageContext.request.contextPath}/admin/H+/js/plugins/dataTables/jquery.dataTables.js"></script>
 <script src="${pageContext.request.contextPath}/admin/H+/js/plugins/dataTables/dataTables.bootstrap.js"></script>
-
-<!-- 自定义js -->
-<script src="${pageContext.request.contextPath}/admin/H+/js/content.js?v=1.0.0"></script>
 <!--页面的js文件-->
 <script src="${pageContext.request.contextPath}/admin/js/user/userList.js"></script>
 
 </body>
-
-</html>

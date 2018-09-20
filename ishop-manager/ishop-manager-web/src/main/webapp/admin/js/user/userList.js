@@ -2,6 +2,7 @@ $(".userListTable").dataTable({
     "processing": true,//数据加载时显示进度条
     "searching": true,//启用搜索功能
     "serverSide": true,//这个用来指明是通过服务端来取数据
+    "sPaginationType": "full_numbers",      //分页样式
     "sAjaxSource": "/user/selectList",//这个是请求的地址
     "fnServerData": retrieveData, // 获取数据的处理函数
     "columns":[
@@ -13,8 +14,30 @@ $(".userListTable").dataTable({
         {"data":"userPhone"},
         {"data":"userEmail"},
         {"data":"userScore"},
-        {"data":"userStatus"}
-    ]
+        {"data":"userStatus"},
+        {"data":"createTime"}
+    ],
+    "lengthMenu":[
+        [10,15,20]
+    ],
+    order:[[9,"desc"]],
+    "language": {
+        "lengthMenu": "  _MENU_ 条数据",
+        "emptyTable": "表格中没有数据~",
+        "info": "显示 _START_ 到 _END_ 条数据 共 _TOTAL_ 条数据",
+        "infoEmpty": "没有数据~",
+        "infoFiltered": "(在 _MAX_ 条数据中查询)",
+        "lengthMenu": "显示 _MENU_ 条数据",
+        "search": "查询:",
+        "zeroRecords": "没有找到对应的数据",
+        "paginate": {
+            "previous":"上一页",
+            "next": "下一页",
+            "last": "末页",
+            "first": "首页"
+        }
+    },
+
 });
 
 // 3个参数的名字可以随便命名,但必须是3个参数,少一个都不行

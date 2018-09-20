@@ -1,7 +1,7 @@
 package com.ishop.warpper;
 
-import com.ishop.base.BaseWarpper;
 import com.ishop.pojo.TcUsers;
+import com.ishop.utils.pojo.BaseWarpper;
 
 import java.util.List;
 import java.util.Map;

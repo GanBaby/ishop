@@ -1,4 +1,4 @@
-package com.ishop.utils;
+package com.ishop.utils.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JavaType;

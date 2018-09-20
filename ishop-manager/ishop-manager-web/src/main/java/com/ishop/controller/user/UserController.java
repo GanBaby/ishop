@@ -1,10 +1,13 @@
 package com.ishop.controller.user;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.ishop.service.TcUserService;
-import com.ishop.utils.StringUtils;
+import com.ishop.utils.controller.BaseController;
+import com.ishop.utils.util.Message;
+import com.ishop.utils.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -18,7 +21,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping(value = "user")
-public class UserController {
+public class UserController extends BaseController {
 
     @Autowired
     private TcUserService tcUserServiceImpl;
@@ -33,14 +36,24 @@ public class UserController {
      */
     @RequestMapping(value="selectList")
     @ResponseBody
-    public Object selectList(@RequestParam Map<String,String> map){
-        String iDisplayStart = map.get("iDisplayStart");
-        if(StringUtils.isBlank(iDisplayStart)){
+    public Message selectList(@RequestParam Map<String,String> map){
+        try{
+            String iDisplayStart = map.get("iDisplayStart");
+            String iDisplayLength = map.get("iDisplayLength");
+            if(StringUtils.isBlank(iDisplayStart)){
+                return renderError("数据错误");
+            }
+            if(StringUtils.isBlank(iDisplayStart)){
+                return renderError("数据错误");
+            }
+            PageHelper.startPage(Integer.parseInt(iDisplayStart),Integer.parseInt(iDisplayLength));
+            List list = tcUserServiceImpl.selectList();
 
+            PageInfo<Map<String,String>> page = new PageInfo<>(list);
+            return renderSuccess(page);
+        }catch(Exception e){
+            return renderException(e);
         }
-
-        List result = tcUserServiceImpl.selectList();
-        return result;
     }
 
 }

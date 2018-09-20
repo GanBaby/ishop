@@ -1,4 +1,6 @@
-package com.ishop.utils;
+package com.ishop.utils.controller;
+
+import com.ishop.utils.util.StringUtils;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

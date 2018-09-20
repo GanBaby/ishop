@@ -1,4 +1,4 @@
-package com.ishop.utils;
+package com.ishop.utils.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

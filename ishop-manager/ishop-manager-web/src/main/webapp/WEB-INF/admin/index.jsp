@@ -8,14 +8,10 @@
     <meta name="renderer" content="webkit">
 
     <title>H+ 后台主题UI框架 - 主页</title>
+    <%--动态引入全局js与css--%>
+    <jsp:include page="${pageContext.request.contextPath}/admin/view/main/admin_main.jsp" flush="true" />
 
-    <!--[if lt IE 9]>
-    <meta http-equiv="refresh" content="0;ie.html"/>
-    <![endif]-->
-    <link href="${pageContext.request.contextPath}/admin/H+/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/admin/H+/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/admin/H+/css/animate.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/admin/H+/css/style.css?v=4.1.0" rel="stylesheet">
+
 </head>
 
 <body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
@@ -156,10 +152,12 @@
             </div>
             <a href="#" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
         </div>
+
         <div class="row J_mainContent" id="content-main">
             <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="${pageContext.request.contextPath}/admin/view/homePage/adminHome.jsp" frameborder="0"
                     data-id="${pageContext.request.contextPath}/admin/view/homePage/adminHome.jsp" seamless></iframe>
         </div>
+
         <div class="footer">
             <div class="pull-right">&copy; 2014-2015 <a href="#" target="_blank">内容待定</a>
             </div>
@@ -259,20 +257,6 @@
     </div>
     <!--右侧边栏结束-->
 </div>
-
-<!-- 全局js -->
-<script src="${pageContext.request.contextPath}/admin/H+/js/jquery.min.js?v=2.1.4"></script>
-<script src="${pageContext.request.contextPath}/admin/H+/js/bootstrap.min.js?v=3.3.6"></script>
-<script src="${pageContext.request.contextPath}/admin/H+/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="${pageContext.request.contextPath}/admin/H+/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-<script src="${pageContext.request.contextPath}/admin/H+/js/plugins/layer/layer.min.js"></script>
-
-<!-- 自定义js -->
-<script src="${pageContext.request.contextPath}/admin/H+/js/hplus.js?v=4.1.0"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/admin/H+/js/contabs.js"></script>
-
-<!-- 第三方插件 -->
-<script src="${pageContext.request.contextPath}/admin/H+/js/plugins/pace/pace.min.js"></script>
 
 </body>
 
