@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>H+ 后台主题UI框架 - 500错误</title>
+    <title>500错误</title>
 
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/admin/H+/img/favicon.ico">
     <link href="${pageContext.request.contextPath}/admin/H+/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">

@@ -1,11 +1,14 @@
 package com.ishop.controller.user;
 
+import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.ishop.service.TcUserService;
 import com.ishop.utils.controller.BaseController;
 import com.ishop.utils.util.Message;
+import com.ishop.utils.util.PageUtil;
 import com.ishop.utils.util.StringUtils;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +31,7 @@ public class UserController extends BaseController {
 
     /**
      * 获取用户信息列表
-     * @param map
+     * @param param
      *        iDisplayStart:当前页
      *        sSearch:搜索的内容
      *        iDisplayLength:每页显示的数据量
@@ -36,21 +39,19 @@ public class UserController extends BaseController {
      */
     @RequestMapping(value="selectList")
     @ResponseBody
-    public Message selectList(@RequestParam Map<String,String> map){
+    public Object selectList(@RequestParam Map<String,String> param){
         try{
-            String iDisplayStart = map.get("iDisplayStart");
-            String iDisplayLength = map.get("iDisplayLength");
-            if(StringUtils.isBlank(iDisplayStart)){
+            //每页显示的数据量
+            String pageSize = param.get("pageSize");
+            //当前页数
+            String offset = param.get("offset");
+            if(StringUtils.isEmpty(pageSize)||StringUtils.isEmpty(offset)){
                 return renderError("数据错误");
             }
-            if(StringUtils.isBlank(iDisplayStart)){
-                return renderError("数据错误");
-            }
-            PageHelper.startPage(Integer.parseInt(iDisplayStart),Integer.parseInt(iDisplayLength));
+            Page<Map<String,String>> page = PageHelper.startPage(Integer.parseInt(offset), Integer.parseInt(pageSize));
             List list = tcUserServiceImpl.selectList();
-
-            PageInfo<Map<String,String>> page = new PageInfo<>(list);
-            return renderSuccess(page);
+            PageUtil pageUtil = new PageUtil(page.getTotal(), list);
+            return pageUtil;
         }catch(Exception e){
             return renderException(e);
         }
