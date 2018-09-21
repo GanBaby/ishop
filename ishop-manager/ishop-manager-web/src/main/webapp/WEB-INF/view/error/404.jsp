@@ -53,7 +53,7 @@
 
 	<div class="xy">
 
-		<img src="${pageContext.request.contextPath}/images/error/404.jpg" alt="" />
+		<img src="${pageContext.request.contextPath}/view/images/error/404.jpg" alt="" />
 
 	</div>
 
@@ -66,5 +66,3 @@
 </body>
 
 </html>
-
-<!--代码整理：js代码 www.jsdaima.com-->
