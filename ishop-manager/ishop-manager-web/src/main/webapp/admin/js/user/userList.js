@@ -55,7 +55,7 @@ new Table({
                 var e = '<a href="#" mce_href="#" onclick="edit(\''
                     + row.userId + '\')">编辑</a> ';
                 var d = '<a href="#" mce_href="#" onclick="del(\''
-                    + row.userId + '\')">删除</a> ';
+                    + row.userId + '\')">禁用</a> ';
                 return e + d;
             }
         } ]

@@ -13,6 +13,8 @@
         <module>ishop-common</module>
         <module>ishop-manager</module>
         <module>ishop-codegen</module>
+        <module>ishop-rest</module>
+        <module>ishop-portal</module>
     </modules>
     <!-- 集中定义依赖版本号 -->
     <properties>
@@ -43,6 +45,7 @@
         <commons-fileupload.version>1.3.1</commons-fileupload.version>
         <jedis.version>2.7.2</jedis.version>
         <solrj.version>4.10.3</solrj.version>
+        <beetl.version>2.7.26</beetl.version>
     </properties>
     <!-- 只定义依赖的版本，并不实际依赖 -->
     <dependencyManagement>
@@ -224,6 +227,12 @@
                 <groupId>org.apache.solr</groupId>
                 <artifactId>solr-solrj</artifactId>
                 <version>${solrj.version}</version>
+            </dependency>
+            <!--beetl 模板引擎-->
+            <dependency>
+                <groupId>com.ibeetl</groupId>
+                <artifactId>beetl</artifactId>
+                <version>${beetl.version}</version>
             </dependency>
         </dependencies>
 
