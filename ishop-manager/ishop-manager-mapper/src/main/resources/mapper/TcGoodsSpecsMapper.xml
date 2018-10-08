@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ishop.mapper.TcGoodsSpecsMapper">
+  <resultMap id="BaseResultMap" type="com.ishop.pojo.TcGoodsSpecs">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="shopId" jdbcType="INTEGER" property="shopid" />
+    <result column="goodsId" jdbcType="INTEGER" property="goodsid" />
+    <result column="productNo" jdbcType="VARCHAR" property="productno" />
+    <result column="specIds" jdbcType="VARCHAR" property="specids" />
+    <result column="marketPrice" jdbcType="DECIMAL" property="marketprice" />
+    <result column="specPrice" jdbcType="DECIMAL" property="specprice" />
+    <result column="specStock" jdbcType="INTEGER" property="specstock" />
+    <result column="warnStock" jdbcType="INTEGER" property="warnstock" />
+    <result column="saleNum" jdbcType="INTEGER" property="salenum" />
+    <result column="isDefault" jdbcType="TINYINT" property="isdefault" />
+    <result column="dataFlag" jdbcType="TINYINT" property="dataflag" />
+  </resultMap>
+</mapper>

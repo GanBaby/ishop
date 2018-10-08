@@ -7,10 +7,10 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 /**
-* @author ×÷Õß:¸ÊÒøµÀ
-* @version ´´½¨Ê±¼ä£º2018Äê6ÔÂ20ÈÕ ÏÂÎç7:42:39
-* ÓÃ»§¹¤¾ßÀà(¿É»ñÈ¡µ±Ç°ÓÃ»§)
-*/
+ * @author ä½œè€…:ç”˜é“¶é“
+ * @version åˆ›å»ºæ—¶é—´ï¼š2018å¹´6æœˆ20æ—¥ ä¸‹åˆ7:42:39
+ * ç”¨æˆ·å·¥å…·ç±»(å¯è·å–å½“å‰ç”¨æˆ·)
+ */
 public class UserUtil {
 
 	public static final String LOGIN_USER = "user";
