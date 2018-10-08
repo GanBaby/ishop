@@ -13,8 +13,6 @@
         <module>ishop-common</module>
         <module>ishop-manager</module>
         <module>ishop-codegen</module>
-        <module>ishop-rest</module>
-        <module>ishop-portal</module>
     </modules>
     <!-- 集中定义依赖版本号 -->
     <properties>

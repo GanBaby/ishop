@@ -17,7 +17,7 @@ public class PageController {
      */
     @RequestMapping("/")
     public String showIndex(){
-        
+
         return "index";
     }
 
