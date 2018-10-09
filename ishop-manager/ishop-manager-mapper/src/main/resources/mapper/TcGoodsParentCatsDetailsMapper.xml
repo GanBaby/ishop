@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ishop.mapper.TcGoodsParentCatsDetailsMapper">
+  <resultMap id="BaseResultMap" type="com.ishop.entity.TcGoodsParentCatsDetails">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="CAT_ID" jdbcType="INTEGER" property="catId" />
+    <result column="CAT_NAME" jdbcType="VARCHAR" property="catName" />
+    <result column="TITLE" jdbcType="VARCHAR" property="title" />
+    <result column="SUBTITLE" jdbcType="VARCHAR" property="subtitle" />
+    <result column="IMAGES_PATH" jdbcType="VARCHAR" property="imagesPath" />
+  </resultMap>
+
+  <select id="selectList" resultType="map">
+    SELECT CAT_ID catId, CAT_NAME catName, TITLE title,
+    SUBTITLE subtitle, IMAGES_PATH imagesPath
+    FROM tc_goods_parent_cats_details
+  </select>
+
+
+</mapper>

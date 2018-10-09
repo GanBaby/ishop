@@ -1,5 +1,7 @@
 package com.ishop.controller.page;
 
+import com.ishop.service.page.PageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,12 +13,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class PageController {
 
+    @Autowired
+    private PageService pageService;
+
     /**
      * 打开首页
      * @return 返回首页的视图逻辑地址
      */
     @RequestMapping("/")
     public String showIndex(){
+
+        //获取首页需要展示的商品内容
+
 
         return "index";
     }

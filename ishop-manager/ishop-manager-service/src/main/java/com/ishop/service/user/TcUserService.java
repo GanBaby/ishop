@@ -1,4 +1,4 @@
-package com.ishop.service;
+package com.ishop.service.user;
 
 import java.util.List;
 import java.util.Map;

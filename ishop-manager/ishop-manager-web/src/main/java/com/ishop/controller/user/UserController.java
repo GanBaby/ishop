@@ -2,13 +2,10 @@ package com.ishop.controller.user;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 import com.ishop.service.TcUserService;
 import com.ishop.utils.controller.BaseController;
-import com.ishop.utils.util.Message;
 import com.ishop.utils.util.PageUtil;
 import com.ishop.utils.util.StringUtils;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

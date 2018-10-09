@@ -1,410 +1,413 @@
 package com.ishop.pojo;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.util.Date;
-import javax.persistence.*;
 
 @Table(name = "tc_goods")
 public class TcGoods {
     @Id
-    @Column(name = "goodsId")
-    private Integer goodsid;
+    @Column(name = "GOODS_ID")
+    private Integer goodsId;
 
     /**
      * 商品编号
      */
-    @Column(name = "goodsSn")
-    private String goodssn;
+    @Column(name = "GOODS_SN")
+    private String goodsSn;
 
     /**
      * 商品货号
      */
-    @Column(name = "productNo")
-    private String productno;
+    @Column(name = "PRODUCT_NO")
+    private String productNo;
 
     /**
      * 商品名称
      */
-    @Column(name = "goodsName")
-    private String goodsname;
+    @Column(name = "GOODS_NAME")
+    private String goodsName;
 
     /**
      * 商品图片
      */
-    @Column(name = "goodsImg")
-    private String goodsimg;
+    @Column(name = "GOODS_IMG")
+    private String goodsImg;
 
     /**
      * 门店id
      */
-    @Column(name = "shopId")
-    private Integer shopid;
+    @Column(name = "SHOP_ID")
+    private Integer shopId;
 
     /**
      * 市场价
      */
-    @Column(name = "marketPrice")
-    private BigDecimal marketprice;
+    @Column(name = "MARKET_PRICE")
+    private BigDecimal marketPrice;
 
     /**
      * 门店价
      */
-    @Column(name = "shopPrice")
-    private BigDecimal shopprice;
+    @Column(name = "SHOP_PRICE")
+    private BigDecimal shopPrice;
 
     /**
      * 预警库存
      */
-    @Column(name = "warnStock")
-    private Integer warnstock;
+    @Column(name = "WARN_STOCK")
+    private Integer warnStock;
 
     /**
      * 商品总库存·
      */
-    @Column(name = "goodsStock")
-    private Integer goodsstock;
+    @Column(name = "GOODS_STOCK")
+    private Integer goodsStock;
 
     /**
-     * 单价
+     * 单位
      */
-    @Column(name = "goodsUnit")
-    private String goodsunit;
+    @Column(name = "GOODS_UNIT")
+    private String goodsUnit;
 
     /**
      * 是否上架	0:不上架 1:上架
      */
-    @Column(name = "isSale")
+    @Column(name = "ISSALE")
     private Byte issale;
 
     /**
      * 是否精品	0:否 1:是
      */
-    @Column(name = "isBest")
+    @Column(name = "ISBEST")
     private Byte isbest;
 
     /**
      * 是否热销产品	0:否 1:是
      */
-    @Column(name = "isHot")
+    @Column(name = "ISHOT")
     private Byte ishot;
 
     /**
      * 是否新品	0:否 1:是
      */
-    @Column(name = "isNew")
+    @Column(name = "ISNEW")
     private Byte isnew;
 
     /**
      * 是否推荐	0:否 1:是
      */
-    @Column(name = "isRecom")
+    @Column(name = "ISRECOM")
     private Byte isrecom;
 
     /**
      * 商品分类ID路径	catId1_catId2_catId3
      */
-    @Column(name = "goodsCatIdPath")
-    private String goodscatidpath;
+    @Column(name = "GOODS_CATID_PATH")
+    private String goodsCatidPath;
 
     /**
      * 最后一级商品分类ID
      */
-    @Column(name = "goodsCatId")
-    private Integer goodscatid;
+    @Column(name = "GOODS_CATID")
+    private Integer goodsCatid;
 
     /**
      * 门店商品分类第一级ID
      */
-    @Column(name = "shopCatId1")
-    private Integer shopcatid1;
+    @Column(name = "SHOP_CATID1")
+    private Integer shopCatid1;
 
     /**
      * 门店商品第二级分类ID
      */
-    @Column(name = "shopCatId2")
-    private Integer shopcatid2;
+    @Column(name = "SHOP_CATID2")
+    private Integer shopCatid2;
 
     /**
      * 品牌Id
      */
-    @Column(name = "brandId")
-    private Integer brandid;
+    @Column(name = "BRAND_ID")
+    private Integer brandId;
 
     /**
      * 商品状态	-1:违规 0:未审核 1:已审核
      */
-    @Column(name = "goodsStatus")
-    private Byte goodsstatus;
+    @Column(name = "GOODS_STATUS")
+    private Byte goodsStatus;
 
     /**
      * 总销售量
      */
-    @Column(name = "saleNum")
-    private Integer salenum;
+    @Column(name = "SALE_NUM")
+    private Integer saleNum;
 
     /**
      * 	上架时间
      */
-    @Column(name = "saleTime")
-    private Date saletime;
+    @Column(name = "SALE_TIME")
+    private Date saleTime;
 
     /**
      * 访问数
      */
-    @Column(name = "visitNum")
-    private Integer visitnum;
+    @Column(name = "VISIT_NUM")
+    private Integer visitNum;
 
     /**
      * 评价数
      */
-    @Column(name = "appraiseNum")
-    private Integer appraisenum;
+    @Column(name = "APPRAISE_NUM")
+    private Integer appraiseNum;
 
     /**
      * 是否有规格	0:没有 1:有
      */
-    @Column(name = "isSpec")
+    @Column(name = "ISSPEC")
     private Byte isspec;
 
     /**
      * 商品SEO关键字
      */
-    @Column(name = "goodsSeoKeywords")
-    private String goodsseokeywords;
+    @Column(name = "GOODS_SEO_KEYWORDS")
+    private String goodsSeoKeywords;
 
     /**
      * 状态说明	一般用于说明拒绝原因
      */
-    @Column(name = "illegalRemarks")
-    private String illegalremarks;
+    @Column(name = "ILLEGAL_REMARKS")
+    private String illegalRemarks;
 
     /**
      * 删除标志	-1:删除 1:有效
      */
-    @Column(name = "dataFlag")
-    private Byte dataflag;
+    @Column(name = "DATA_FLAG")
+    private Byte dataFlag;
 
     /**
      * 创建时间
      */
-    @Column(name = "createTime")
-    private Date createtime;
+    @Column(name = "CREATE_TIME")
+    private Date createTime;
 
     /**
      * 促销信息
      */
-    @Column(name = "goodsTips")
-    private String goodstips;
+    @Column(name = "GOODS_TIPS")
+    private String goodsTips;
 
     /**
      * 	商品描述
      */
-    @Column(name = "goodsDesc")
-    private String goodsdesc;
+    @Column(name = "GOODS_DESC")
+    private String goodsDesc;
 
     /**
      * 商品相册
      */
+    @Column(name = "GALLERY")
     private String gallery;
 
     /**
-     * @return goodsId
+     * @return GOODS_ID
      */
-    public Integer getGoodsid() {
-        return goodsid;
+    public Integer getGoodsId() {
+        return goodsId;
     }
 
     /**
-     * @param goodsid
+     * @param goodsId
      */
-    public void setGoodsid(Integer goodsid) {
-        this.goodsid = goodsid;
+    public void setGoodsId(Integer goodsId) {
+        this.goodsId = goodsId;
     }
 
     /**
      * 获取商品编号
      *
-     * @return goodsSn - 商品编号
+     * @return GOODS_SN - 商品编号
      */
-    public String getGoodssn() {
-        return goodssn;
+    public String getGoodsSn() {
+        return goodsSn;
     }
 
     /**
      * 设置商品编号
      *
-     * @param goodssn 商品编号
+     * @param goodsSn 商品编号
      */
-    public void setGoodssn(String goodssn) {
-        this.goodssn = goodssn == null ? null : goodssn.trim();
+    public void setGoodsSn(String goodsSn) {
+        this.goodsSn = goodsSn == null ? null : goodsSn.trim();
     }
 
     /**
      * 获取商品货号
      *
-     * @return productNo - 商品货号
+     * @return PRODUCT_NO - 商品货号
      */
-    public String getProductno() {
-        return productno;
+    public String getProductNo() {
+        return productNo;
     }
 
     /**
      * 设置商品货号
      *
-     * @param productno 商品货号
+     * @param productNo 商品货号
      */
-    public void setProductno(String productno) {
-        this.productno = productno == null ? null : productno.trim();
+    public void setProductNo(String productNo) {
+        this.productNo = productNo == null ? null : productNo.trim();
     }
 
     /**
      * 获取商品名称
      *
-     * @return goodsName - 商品名称
+     * @return GOODS_NAME - 商品名称
      */
-    public String getGoodsname() {
-        return goodsname;
+    public String getGoodsName() {
+        return goodsName;
     }
 
     /**
      * 设置商品名称
      *
-     * @param goodsname 商品名称
+     * @param goodsName 商品名称
      */
-    public void setGoodsname(String goodsname) {
-        this.goodsname = goodsname == null ? null : goodsname.trim();
+    public void setGoodsName(String goodsName) {
+        this.goodsName = goodsName == null ? null : goodsName.trim();
     }
 
     /**
      * 获取商品图片
      *
-     * @return goodsImg - 商品图片
+     * @return GOODS_IMG - 商品图片
      */
-    public String getGoodsimg() {
-        return goodsimg;
+    public String getGoodsImg() {
+        return goodsImg;
     }
 
     /**
      * 设置商品图片
      *
-     * @param goodsimg 商品图片
+     * @param goodsImg 商品图片
      */
-    public void setGoodsimg(String goodsimg) {
-        this.goodsimg = goodsimg == null ? null : goodsimg.trim();
+    public void setGoodsImg(String goodsImg) {
+        this.goodsImg = goodsImg == null ? null : goodsImg.trim();
     }
 
     /**
      * 获取门店id
      *
-     * @return shopId - 门店id
+     * @return SHOP_ID - 门店id
      */
-    public Integer getShopid() {
-        return shopid;
+    public Integer getShopId() {
+        return shopId;
     }
 
     /**
      * 设置门店id
      *
-     * @param shopid 门店id
+     * @param shopId 门店id
      */
-    public void setShopid(Integer shopid) {
-        this.shopid = shopid;
+    public void setShopId(Integer shopId) {
+        this.shopId = shopId;
     }
 
     /**
      * 获取市场价
      *
-     * @return marketPrice - 市场价
+     * @return MARKET_PRICE - 市场价
      */
-    public BigDecimal getMarketprice() {
-        return marketprice;
+    public BigDecimal getMarketPrice() {
+        return marketPrice;
     }
 
     /**
      * 设置市场价
      *
-     * @param marketprice 市场价
+     * @param marketPrice 市场价
      */
-    public void setMarketprice(BigDecimal marketprice) {
-        this.marketprice = marketprice;
+    public void setMarketPrice(BigDecimal marketPrice) {
+        this.marketPrice = marketPrice;
     }
 
     /**
      * 获取门店价
      *
-     * @return shopPrice - 门店价
+     * @return SHOP_PRICE - 门店价
      */
-    public BigDecimal getShopprice() {
-        return shopprice;
+    public BigDecimal getShopPrice() {
+        return shopPrice;
     }
 
     /**
      * 设置门店价
      *
-     * @param shopprice 门店价
+     * @param shopPrice 门店价
      */
-    public void setShopprice(BigDecimal shopprice) {
-        this.shopprice = shopprice;
+    public void setShopPrice(BigDecimal shopPrice) {
+        this.shopPrice = shopPrice;
     }
 
     /**
      * 获取预警库存
      *
-     * @return warnStock - 预警库存
+     * @return WARN_STOCK - 预警库存
      */
-    public Integer getWarnstock() {
-        return warnstock;
+    public Integer getWarnStock() {
+        return warnStock;
     }
 
     /**
      * 设置预警库存
      *
-     * @param warnstock 预警库存
+     * @param warnStock 预警库存
      */
-    public void setWarnstock(Integer warnstock) {
-        this.warnstock = warnstock;
+    public void setWarnStock(Integer warnStock) {
+        this.warnStock = warnStock;
     }
 
     /**
      * 获取商品总库存·
      *
-     * @return goodsStock - 商品总库存·
+     * @return GOODS_STOCK - 商品总库存·
      */
-    public Integer getGoodsstock() {
-        return goodsstock;
+    public Integer getGoodsStock() {
+        return goodsStock;
     }
 
     /**
      * 设置商品总库存·
      *
-     * @param goodsstock 商品总库存·
+     * @param goodsStock 商品总库存·
      */
-    public void setGoodsstock(Integer goodsstock) {
-        this.goodsstock = goodsstock;
+    public void setGoodsStock(Integer goodsStock) {
+        this.goodsStock = goodsStock;
     }
 
     /**
-     * 获取单价
+     * 获取单位
      *
-     * @return goodsUnit - 单价
+     * @return GOODS_UNIT - 单位
      */
-    public String getGoodsunit() {
-        return goodsunit;
+    public String getGoodsUnit() {
+        return goodsUnit;
     }
 
     /**
-     * 设置单价
+     * 设置单位
      *
-     * @param goodsunit 单价
+     * @param goodsUnit 单位
      */
-    public void setGoodsunit(String goodsunit) {
-        this.goodsunit = goodsunit == null ? null : goodsunit.trim();
+    public void setGoodsUnit(String goodsUnit) {
+        this.goodsUnit = goodsUnit == null ? null : goodsUnit.trim();
     }
 
     /**
      * 获取是否上架	0:不上架 1:上架
      *
-     * @return isSale - 是否上架	0:不上架 1:上架
+     * @return ISSALE - 是否上架	0:不上架 1:上架
      */
     public Byte getIssale() {
         return issale;
@@ -422,7 +425,7 @@ public class TcGoods {
     /**
      * 获取是否精品	0:否 1:是
      *
-     * @return isBest - 是否精品	0:否 1:是
+     * @return ISBEST - 是否精品	0:否 1:是
      */
     public Byte getIsbest() {
         return isbest;
@@ -440,7 +443,7 @@ public class TcGoods {
     /**
      * 获取是否热销产品	0:否 1:是
      *
-     * @return isHot - 是否热销产品	0:否 1:是
+     * @return ISHOT - 是否热销产品	0:否 1:是
      */
     public Byte getIshot() {
         return ishot;
@@ -458,7 +461,7 @@ public class TcGoods {
     /**
      * 获取是否新品	0:否 1:是
      *
-     * @return isNew - 是否新品	0:否 1:是
+     * @return ISNEW - 是否新品	0:否 1:是
      */
     public Byte getIsnew() {
         return isnew;
@@ -476,7 +479,7 @@ public class TcGoods {
     /**
      * 获取是否推荐	0:否 1:是
      *
-     * @return isRecom - 是否推荐	0:否 1:是
+     * @return ISRECOM - 是否推荐	0:否 1:是
      */
     public Byte getIsrecom() {
         return isrecom;
@@ -494,187 +497,187 @@ public class TcGoods {
     /**
      * 获取商品分类ID路径	catId1_catId2_catId3
      *
-     * @return goodsCatIdPath - 商品分类ID路径	catId1_catId2_catId3
+     * @return GOODS_CATID_PATH - 商品分类ID路径	catId1_catId2_catId3
      */
-    public String getGoodscatidpath() {
-        return goodscatidpath;
+    public String getGoodsCatidPath() {
+        return goodsCatidPath;
     }
 
     /**
      * 设置商品分类ID路径	catId1_catId2_catId3
      *
-     * @param goodscatidpath 商品分类ID路径	catId1_catId2_catId3
+     * @param goodsCatidPath 商品分类ID路径	catId1_catId2_catId3
      */
-    public void setGoodscatidpath(String goodscatidpath) {
-        this.goodscatidpath = goodscatidpath == null ? null : goodscatidpath.trim();
+    public void setGoodsCatidPath(String goodsCatidPath) {
+        this.goodsCatidPath = goodsCatidPath == null ? null : goodsCatidPath.trim();
     }
 
     /**
      * 获取最后一级商品分类ID
      *
-     * @return goodsCatId - 最后一级商品分类ID
+     * @return GOODS_CATID - 最后一级商品分类ID
      */
-    public Integer getGoodscatid() {
-        return goodscatid;
+    public Integer getGoodsCatid() {
+        return goodsCatid;
     }
 
     /**
      * 设置最后一级商品分类ID
      *
-     * @param goodscatid 最后一级商品分类ID
+     * @param goodsCatid 最后一级商品分类ID
      */
-    public void setGoodscatid(Integer goodscatid) {
-        this.goodscatid = goodscatid;
+    public void setGoodsCatid(Integer goodsCatid) {
+        this.goodsCatid = goodsCatid;
     }
 
     /**
      * 获取门店商品分类第一级ID
      *
-     * @return shopCatId1 - 门店商品分类第一级ID
+     * @return SHOP_CATID1 - 门店商品分类第一级ID
      */
-    public Integer getShopcatid1() {
-        return shopcatid1;
+    public Integer getShopCatid1() {
+        return shopCatid1;
     }
 
     /**
      * 设置门店商品分类第一级ID
      *
-     * @param shopcatid1 门店商品分类第一级ID
+     * @param shopCatid1 门店商品分类第一级ID
      */
-    public void setShopcatid1(Integer shopcatid1) {
-        this.shopcatid1 = shopcatid1;
+    public void setShopCatid1(Integer shopCatid1) {
+        this.shopCatid1 = shopCatid1;
     }
 
     /**
      * 获取门店商品第二级分类ID
      *
-     * @return shopCatId2 - 门店商品第二级分类ID
+     * @return SHOP_CATID2 - 门店商品第二级分类ID
      */
-    public Integer getShopcatid2() {
-        return shopcatid2;
+    public Integer getShopCatid2() {
+        return shopCatid2;
     }
 
     /**
      * 设置门店商品第二级分类ID
      *
-     * @param shopcatid2 门店商品第二级分类ID
+     * @param shopCatid2 门店商品第二级分类ID
      */
-    public void setShopcatid2(Integer shopcatid2) {
-        this.shopcatid2 = shopcatid2;
+    public void setShopCatid2(Integer shopCatid2) {
+        this.shopCatid2 = shopCatid2;
     }
 
     /**
      * 获取品牌Id
      *
-     * @return brandId - 品牌Id
+     * @return BRAND_ID - 品牌Id
      */
-    public Integer getBrandid() {
-        return brandid;
+    public Integer getBrandId() {
+        return brandId;
     }
 
     /**
      * 设置品牌Id
      *
-     * @param brandid 品牌Id
+     * @param brandId 品牌Id
      */
-    public void setBrandid(Integer brandid) {
-        this.brandid = brandid;
+    public void setBrandId(Integer brandId) {
+        this.brandId = brandId;
     }
 
     /**
      * 获取商品状态	-1:违规 0:未审核 1:已审核
      *
-     * @return goodsStatus - 商品状态	-1:违规 0:未审核 1:已审核
+     * @return GOODS_STATUS - 商品状态	-1:违规 0:未审核 1:已审核
      */
-    public Byte getGoodsstatus() {
-        return goodsstatus;
+    public Byte getGoodsStatus() {
+        return goodsStatus;
     }
 
     /**
      * 设置商品状态	-1:违规 0:未审核 1:已审核
      *
-     * @param goodsstatus 商品状态	-1:违规 0:未审核 1:已审核
+     * @param goodsStatus 商品状态	-1:违规 0:未审核 1:已审核
      */
-    public void setGoodsstatus(Byte goodsstatus) {
-        this.goodsstatus = goodsstatus;
+    public void setGoodsStatus(Byte goodsStatus) {
+        this.goodsStatus = goodsStatus;
     }
 
     /**
      * 获取总销售量
      *
-     * @return saleNum - 总销售量
+     * @return SALE_NUM - 总销售量
      */
-    public Integer getSalenum() {
-        return salenum;
+    public Integer getSaleNum() {
+        return saleNum;
     }
 
     /**
      * 设置总销售量
      *
-     * @param salenum 总销售量
+     * @param saleNum 总销售量
      */
-    public void setSalenum(Integer salenum) {
-        this.salenum = salenum;
+    public void setSaleNum(Integer saleNum) {
+        this.saleNum = saleNum;
     }
 
     /**
      * 获取	上架时间
      *
-     * @return saleTime - 	上架时间
+     * @return SALE_TIME - 	上架时间
      */
-    public Date getSaletime() {
-        return saletime;
+    public Date getSaleTime() {
+        return saleTime;
     }
 
     /**
      * 设置	上架时间
      *
-     * @param saletime 	上架时间
+     * @param saleTime 	上架时间
      */
-    public void setSaletime(Date saletime) {
-        this.saletime = saletime;
+    public void setSaleTime(Date saleTime) {
+        this.saleTime = saleTime;
     }
 
     /**
      * 获取访问数
      *
-     * @return visitNum - 访问数
+     * @return VISIT_NUM - 访问数
      */
-    public Integer getVisitnum() {
-        return visitnum;
+    public Integer getVisitNum() {
+        return visitNum;
     }
 
     /**
      * 设置访问数
      *
-     * @param visitnum 访问数
+     * @param visitNum 访问数
      */
-    public void setVisitnum(Integer visitnum) {
-        this.visitnum = visitnum;
+    public void setVisitNum(Integer visitNum) {
+        this.visitNum = visitNum;
     }
 
     /**
      * 获取评价数
      *
-     * @return appraiseNum - 评价数
+     * @return APPRAISE_NUM - 评价数
      */
-    public Integer getAppraisenum() {
-        return appraisenum;
+    public Integer getAppraiseNum() {
+        return appraiseNum;
     }
 
     /**
      * 设置评价数
      *
-     * @param appraisenum 评价数
+     * @param appraiseNum 评价数
      */
-    public void setAppraisenum(Integer appraisenum) {
-        this.appraisenum = appraisenum;
+    public void setAppraiseNum(Integer appraiseNum) {
+        this.appraiseNum = appraiseNum;
     }
 
     /**
      * 获取是否有规格	0:没有 1:有
      *
-     * @return isSpec - 是否有规格	0:没有 1:有
+     * @return ISSPEC - 是否有规格	0:没有 1:有
      */
     public Byte getIsspec() {
         return isspec;
@@ -692,115 +695,115 @@ public class TcGoods {
     /**
      * 获取商品SEO关键字
      *
-     * @return goodsSeoKeywords - 商品SEO关键字
+     * @return GOODS_SEO_KEYWORDS - 商品SEO关键字
      */
-    public String getGoodsseokeywords() {
-        return goodsseokeywords;
+    public String getGoodsSeoKeywords() {
+        return goodsSeoKeywords;
     }
 
     /**
      * 设置商品SEO关键字
      *
-     * @param goodsseokeywords 商品SEO关键字
+     * @param goodsSeoKeywords 商品SEO关键字
      */
-    public void setGoodsseokeywords(String goodsseokeywords) {
-        this.goodsseokeywords = goodsseokeywords == null ? null : goodsseokeywords.trim();
+    public void setGoodsSeoKeywords(String goodsSeoKeywords) {
+        this.goodsSeoKeywords = goodsSeoKeywords == null ? null : goodsSeoKeywords.trim();
     }
 
     /**
      * 获取状态说明	一般用于说明拒绝原因
      *
-     * @return illegalRemarks - 状态说明	一般用于说明拒绝原因
+     * @return ILLEGAL_REMARKS - 状态说明	一般用于说明拒绝原因
      */
-    public String getIllegalremarks() {
-        return illegalremarks;
+    public String getIllegalRemarks() {
+        return illegalRemarks;
     }
 
     /**
      * 设置状态说明	一般用于说明拒绝原因
      *
-     * @param illegalremarks 状态说明	一般用于说明拒绝原因
+     * @param illegalRemarks 状态说明	一般用于说明拒绝原因
      */
-    public void setIllegalremarks(String illegalremarks) {
-        this.illegalremarks = illegalremarks == null ? null : illegalremarks.trim();
+    public void setIllegalRemarks(String illegalRemarks) {
+        this.illegalRemarks = illegalRemarks == null ? null : illegalRemarks.trim();
     }
 
     /**
      * 获取删除标志	-1:删除 1:有效
      *
-     * @return dataFlag - 删除标志	-1:删除 1:有效
+     * @return DATA_FLAG - 删除标志	-1:删除 1:有效
      */
-    public Byte getDataflag() {
-        return dataflag;
+    public Byte getDataFlag() {
+        return dataFlag;
     }
 
     /**
      * 设置删除标志	-1:删除 1:有效
      *
-     * @param dataflag 删除标志	-1:删除 1:有效
+     * @param dataFlag 删除标志	-1:删除 1:有效
      */
-    public void setDataflag(Byte dataflag) {
-        this.dataflag = dataflag;
+    public void setDataFlag(Byte dataFlag) {
+        this.dataFlag = dataFlag;
     }
 
     /**
      * 获取创建时间
      *
-     * @return createTime - 创建时间
+     * @return CREATE_TIME - 创建时间
      */
-    public Date getCreatetime() {
-        return createtime;
+    public Date getCreateTime() {
+        return createTime;
     }
 
     /**
      * 设置创建时间
      *
-     * @param createtime 创建时间
+     * @param createTime 创建时间
      */
-    public void setCreatetime(Date createtime) {
-        this.createtime = createtime;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     /**
      * 获取促销信息
      *
-     * @return goodsTips - 促销信息
+     * @return GOODS_TIPS - 促销信息
      */
-    public String getGoodstips() {
-        return goodstips;
+    public String getGoodsTips() {
+        return goodsTips;
     }
 
     /**
      * 设置促销信息
      *
-     * @param goodstips 促销信息
+     * @param goodsTips 促销信息
      */
-    public void setGoodstips(String goodstips) {
-        this.goodstips = goodstips == null ? null : goodstips.trim();
+    public void setGoodsTips(String goodsTips) {
+        this.goodsTips = goodsTips == null ? null : goodsTips.trim();
     }
 
     /**
      * 获取	商品描述
      *
-     * @return goodsDesc - 	商品描述
+     * @return GOODS_DESC - 	商品描述
      */
-    public String getGoodsdesc() {
-        return goodsdesc;
+    public String getGoodsDesc() {
+        return goodsDesc;
     }
 
     /**
      * 设置	商品描述
      *
-     * @param goodsdesc 	商品描述
+     * @param goodsDesc 	商品描述
      */
-    public void setGoodsdesc(String goodsdesc) {
-        this.goodsdesc = goodsdesc == null ? null : goodsdesc.trim();
+    public void setGoodsDesc(String goodsDesc) {
+        this.goodsDesc = goodsDesc == null ? null : goodsDesc.trim();
     }
 
     /**
      * 获取商品相册
      *
-     * @return gallery - 商品相册
+     * @return GALLERY - 商品相册
      */
     public String getGallery() {
         return gallery;

@@ -1,8 +1,9 @@
-package com.ishop.service.Impl;
+package com.ishop.service.user.Impl;
 
 import com.ishop.mapper.TcUsersMapper;
 import com.ishop.pojo.TcUsers;
 import com.ishop.service.TcUserService;
+import com.ishop.service.user.TcUserService;
 import com.ishop.warpper.TcUserWarpper;
 import org.springframework.stereotype.Service;
 

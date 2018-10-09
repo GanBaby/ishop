@@ -856,7 +856,7 @@
 								<a href="# ">桂花糕</a>
 								<a href="# ">奶皮酥</a>
 								<a href="# ">栗子糕 </a>
-								<a href="# ">马卡龙</a>
+								<a href= "# ">马卡龙</a>
 								<a href="# ">铜锣烧</a>
 								<a href="# ">豌豆黄</a>
 							</div>
@@ -893,72 +893,72 @@
 								</div>
 								<a href="# "><img src="${pageContext.request.contextPath}/view/images/act2.png " /></a>
 							</div>
-							<div class="text-two last">
+							<div class="text-two">
 								<div class="outer-con ">
 									<div class="title ">
-										雪之恋和风大福
+										雪之恋和风大福1
 									</div>
 									<div class="sub-title ">
 										仅售：¥13.8
 									</div>
-									
+
 								</div>
 								<a href="# "><img src="${pageContext.request.contextPath}/view/images/act2.png " /></a>
-						    </div>
-						</div>
-		             <div class="am-u-sm-12 am-u-md-4 ">
-						<div class="am-u-sm-3 am-u-md-6 text-three">
-							<div class="outer-con ">
-								<div class="title ">
-									小优布丁
-								</div>
-								
-								<div class="sub-title ">
-									尝鲜价：¥4.8
-								</div>
 							</div>
-							<a href="# "><img src="${pageContext.request.contextPath}/view/images/act3.png " /></a>
 						</div>
+						 <div class="am-u-sm-12 am-u-md-4 ">
+							<div class="am-u-sm-3 am-u-md-6 text-three">
+								<div class="outer-con ">
+									<div class="title ">
+										小优布丁
+									</div>
 
-						<div class="am-u-sm-3 am-u-md-6 text-three">
-							<div class="outer-con ">
-								<div class="title ">
-									小优布丁
+									<div class="sub-title ">
+										尝鲜价：¥4.8
+									</div>
 								</div>
-								
-								<div class="sub-title ">
-									尝鲜价：¥4.8
-								</div>
+								<a href="# "><img src="${pageContext.request.contextPath}/view/images/act3.png " /></a>
 							</div>
-							<a href="# "><img src="${pageContext.request.contextPath}/view/images/act3.png " /></a>
-						</div>
 
-						<div class="am-u-sm-3 am-u-md-6 text-three">
-							<div class="outer-con ">
-								<div class="title ">
-									小优布丁
-								</div>
-								
-								<div class="sub-title ">
-									尝鲜价：¥4.8
-								</div>
-							</div>
-							<a href="# "><img src="${pageContext.request.contextPath}/view/images/act3.png " /></a>
-						</div>
+							<div class="am-u-sm-3 am-u-md-6 text-three">
+								<div class="outer-con ">
+									<div class="title ">
+										小优布丁
+									</div>
 
-						<div class="am-u-sm-3 am-u-md-6 text-three last ">
-							<div class="outer-con ">
-								<div class="title ">
-									小优布丁
+									<div class="sub-title ">
+										尝鲜价：¥4.8
+									</div>
 								</div>
-								
-								<div class="sub-title ">
-									尝鲜价：¥4.8
-								</div>
+								<a href="# "><img src="${pageContext.request.contextPath}/view/images/act3.png " /></a>
 							</div>
-							<a href="# "><img src="${pageContext.request.contextPath}/view/images/act3.png " /></a>
+
+							<div class="am-u-sm-3 am-u-md-6 text-three">
+								<div class="outer-con ">
+									<div class="title ">
+										小优布丁
+									</div>
+
+									<div class="sub-title ">
+										尝鲜价：¥4.8
+									</div>
+								</div>
+								<a href="# "><img src="${pageContext.request.contextPath}/view/images/act3.png " /></a>
+							</div>
+
+							<div class="am-u-sm-3 am-u-md-6 text-three last ">
+								<div class="outer-con ">
+									<div class="title ">
+										小优布丁
+									</div>
+
+									<div class="sub-title ">
+										尝鲜价：¥4.8
+									</div>
+								</div>
+								<a href="# "><img src="${pageContext.request.contextPath}/view/images/act3.png " /></a>
+							</div>
 						</div>
-					</div>
 
 					</div>
                  <div class="clear "></div>
