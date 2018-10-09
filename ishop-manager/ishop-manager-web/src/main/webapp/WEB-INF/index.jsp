@@ -788,7 +788,7 @@
 					<div class="clear "></div>
 					<!--热门活动 -->
 
-					<div class="am-container activity ">
+					<!--<div class="am-container activity ">
 						<div class="shopTitle ">
 							<h4>活动</h4>
 							<h3>每期活动 优惠享不停 </h3>
@@ -799,7 +799,7 @@
 					
 					  <div class="am-g am-g-fixed ">
 						<div class="am-u-sm-3 ">
-							<div class="icon-sale one "></div>	
+							<div class="icon-sale one "></div>
 								<h4>秒杀</h4>							
 							<div class="activityMain ">
 								<img src="${pageContext.request.contextPath}/view/images/activity1.jpg "></img>
@@ -810,7 +810,7 @@
 						</div>
 						
 						<div class="am-u-sm-3 ">
-						  <div class="icon-sale two "></div>	
+						  <div class="icon-sale two "></div>
 							<h4>特惠</h4>
 							<div class="activityMain ">
 								<img src="${pageContext.request.contextPath}/view/images/activity2.jpg "></img>
@@ -844,7 +844,7 @@
 
 					  </div>
                    </div>
-					<div class="clear "></div>
+					<div class="clear "></div>-->
 
 					<!--甜点-->
 					
