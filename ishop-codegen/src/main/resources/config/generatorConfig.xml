@@ -32,8 +32,8 @@
 		</javaTypeResolver>
 
 		<!-- 生成实体类地址 -->
-		<javaModelGenerator targetPackage="com.ishop.entity" targetProject="${project}">
-			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.ishop.persist.entity.model， true:com.ishop.persist.entity.model.[schemaName] -->
+		<javaModelGenerator targetPackage="com.ishop.pojo" targetProject="${project}">
+			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.ishop.persist.pojo.model， true:com.ishop.persist.pojo.model.[schemaName] -->
 			<property name="enableSubPackages" value="false"/>
 			<!-- 是否针对string类型的字段在set的时候进行trim调用 -->
 			<property name="trimStrings" value="true"/>
@@ -60,7 +60,7 @@
 			   enableDeleteByPrimaryKey="true"
 			   enableDeleteByExample="false"
 			   enableCountByExample="false"
-			   enableUpdateByExample="true">
+			   enableUpdateByExample="false">
 			<generatedKey column="id" sqlStatement="mysql" identity="true"/>
 		</table>
 
