@@ -1,17 +1,23 @@
 package com.ishop.controller.page;
 
 import com.ishop.service.page.PageService;
+import com.ishop.utils.controller.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 页面跳转Controller
  * Created by 甘银道 on 2018/9/17
  */
 @Controller
-public class PageController {
+public class PageController extends BaseController{
 
     @Autowired
     private PageService pageService;
@@ -22,10 +28,10 @@ public class PageController {
      */
     @RequestMapping("/")
     public String showIndex(){
-
         //获取首页需要展示的商品内容
-
-
+        List<Map<String, Object>> dataList = pageService.getIndexData();
+        HttpServletRequest request = getRequest();
+        request.setAttribute("dataList",dataList);
         return "index";
     }
 

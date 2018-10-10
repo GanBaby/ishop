@@ -45,7 +45,7 @@
 <script src="${pageContext.request.contextPath}/admin/H+/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
 
 <!--页面的js文件-->
-<script src="${pageContext.request.contextPath}/admin/js/goods/userList.js"></script>
+<script src="${pageContext.request.contextPath}/admin/js/user/userList.js"></script>
 
 </body>
 </html>

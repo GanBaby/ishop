@@ -25,8 +25,8 @@ public class TcGoodsParentCatsDetails {
     /**
      * 分类头部小标题
      */
-    @Column(name = "SUBTITLE")
-    private String subtitle;
+    @Column(name = "SUB_TITLE")
+    private String subTitle;
 
     /**
      * 分类图片路径
@@ -89,17 +89,17 @@ public class TcGoodsParentCatsDetails {
      *
      * @return SUBTITLE - 分类头部小标题
      */
-    public String getSubtitle() {
-        return subtitle;
+    public String getSubTitle() {
+        return subTitle;
     }
 
     /**
      * 设置分类头部小标题
      *
-     * @param subtitle 分类头部小标题
+     * @param subTitle 分类头部小标题
      */
-    public void setSubtitle(String subtitle) {
-        this.subtitle = subtitle == null ? null : subtitle.trim();
+    public void setSubTitle(String subTitle) {
+        this.subTitle = subTitle == null ? null : subTitle.trim();
     }
 
     /**

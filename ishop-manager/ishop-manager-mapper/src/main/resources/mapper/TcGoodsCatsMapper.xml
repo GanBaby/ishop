@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ishop.mapper.TcGoodsCatsMapper">
+  <resultMap id="BaseResultMap" type="com.ishop.pojo.TcGoodsCats">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="CAT_ID" jdbcType="INTEGER" property="catId" />
+    <result column="PARENT_ID" jdbcType="INTEGER" property="parentId" />
+    <result column="CAT_NAME" jdbcType="VARCHAR" property="catName" />
+    <result column="IS_SHOW" jdbcType="TINYINT" property="isShow" />
+    <result column="IS_FLOOR" jdbcType="TINYINT" property="isFloor" />
+    <result column="CAT_SORT" jdbcType="INTEGER" property="catSort" />
+    <result column="DATA_FLAG" jdbcType="TINYINT" property="dataFlag" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="COMMISSION_RATE" jdbcType="DECIMAL" property="commissionRate" />
+  </resultMap>
+
+  <select id="selectByParentId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    SELECT CAT_ID catId, PARENT_ID parentId, CAT_NAME catName,
+           IS_SHOW isShow, IS_FLOOR isFloor, CAT_SORT catSort,
+           DATA_FLAG dataFlag, CREATE_TIME createTime, COMMISSION_RATE commissionRate
+    FROM tc_goods_cats
+    WHERE 1=1
+    <if test="parentId != null and parentId != ''">
+      AND PARENT_ID=#{parentId,jdbcType=VARCHAR}
+    </if>
+    AND DATA_FLAG='1' AND IS_SHOW='1' ORDER BY CAT_SORT ASC
+  </select>
+
+
+</mapper>

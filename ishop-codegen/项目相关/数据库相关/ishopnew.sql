@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2018-10-10 09:03:43
+Date: 2018-10-10 16:26:37
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -4408,17 +4408,17 @@ CREATE TABLE `tc_goods_attributes` (
 -- ----------------------------
 DROP TABLE IF EXISTS `tc_goods_cats`;
 CREATE TABLE `tc_goods_cats` (
-  `catId` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
-  `parentId` int(11) NOT NULL COMMENT '父ID',
-  `catName` varchar(20) NOT NULL COMMENT '分类名称',
-  `isShow` tinyint(4) NOT NULL DEFAULT '1' COMMENT '是否显示	0:隐藏 1:显示',
-  `isFloor` tinyint(4) NOT NULL DEFAULT '1' COMMENT '是否显示楼层	0:不显示 1:显示',
-  `catSort` int(11) NOT NULL DEFAULT '0' COMMENT '排序号',
-  `dataFlag` tinyint(4) NOT NULL DEFAULT '1' COMMENT '删除标志	1:有效 -1：删除',
-  `createTime` datetime NOT NULL COMMENT '建立时间',
-  `commissionRate` decimal(11,2) DEFAULT '-1.00' COMMENT '商品佣金比例	-1代表使用上级父类的佣金设置',
-  PRIMARY KEY (`catId`),
-  KEY `parentId` (`parentId`,`isShow`,`dataFlag`) USING BTREE
+  `CAT_ID` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `PARENT_ID` int(11) NOT NULL COMMENT '父ID',
+  `CAT_NAME` varchar(20) NOT NULL COMMENT '分类名称',
+  `IS_SHOW` tinyint(4) NOT NULL DEFAULT '1' COMMENT '是否显示	0:隐藏 1:显示',
+  `IS_FLOOR` tinyint(4) NOT NULL DEFAULT '1' COMMENT '是否显示楼层	0:不显示 1:显示',
+  `CAT_SORT` int(11) NOT NULL DEFAULT '0' COMMENT '排序号',
+  `DATA_FLAG` tinyint(4) NOT NULL DEFAULT '1' COMMENT '删除标志	1:有效 -1：删除',
+  `CREATE_TIME` datetime NOT NULL COMMENT '建立时间',
+  `COMMISSION_RATE` decimal(11,2) DEFAULT '-1.00' COMMENT '商品佣金比例	-1代表使用上级父类的佣金设置',
+  PRIMARY KEY (`CAT_ID`),
+  KEY `parentId` (`PARENT_ID`,`IS_SHOW`,`DATA_FLAG`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=368 DEFAULT CHARSET=utf8 COMMENT='商品分类表';
 
 -- ----------------------------
@@ -4783,7 +4783,7 @@ CREATE TABLE `tc_goods_parent_cats_details` (
   `CAT_ID` int(11) NOT NULL COMMENT '父分类的id',
   `CAT_NAME` varchar(25) NOT NULL,
   `TITLE` varchar(30) NOT NULL COMMENT '分类头部内容',
-  `SUBTITLE` varchar(30) NOT NULL COMMENT '分类头部小标题',
+  `SUB_TITLE` varchar(30) NOT NULL COMMENT '分类头部小标题',
   `IMAGES_PATH` varchar(150) NOT NULL COMMENT '分类图片路径',
   PRIMARY KEY (`CAT_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='父分类详情内容表';

@@ -2,7 +2,7 @@ package com.ishop.controller.user;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.ishop.service.TcUserService;
+import com.ishop.service.user.TcUserService;
 import com.ishop.utils.controller.BaseController;
 import com.ishop.utils.util.PageUtil;
 import com.ishop.utils.util.StringUtils;

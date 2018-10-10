@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ishop.mapper.TcGoodsMapper">
-  <resultMap id="BaseResultMap" type="com.ishop.entity.TcGoods">
+  <resultMap id="BaseResultMap" type="com.ishop.pojo.TcGoods">
     <!--
       WARNING - @mbg.generated
     -->
@@ -40,4 +40,24 @@
     <result column="GOODS_DESC" jdbcType="LONGVARCHAR" property="goodsDesc" />
     <result column="GALLERY" jdbcType="LONGVARCHAR" property="gallery" />
   </resultMap>
+
+  <select id="getRecomGoodsLikeOneCatId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    SELECT GOODS_ID goodsId, GOODS_SN goodsSn, PRODUCT_NO productNo, GOODS_NAME goodsName,
+    GOODS_IMG goodsImg, SHOP_ID shopId, MARKET_PRICE marketPrice, SHOP_PRICE shopPrice,
+    WARN_STOCK warnStock, GOODS_STOCK goodsStock, GOODS_UNIT goodsUnit, ISSALE issale,
+    ISBEST isbest, ISHOT ishot, ISNEW isnew, ISRECOM isrecom, GOODS_CATID_PATH goodsCatidPath,
+    GOODS_CATID goodsCatid, SHOP_CATID1 shopCatid1, SHOP_CATID2 shopCatid2, BRAND_ID brandId,
+    GOODS_STATUS goodsStatus, SALE_NUM saleNum, SALE_TIME saleTime, VISIT_NUM visitNum,
+    APPRAISE_NUM appraiseNum, ISSPEC isspec, GOODS_SEO_KEYWORDS goodsSeoKeywords,
+    ILLEGAL_REMARKS illegalRemarks, DATA_FLAG dataFlag, CREATE_TIME createTime,
+    GOODS_TIPS goodsTips, GOODS_DESC goodsDesc, GALLERY gallery
+    FROM tc_goods
+    WHERE 1=1
+    <if test="oneCatId != null and oneCatId != ''">
+     AND GOODS_CATID_PATH LIKE CONCAT(#{oneCatId},'%')
+    </if>
+    AND ISRECOM='1' AND DATA_FLAG='1' AND ISSALE='1'
+    ORDER BY SALE_TIME DESC
+  </select>
+
 </mapper>
