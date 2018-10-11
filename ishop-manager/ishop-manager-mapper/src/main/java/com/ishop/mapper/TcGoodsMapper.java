@@ -14,4 +14,7 @@ public interface TcGoodsMapper extends Mapper<TcGoods> {
      * @return 返回获取的热销商品集合
      */
     List<TcGoods> getRecomGoodsLikeOneCatId(@Param(value="oneCatId") int oneCatId);
+
+    boolean deleteByGoodsId(@Param(value="goodsId") String goodsId);
+
 }

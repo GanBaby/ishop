@@ -1,6 +1,7 @@
+var url="/goods/select";
 new Table({
     tag:".goodsTable",
-    url:"/goods/selectList",
+    url:url,
     columns : [
         {
             field : 'goodsId',
@@ -27,11 +28,13 @@ new Table({
             title : '上/下架',
             align : 'center',
             formatter : function(value, row, index) {
-                var e = '<a href="#" mce_href="#" onclick="edit(\''
+                console.info("row:"+row.isSale);
+                console.info("value:"+value);
+                var e = '<a href="#" mce_href="#" class="btn btn-outline btn-primary btn-xs" onclick="edit(\''
                     + row.goodsId + '\')">上架</a> ';
-                var d = '<a href="#" mce_href="#" onclick="del(\''
+                var a = '<a href="#" mce_href="#" class="btn btn-outline btn-primary btn-xs" onclick="edit(\''
                     + row.goodsId + '\')">下架</a> ';
-                return e + d;
+                return e + a;
             }
         },
         {
@@ -49,14 +52,25 @@ new Table({
             field : 'id',
             align : 'center',
             formatter : function(value, row, index) {
-                var e = '<a href="#" mce_href="#" onclick="edit(\''
-                    + row.goodsId + '\')">编辑</a> ';
                 var d = '<a href="#" mce_href="#" onclick="del(\''
-                    + row.goodsId + '\')">修改</a> ';
-                return e + d;
-                var f = '<a href="#" mce_href="#" onclick="del(\''
-                    + row.goodsId + '\')">删除</a> ';
-                return e + d + f;
+                    + row.goodsId + '\')"><span class="glyphicon glyphicon-pencil"><pseudo:before><pseudo:before> </span></a>&nbsp;&nbsp;&nbsp;&nbsp;';
+                var f = '<a class="glyphicon glyphicon-trash" onclick="delGoods(\''+row.goodsId+'\')"></a>';
+                return d + f;
             }
         } ]
 });
+
+
+//删除商品的方法
+    function delGoods(goodsId){
+        $.post("/goods/delete",{goodsId:goodsId},function(data){
+            if(data.rspCode=='success'){
+                alert(data.rspDesc);
+                $(".goodsTable").bootstrapTable('refresh',{"url":url});
+            }else{
+                alert(data.rspDesc);
+            }
+        })
+
+    }
+

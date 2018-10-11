@@ -52,9 +52,9 @@ new Table({
             field : 'id',
             align : 'center',
             formatter : function(value, row, index) {
-                var e = '<a href="#" mce_href="#" onclick="edit(\''
+                var e = '<a href="#" mce_href="#" class="btn btn-outline btn-primary btn-xs" onclick="edit(\''
                     + row.userId + '\')">编辑</a> ';
-                var d = '<a href="#" mce_href="#" onclick="del(\''
+                var d = '<a href="#" mce_href="#" class="btn btn-outline btn-primary btn-xs" onclick="del(\''
                     + row.userId + '\')">禁用</a> ';
                 return e + d;
             }
