@@ -9,14 +9,14 @@
 
 		<title>首页</title>
 
-		<link href="${pageContext.request.contextPath}/view/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
-		<link href="${pageContext.request.contextPath}/view/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
+		<link href="${pageContext.request.contextPath}/modern/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+		<link href="${pageContext.request.contextPath}/modern/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
 
-		<link href="${pageContext.request.contextPath}/view/basic/css/demo.css" rel="stylesheet" type="text/css" />
+		<link href="${pageContext.request.contextPath}/modern/basic/css/demo.css" rel="stylesheet" type="text/css" />
 
-		<link href="${pageContext.request.contextPath}/view/css/hmstyle.css" rel="stylesheet" type="text/css" />
-		<script src="${pageContext.request.contextPath}/view/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
-		<script src="${pageContext.request.contextPath}/view/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+		<link href="${pageContext.request.contextPath}/modern/css/hmstyle.css" rel="stylesheet" type="text/css" />
+		<script src="${pageContext.request.contextPath}/modern/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="${pageContext.request.contextPath}/modern/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
 
 	</head>
 
@@ -51,9 +51,9 @@
 				<!--悬浮搜索框-->
 
 				<div class="nav white">
-					<div class="logo"><img src="${pageContext.request.contextPath}/view/images/logo.png" /></div>
+					<div class="logo"><img src="${pageContext.request.contextPath}/modern/images/logo.png" /></div>
 					<div class="logoBig">
-						<li><img src="${pageContext.request.contextPath}/view/images/logobig.png" /></li>
+						<li><img src="${pageContext.request.contextPath}/modern/images/logobig.png" /></li>
 					</div>
 
 					<div class="search-bar pr">
@@ -73,10 +73,10 @@
                       <!--轮播 -->
 						<div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
 							<ul class="am-slides">
-								<li class="banner1"><a href="introduction.html"><img src="${pageContext.request.contextPath}/view/images/ad1.jpg" /></a></li>
-								<li class="banner2"><a><img src="${pageContext.request.contextPath}/view/images/ad2.jpg" /></a></li>
-								<li class="banner3"><a><img src="${pageContext.request.contextPath}/view/images/ad3.jpg" /></a></li>
-								<li class="banner4"><a><img src="${pageContext.request.contextPath}/view/images/ad4.jpg" /></a></li>
+								<li class="banner1"><a href="introduction.html"><img src="${pageContext.request.contextPath}/modern/images/ad1.jpg" /></a></li>
+								<li class="banner2"><a><img src="${pageContext.request.contextPath}/modern/images/ad2.jpg" /></a></li>
+								<li class="banner3"><a><img src="${pageContext.request.contextPath}/modern/images/ad3.jpg" /></a></li>
+								<li class="banner4"><a><img src="${pageContext.request.contextPath}/modern/images/ad4.jpg" /></a></li>
 
 							</ul>
 						</div>
@@ -110,7 +110,7 @@
 										<ul class="category-list" id="js_climit_li">
 											<li class="appliance js_toggle relative first">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/view/images/cake.png"></i><a class="ml-22" title="点心">点心/蛋糕</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/modern/images/cake.png"></i><a class="ml-22" title="点心">点心/蛋糕</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -161,7 +161,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/view/images/cookies.png"></i><a class="ml-22" title="饼干、膨化">饼干/膨化</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/modern/images/cookies.png"></i><a class="ml-22" title="饼干、膨化">饼干/膨化</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -221,7 +221,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/view/images/meat.png"></i><a class="ml-22" title="熟食、肉类">熟食/肉类</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/modern/images/meat.png"></i><a class="ml-22" title="熟食、肉类">熟食/肉类</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -274,7 +274,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/view/images/bamboo.png"></i><a class="ml-22" title="素食、卤味">素食/卤味</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/modern/images/bamboo.png"></i><a class="ml-22" title="素食、卤味">素食/卤味</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -324,7 +324,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/view/images/nut.png"></i><a class="ml-22" title="坚果、炒货">坚果/炒货</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/modern/images/nut.png"></i><a class="ml-22" title="坚果、炒货">坚果/炒货</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -376,7 +376,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/view/images/candy.png"></i><a class="ml-22" title="糖果、蜜饯">糖果/蜜饯</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/modern/images/candy.png"></i><a class="ml-22" title="糖果、蜜饯">糖果/蜜饯</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -426,7 +426,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/view/images/chocolate.png"></i><a class="ml-22" title="巧克力">巧克力</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/modern/images/chocolate.png"></i><a class="ml-22" title="巧克力">巧克力</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -478,7 +478,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/view/images/fish.png"></i><a class="ml-22" title="海味、河鲜">海味/河鲜</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/modern/images/fish.png"></i><a class="ml-22" title="海味、河鲜">海味/河鲜</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -536,7 +536,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/view/images/tea.png"></i><a class="ml-22" title="花茶、果茶">花茶/果茶</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/modern/images/tea.png"></i><a class="ml-22" title="花茶、果茶">花茶/果茶</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -585,7 +585,7 @@
 											</li>
 											<li class="appliance js_toggle relative last">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/view/images/package.png"></i><a class="ml-22" title="品牌、礼包">品牌/礼包</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${pageContext.request.contextPath}/modern/images/package.png"></i><a class="ml-22" title="品牌、礼包">品牌/礼包</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -659,22 +659,22 @@
 					<!--小导航 -->
 					<div class="am-g am-g-fixed smallnav">
 						<div class="am-u-sm-3">
-							<a href="sort.html"><img src="${pageContext.request.contextPath}/view/images/navsmall.jpg" />
+							<a href="sort.html"><img src="${pageContext.request.contextPath}/modern/images/navsmall.jpg" />
 								<div class="title">商品分类</div>
 							</a>
 						</div>
 						<div class="am-u-sm-3">
-							<a href="#"><img src="${pageContext.request.contextPath}/view/images/huismall.jpg" />
+							<a href="#"><img src="${pageContext.request.contextPath}/modern/images/huismall.jpg" />
 								<div class="title">大聚惠</div>
 							</a>
 						</div>
 						<div class="am-u-sm-3">
-							<a href="#"><img src="${pageContext.request.contextPath}/view/images/mansmall.jpg" />
+							<a href="#"><img src="${pageContext.request.contextPath}/modern/images/mansmall.jpg" />
 								<div class="title">个人中心</div>
 							</a>
 						</div>
 						<div class="am-u-sm-3">
-							<a href="#"><img src="${pageContext.request.contextPath}/view/images/moneysmall.jpg" />
+							<a href="#"><img src="${pageContext.request.contextPath}/modern/images/moneysmall.jpg" />
 								<div class="title">投资理财</div>
 							</a>
 						</div>
@@ -688,19 +688,19 @@
 
 							<ul>
 								<li class="title-first"><a target="_blank" href="#">
-									<img src="${pageContext.request.contextPath}/view/images/TJ2.jpg"></img>
+									<img src="${pageContext.request.contextPath}/modern/images/TJ2.jpg"></img>
 									<span>[特惠]</span>商城爆品1分秒								
 								</a></li>
 								<li class="title-first"><a target="_blank" href="#">
 									<span>[公告]</span>商城与广州市签署战略合作协议
-								     <img src="${pageContext.request.contextPath}/view/images/TJ.jpg"></img>
+								     <img src="${pageContext.request.contextPath}/modern/images/TJ.jpg"></img>
 								     <p>XXXXXXXXXXXXXXXXXX</p>
 							    </a></li>
 							    
 						<div class="mod-vip">
 							<div class="m-baseinfo">
 								<a href="person/index.html">
-									<img src="${pageContext.request.contextPath}/view/images/getAvatar.do.jpg">
+									<img src="${pageContext.request.contextPath}/modern/images/getAvatar.do.jpg">
 								</a>
 								<em>
 									Hi,<span class="s-name">小叮当</span>
@@ -725,7 +725,7 @@
 								<li><a target="_blank" href="#"><span>[特惠]</span>家电狂欢千亿礼券 买1送1！</a></li>
 								
 							</ul>
-                        <div class="advTip"><img src="${pageContext.request.contextPath}/view/images/advTip.jpg"/></div>
+                        <div class="advTip"><img src="${pageContext.request.contextPath}/modern/images/advTip.jpg"/></div>
 						</div>
 					</div>
 					<div class="clear"></div>
@@ -754,7 +754,7 @@
 
 					<div class="am-g am-g-fixed recommendation">
 						<div class="clock am-u-sm-3">
-							<img src="${pageContext.request.contextPath}/view/images/2016.png "></img>
+							<img src="${pageContext.request.contextPath}/modern/images/2016.png "></img>
 							<p>今日<br>推荐</p>
 						</div>
 						<div class="am-u-sm-4 am-u-lg-3 ">
@@ -763,7 +763,7 @@
 								<h4>开年福利篇</h4>
 							</div>
 							<div class="recommendationMain ">
-								<img src="${pageContext.request.contextPath}/view/images/tj.png "></img>
+								<img src="${pageContext.request.contextPath}/modern/images/tj.png "></img>
 							</div>
 						</div>						
 						<div class="am-u-sm-4 am-u-lg-3 ">
@@ -772,7 +772,7 @@
 								<h4>让爱早回家</h4>
 							</div>
 							<div class="recommendationMain ">
-								<img src="${pageContext.request.contextPath}/view/images/tj1.png "></img>
+								<img src="${pageContext.request.contextPath}/modern/images/tj1.png "></img>
 							</div>
 						</div>
 						<div class="am-u-sm-4 am-u-lg-3 ">
@@ -781,7 +781,7 @@
 								<h4>甜甜蜜蜜</h4>
 							</div>
 							<div class="recommendationMain ">
-								<img src="${pageContext.request.contextPath}/view/images/tj2.png "></img>
+								<img src="${pageContext.request.contextPath}/modern/images/tj2.png "></img>
 							</div>
 						</div>
 
@@ -803,7 +803,7 @@
 							<div class="icon-sale one "></div>
 								<h4>秒杀</h4>							
 							<div class="activityMain ">
-								<img src="${pageContext.request.contextPath}/view/images/activity1.jpg "></img>
+								<img src="${pageContext.request.contextPath}/modern/images/activity1.jpg "></img>
 							</div>
 							<div class="info ">
 								<h3>春节送礼优选</h3>
@@ -814,7 +814,7 @@
 						  <div class="icon-sale two "></div>
 							<h4>特惠</h4>
 							<div class="activityMain ">
-								<img src="${pageContext.request.contextPath}/view/images/activity2.jpg "></img>
+								<img src="${pageContext.request.contextPath}/modern/images/activity2.jpg "></img>
 							</div>
 							<div class="info ">
 								<h3>春节送礼优选</h3>								
@@ -825,7 +825,7 @@
 							<div class="icon-sale three "></div>
 							<h4>团购</h4>
 							<div class="activityMain ">
-								<img src="${pageContext.request.contextPath}/view/images/activity3.jpg "></img>
+								<img src="${pageContext.request.contextPath}/modern/images/activity3.jpg "></img>
 							</div>
 							<div class="info ">
 								<h3>春节送礼优选</h3>
@@ -836,7 +836,7 @@
 							<div class="icon-sale "></div>
 							<h4>超值</h4>
 							<div class="activityMain ">
-								<img src="${pageContext.request.contextPath}/view/images/activity.jpg "></img>
+								<img src="${pageContext.request.contextPath}/modern/images/activity.jpg "></img>
 							</div>
 							<div class="info ">
 								<h3>春节送礼优选</h3>
@@ -953,7 +953,7 @@
 						</a>
 						<div class="ibar_login_box status_login ">
 							<div class="avatar_box ">
-								<p class="avatar_imgbox "><img src="${pageContext.request.contextPath}/view/images/no-img_mid_.jpg " /></p>
+								<p class="avatar_imgbox "><img src="${pageContext.request.contextPath}/modern/images/no-img_mid_.jpg " /></p>
 								<ul class="user_info ">
 									<li>用户名：sl1903</li>
 									<li>级&nbsp;别：普通会员</li>
@@ -998,7 +998,7 @@
 
 					<div id="brand " class="item ">
 						<a href="#">
-							<span class="wdsc "><img src="${pageContext.request.contextPath}/view/images/wdsc.png " /></span>
+							<span class="wdsc "><img src="${pageContext.request.contextPath}/modern/images/wdsc.png " /></span>
 						</a>
 						<div class="mp_tooltip ">
 							我的收藏
@@ -1008,7 +1008,7 @@
 
 					<div id="broadcast " class="item ">
 						<a href="# ">
-							<span class="chongzhi "><img src="${pageContext.request.contextPath}/view/images/chongzhi.png " /></span>
+							<span class="chongzhi "><img src="${pageContext.request.contextPath}/modern/images/chongzhi.png " /></span>
 						</a>
 						<div class="mp_tooltip ">
 							我要充值
@@ -1024,7 +1024,7 @@
 						<!--二维码 -->
 						<li class="qtitem ">
 							<a href="#none "><span class="mpbtn_qrcode "></span></a>
-							<div class="mp_qrcode " style="display:none; "><img src="${pageContext.request.contextPath}/view/images/weixin_code_145.png " /><i class="icon_arrow_white "></i></div>
+							<div class="mp_qrcode " style="display:none; "><img src="${pageContext.request.contextPath}/modern/images/weixin_code_145.png " /><i class="icon_arrow_white "></i></div>
 						</li>
 						<li class="qtitem ">
 							<a href="#top " class="return_top "><span class="top "></span></a>
@@ -1103,9 +1103,9 @@
 			</div>
 		</div>
 		<script>
-			window.jQuery || document.write('<script src="view/basic/js/jquery.min.js "><\/script>');
+			window.jQuery || document.write('<script src="modern/basic/js/jquery.min.js "><\/script>');
 		</script>
-		<script type="text/javascript " src="${pageContext.request.contextPath}/view/basic/js/quick_links.js "></script>
+		<script type="text/javascript " src="${pageContext.request.contextPath}/modern/basic/js/quick_links.js "></script>
 	</body>
 
 </html>

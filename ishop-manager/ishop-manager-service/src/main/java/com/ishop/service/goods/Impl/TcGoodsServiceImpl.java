@@ -19,7 +19,7 @@ public class TcGoodsServiceImpl implements TcGoodsService{
          * @return 返回获取的商品列表
          */
         public List<TcGoods> selectList() {
-            List<TcGoods> resultList = tcGoodsMapper.selectAll();
+            List<TcGoods> resultList = tcGoodsMapper.selectList();
             return resultList;
         }
 

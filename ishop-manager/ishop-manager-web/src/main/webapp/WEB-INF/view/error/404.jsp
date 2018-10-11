@@ -23,7 +23,7 @@
 
 		position: absolute;
 
-		top: 50%;
+		top: 20%;
 
 		left: 50%;
 
@@ -32,18 +32,10 @@
 		margin-top: -200px;
 
 	}
-
-	.xydd{
-
-		color: #999;
-
-		font-family: '微软雅黑';
-
-		font-size: 20px;
-
-		text-align: center;
-
-	}
+	/*img{*/
+		/*width:200%;*/
+		/*height:200%;*/
+	/*}*/
 
 	</style>
 
@@ -53,13 +45,7 @@
 
 	<div class="xy">
 
-		<img src="${pageContext.request.contextPath}/view/images/error/404.jpg" alt="" />
-
-	</div>
-
-	<div class="xydd">
-
-		<h1>当前页面被UFO抓走了！！！</h1>
+		<img src="${pageContext.request.contextPath}/basic/images/error/404.png" alt=""/>
 
 	</div>
 

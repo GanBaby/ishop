@@ -29,9 +29,9 @@
     <!-- 第三方插件 -->
     <script src="${pageContext.request.contextPath}/admin/H+/js/plugins/pace/pace.min.js"></script>
     <!--- 时间工具插件 -->
-    <script src="${pageContext.request.contextPath}/plugins/DateUtil/moment.js"></script>
+    <script src="${pageContext.request.contextPath}/basic/js/plugins/DateUtil/moment.js"></script>
     <!--常用工具js-->
-    <script src="${pageContext.request.contextPath}/plugins/pluginsUtil.js"></script>
+    <script src="${pageContext.request.contextPath}/basic/js/plugins/pluginsUtil.js"></script>
 
 </head>
 </html>

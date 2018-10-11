@@ -28,13 +28,17 @@ new Table({
             title : '上/下架',
             align : 'center',
             formatter : function(value, row, index) {
-                console.info("row:"+row.isSale);
-                console.info("value:"+value);
-                var e = '<a href="#" mce_href="#" class="btn btn-outline btn-primary btn-xs" onclick="edit(\''
-                    + row.goodsId + '\')">上架</a> ';
-                var a = '<a href="#" mce_href="#" class="btn btn-outline btn-primary btn-xs" onclick="edit(\''
-                    + row.goodsId + '\')">下架</a> ';
-                return e + a;
+                var result='';
+                    if(row.issale==1){
+                        result += '<a href="#" mce_href="#" class="btn btn-outline btn-primary btn-xs" onclick="edit(\''
+                            + row.goodsId + '\')">上架</a> ';
+                    }else{
+                        result += '<a href="#" mce_href="#" class="btn btn-outline btn-warning btn-xs" onclick="edit(\''
+                            + row.goodsId + '\')">下架</a> ';
+                    }
+
+
+                return result;
             }
         },
         {

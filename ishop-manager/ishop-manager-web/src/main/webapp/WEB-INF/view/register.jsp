@@ -11,22 +11,22 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/view/AmazeUI-2.4.2/assets/css/amazeui.min.css" />
-    <link href="${pageContext.request.contextPath}/view/css/dlstyle.css" rel="stylesheet" type="text/css">
-    <script src="${pageContext.request.contextPath}/view/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
-    <script src="${pageContext.request.contextPath}/view/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/modern/AmazeUI-2.4.2/assets/css/amazeui.min.css" />
+    <link href="${pageContext.request.contextPath}/modern/css/dlstyle.css" rel="stylesheet" type="text/css">
+    <script src="${pageContext.request.contextPath}/modern/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/modern/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
 
 </head>
 
 <body>
 
 <div class="login-boxtitle">
-    <a href="home/demo.html"><img alt="" src="${pageContext.request.contextPath}/view/images/logobig.png" /></a>
+    <a href="home/demo.html"><img alt="" src="${pageContext.request.contextPath}/modern/images/logobig.png" /></a>
 </div>
 
 <div class="res-banner">
     <div class="res-main">
-        <div class="login-banner-bg"><span></span><img src="${pageContext.request.contextPath}/view/images/big.jpg" /></div>
+        <div class="login-banner-bg"><span></span><img src="${pageContext.request.contextPath}/modern/images/big.jpg" /></div>
         <div class="login-box">
 
             <div class="am-tabs" id="doc-my-tabs">
