@@ -1,10 +1,11 @@
+var Plugins = function(){}
+
 /**
  * bootstrap table封装插件
  * @param option 参数
  * @constructor
  */
-var Table = function(option) {
-
+Plugins.table = function(option) {
     this.tag = null==option||null==option.tag?null:option.tag;//初始化的表格标签
     this.url = null==option||option.url==""?"":option.url; //访问的地址
     this.pagination = null==option||option.pagination==null?true:option.pagination;//是否开启分页，默认是开启
@@ -54,3 +55,63 @@ var Table = function(option) {
         columns : this.columns
     });
 }
+
+
+/**
+ * toastr通知插件封装
+ * @param option 参数
+ * @constructor
+ */
+Plugins.toastr = function(option) {
+    this.status = null==option||null==option.status?"info":option.status;//消息提示样式 默认是常规，info 常规，success 成功，warning 警告，error 错误
+    this.title = null==option||null==option.title?"":option.title;//消息标题,默认为空
+    this.center = null==option||null==option.center?"":option.center;//消息内容,默认为空
+    this.closeButton = null==option||null==option.closeButton?true:option.closeButton;//是否显示关闭按钮（提示框右上角关闭按钮）默认是显示
+    this.debug = null==option||null==option.debug?false:option.debug;//是否使用debug模式 默认是不使用
+    this.newestOnTop = null==option||null==option.newestOnTop?false:option.newestOnTop;//在队列的顶部或底部显示新的Toast消息。 默认是false
+    this.progressBar = null==option||null==option.progressBar?false:option.progressBar;//是是否显示进度条（设置关闭的超时时间进度条） 默认是不显示
+    /**弹出窗的位置
+     * toast-top-left    顶端左边
+     * toast-top-right   顶端右边
+     * toast-top-center  顶端中间
+     * toast-top-full-width 顶端，宽度铺满整个屏幕
+     * toast-botton-right 底部右边
+     * toast-bottom-left  底部左边
+     * toast-bottom-center 底部中间
+     * toast-bottom-full-width 顶端，宽度铺满整个屏幕
+     **/
+    this.positionClass = null==option||null==option.positionClass?"toast-bottom-right":option.positionClass;//弹出窗的位置 默认是 toast-bottom-right;
+    this.preventDuplicates = null==option||null==option.preventDuplicates?false:option.preventDuplicates;//防止显示相同的Toast消息，为true时不会显示相同的信息,默认是false
+    this.onclick = null==option||null==option.onclick?null:option.onclick;///点击消息框自定义事件
+    this.showDuration = null==option||null==option.showDuration?"300":option.showDuration;///显示的动画时间,默认是300
+    this.hideDuration = null==option||null==option.hideDuration?"150":option.hideDuration;//消失的动画时间,默认是150
+    this.timeOut = null==option||null==option.timeOut?"0":option.timeOut;//展现时间，默认是0
+    this.extendedTimeOut = null==option||null==option.extendedTimeOut?"500":option.extendedTimeOut;//加长展示时间，默认是500
+    this.showEasing = null==option||null==option.showEasing?"swing":option.showEasing;//显示时的动画缓冲方式，默认是swing
+    this.hideEasing = null==option||null==option.hideEasing?"linear":option.hideEasing;//消失时的动画缓冲方式，默认是linear
+    this.showMethod = null==option||null==option.showMethod?"fadeIn":option.showMethod;//显示时的动画方式，默认是fadeIn
+    this.hideMethod = null==option||null==option.hideMethod?"fadeOut":option.hideMethod;//消失时的动画方式，默认是fadeOutr
+
+    toastr.options = {
+        "closeButton": this.closeButton, //是否显示关闭按钮（提示框右上角关闭按钮）
+        "debug": this.debug, //是否使用debug模式
+        "newestOnTop": this.newestOnTop, //在队列的顶部或底部显示新的Toast消息。
+        "progressBar": this.progressBar, //是否显示进度条（设置关闭的超时时间进度条）
+        "positionClass": this.positionClass, //弹出窗的位置
+        "preventDuplicates": this.preventDuplicates,  //防止显示相同的Toast消息，为true时不会显示相同的信息
+        "onclick": this.onclick,    //点击消息框自定义事件
+        "showDuration": this.showDuration, //显示的动画时间
+        "hideDuration": this.hideDuration, //消失的动画时间
+        "timeOut": this.timeOut, //展现时间
+        "extendedTimeOut": this.extendedTimeOut, //加长展示时间
+        "showEasing": this.showEasing, //显示时的动画缓冲方式
+        "hideEasing": this.hideEasing, //消失时的动画缓冲方式
+        "showMethod": this.showMethod, //显示时的动画方式
+        "hideMethod": this.hideMethod //消失时的动画方式
+    }
+
+    //弹出消息框
+    // toastr.success("祝贺你成功了");
+    toastr[this.status](this.center,this.title);
+}
+

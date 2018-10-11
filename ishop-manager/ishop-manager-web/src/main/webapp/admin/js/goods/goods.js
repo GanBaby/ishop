@@ -1,5 +1,5 @@
 var url="/goods/select";
-new Table({
+Plugins.table({
     tag:".goodsTable",
     url:url,
     columns : [
@@ -21,14 +21,18 @@ new Table({
         {
             field : 'goodsImg',
             title : '商品图片',
-            align : 'center'
+            align : 'center',
+            formatter : function(value, row, index){
+                var result = "<img src='"+$.fn.rootPath()+row.goodsImg+"' style='width:50px;height:70px;'>";
+                return result;
+            }
         },
         {
             field : 'isSale',
-            title : '上/下架',
+            title : '当前状态',
             align : 'center',
             formatter : function(value, row, index) {
-                var result='';
+                var result="";
                     if(row.issale==1){
                         result += "<a href='#' mce_href='#' class='btn btn-outline btn-primary btn-xs'"+ "onclick=\"edisGoodsSale("
                             + row.goodsId + ",0)\">上架</a> ";
@@ -54,10 +58,11 @@ new Table({
             field : 'id',
             align : 'center',
             formatter : function(value, row, index) {
-                var d = '<a href="#" mce_href="#" onclick="del(\''
+                var result="";
+                result += '<a href="#" mce_href="#" onclick="del(\''
                     + row.goodsId + '\')"><span class="glyphicon glyphicon-pencil"><pseudo:before><pseudo:before> </span></a>&nbsp;&nbsp;&nbsp;&nbsp;';
-                var f = '<a class="glyphicon glyphicon-trash" onclick="delGoods(\''+row.goodsId+'\')"></a>';
-                return d + f;
+                result += '<a class="glyphicon glyphicon-trash" onclick="delGoods(\''+row.goodsId+'\')"></a>';
+                return result;
             }
         } ]
 });
@@ -78,7 +83,7 @@ new Table({
                     alert(data.rspDesc);
                 }
             })
-        },function(){});
+        });
 
     }
 
@@ -94,8 +99,9 @@ function edisGoodsSale(goodsId,status) {
             }
             $(".goodsTable").bootstrapTable('refresh',{"url":url});
         } else {
-            alert(data.rspDesc);
+           Plugins.toastr({status:"error",center:data.rspDesc});
         }
     })
+
 }
 

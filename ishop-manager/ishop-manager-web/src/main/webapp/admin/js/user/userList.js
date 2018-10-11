@@ -1,4 +1,4 @@
-new Table({
+Plugins.table({
     tag:".userListTable",
     url:"/user/selectList",
     columns : [

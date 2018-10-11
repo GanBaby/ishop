@@ -4,8 +4,6 @@
 
 
 <head>
-<!-- bootstrap表格css -->
-<link href="${pageContext.request.contextPath}/admin/H+/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
@@ -37,11 +35,6 @@
 
 <!-- 动态引入全局js与css -->
 <jsp:include page="${pageContext.request.contextPath}/admin/view/main/admin_main.jsp" flush="true"/>
-<!-- bootstrap表格js -->
-<script src="${pageContext.request.contextPath}/admin/H+/js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
-<script src="${pageContext.request.contextPath}/admin/H+/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
-<script src="${pageContext.request.contextPath}/admin/H+/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
-
 <!--页面的js文件-->
 <script src="${pageContext.request.contextPath}/admin/js/user/userList.js"></script>
 
