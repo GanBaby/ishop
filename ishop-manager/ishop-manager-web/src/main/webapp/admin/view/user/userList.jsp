@@ -5,9 +5,7 @@
 
 <head>
 <!-- bootstrap表格css -->
-<link href="${pageContext.request.contextPath}/admin/H+/css/plugins/bootstrap-table/bootstrap-table.min.css"
-
-      rel="stylesheet">
+<link href="${pageContext.request.contextPath}/admin/H+/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">

@@ -52,6 +52,8 @@
 <script src="${pageContext.request.contextPath}/admin/H+/js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
 <script src="${pageContext.request.contextPath}/admin/H+/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
 <script src="${pageContext.request.contextPath}/admin/H+/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<!-- layer javascript -->
+<script src="${pageContext.request.contextPath}/admin/H+/js/plugins/layer/layer.min.js"></script>
 
 <!--页面的js文件-->
 <script src="${pageContext.request.contextPath}/admin/js/goods/goods.js"></script>

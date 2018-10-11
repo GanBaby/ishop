@@ -30,7 +30,7 @@ public class modernPageController extends BaseController {
         List<Map<String, Object>> dataList = pageService.getIndexData();
         HttpServletRequest request = getRequest();
         request.setAttribute("dataList",dataList);
-        return "index";
+        return "modern/index";
     }
 
     /**

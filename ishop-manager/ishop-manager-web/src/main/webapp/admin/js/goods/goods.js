@@ -36,8 +36,6 @@ new Table({
                         result += '<a href="#" mce_href="#" class="btn btn-outline btn-warning btn-xs" onclick="edit(\''
                             + row.goodsId + '\')">下架</a> ';
                     }
-
-
                 return result;
             }
         },
@@ -67,14 +65,20 @@ new Table({
 
 //删除商品的方法
     function delGoods(goodsId){
-        $.post("/goods/delete",{goodsId:goodsId},function(data){
-            if(data.rspCode=='success'){
-                alert(data.rspDesc);
-                $(".goodsTable").bootstrapTable('refresh',{"url":url});
-            }else{
-                alert(data.rspDesc);
-            }
-        })
+        //询问框
+        parent.layer.confirm('您确定要删除这个商品吗?',{
+            btn:['确定','取消'],//按钮
+            shade:false //不显示遮罩
+        },function(){
+            $.post("/goods/delete",{goodsId:goodsId},function(data){
+                if(data.rspCode=='success'){
+                    parent.layer.msg(data.rspDesc);
+                    $(".goodsTable").bootstrapTable('refresh',{"url":url});
+                }else{
+                    alert(data.rspDesc);
+                }
+            })
+        },function(){});
 
     }
 
