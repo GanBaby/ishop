@@ -38,7 +38,7 @@
     </bean>
 
     <!-- 让spring管理sqlsessionfactory 使用mybatis和spring整合包中的 -->
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" 
           p:dataSource-ref="dataSource"
           p:mapperLocations="classpath:mapper/*.xml">
         <!-- 数据库连接池 -->
