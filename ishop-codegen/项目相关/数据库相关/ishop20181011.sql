@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2018-10-10 16:26:37
+Date: 2018-10-11 10:51:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,61 +34,6 @@ CREATE TABLE `tc_accreds` (
 -- ----------------------------
 INSERT INTO `tc_accreds` VALUES ('1', '消保认证商家', 'upload/accreds/2016-09/57edd7551cf4a.png', '1', '2016-06-01 10:41:48');
 INSERT INTO `tc_accreds` VALUES ('2', '七天无条件退款', 'upload/accreds/2016-09/57edd7428f5e1.png', '1', '2016-06-01 10:42:22');
-
--- ----------------------------
--- Table structure for tc_ad_positions
--- ----------------------------
-DROP TABLE IF EXISTS `tc_ad_positions`;
-CREATE TABLE `tc_ad_positions` (
-  `positionId` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
-  `positionType` tinyint(4) NOT NULL DEFAULT '0' COMMENT '广告类型	1：PC版',
-  `positionName` varchar(100) NOT NULL COMMENT '广告位置名称',
-  `positionWidth` int(11) NOT NULL DEFAULT '0' COMMENT '建议宽度',
-  `positionHeight` int(11) NOT NULL DEFAULT '0' COMMENT '建议高度',
-  `dataFlag` tinyint(4) NOT NULL DEFAULT '1' COMMENT '广告位置代码',
-  `positionCode` varchar(20) DEFAULT NULL COMMENT '有效状态	1:有效 -1:无效',
-  `apSort` int(11) NOT NULL COMMENT '排序号',
-  PRIMARY KEY (`positionId`),
-  KEY `dataFlag` (`positionType`) USING BTREE,
-  KEY `positionCode` (`positionCode`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COMMENT='广告位置表';
-
--- ----------------------------
--- Records of tc_ad_positions
--- ----------------------------
-INSERT INTO `tc_ad_positions` VALUES ('4', '1', '首页分层1F顶部广告', '1200', '120', '1', 'ads-1-1', '0');
-INSERT INTO `tc_ad_positions` VALUES ('5', '1', '首页分层1F左侧广告', '240', '338', '1', 'ads-1-2', '0');
-INSERT INTO `tc_ad_positions` VALUES ('6', '1', '首页分层1F右侧广告', '480', '310', '1', 'ads-1-3', '0');
-INSERT INTO `tc_ad_positions` VALUES ('7', '1', '首页分层2F顶部广告', '1200', '120', '1', 'ads-2-1', '0');
-INSERT INTO `tc_ad_positions` VALUES ('8', '1', '首页分层2F左侧广告', '240', '338', '1', 'ads-2-2', '0');
-INSERT INTO `tc_ad_positions` VALUES ('9', '1', '首页分层2F右侧广告', '480', '310', '1', 'ads-2-3', '0');
-INSERT INTO `tc_ad_positions` VALUES ('10', '1', '首页分层3F顶部广告', '1200', '120', '1', 'ads-3-1', '0');
-INSERT INTO `tc_ad_positions` VALUES ('11', '1', '首页分层3F左侧广告', '240', '338', '1', 'ads-3-2', '0');
-INSERT INTO `tc_ad_positions` VALUES ('12', '1', '首页分层3F右侧广告', '480', '310', '1', 'ads-3-3', '0');
-INSERT INTO `tc_ad_positions` VALUES ('13', '1', '首页分层4F顶部广告', '1200', '120', '1', 'ads-4-1', '0');
-INSERT INTO `tc_ad_positions` VALUES ('14', '1', '首页分层4F左侧广告', '240', '338', '1', 'ads-4-2', '0');
-INSERT INTO `tc_ad_positions` VALUES ('15', '1', '首页分层4F右侧广告', '480', '310', '1', 'ads-4-3', '0');
-INSERT INTO `tc_ad_positions` VALUES ('16', '1', '首页分层5F顶部广告', '1200', '120', '1', 'ads-5-1', '0');
-INSERT INTO `tc_ad_positions` VALUES ('17', '1', '首页分层5F左侧广告', '240', '338', '1', 'ads-5-2', '0');
-INSERT INTO `tc_ad_positions` VALUES ('18', '1', '首页分层5F右侧广告', '480', '310', '1', 'ads-5-3', '0');
-INSERT INTO `tc_ad_positions` VALUES ('19', '1', '首页分层6F顶部广告', '1200', '120', '1', 'ads-6-1', '0');
-INSERT INTO `tc_ad_positions` VALUES ('20', '1', '首页分层6F左侧广告', '240', '338', '1', 'ads-6-2', '0');
-INSERT INTO `tc_ad_positions` VALUES ('21', '1', '首页分层6F右侧广告', '480', '310', '1', 'ads-6-3', '0');
-INSERT INTO `tc_ad_positions` VALUES ('22', '1', '首页分层7F顶部广告', '1200', '120', '1', 'ads-7-1', '0');
-INSERT INTO `tc_ad_positions` VALUES ('23', '1', '首页分层7F左侧广告', '240', '338', '1', 'ads-7-2', '0');
-INSERT INTO `tc_ad_positions` VALUES ('24', '1', '首页分层7F右侧广告', '480', '310', '1', 'ads-7-3', '0');
-INSERT INTO `tc_ad_positions` VALUES ('25', '1', '首页分层8F顶部广告', '1200', '120', '1', 'ads-8-1', '0');
-INSERT INTO `tc_ad_positions` VALUES ('26', '1', '首页分层8F左侧广告', '240', '338', '1', 'ads-8-2', '0');
-INSERT INTO `tc_ad_positions` VALUES ('27', '1', '首页分层8F右侧广告', '480', '310', '1', 'ads-8-3', '0');
-INSERT INTO `tc_ad_positions` VALUES ('28', '1', '首页分层9F顶部广告', '1200', '120', '1', 'ads-9-1', '0');
-INSERT INTO `tc_ad_positions` VALUES ('29', '1', '首页分层9F左侧广告', '240', '338', '1', 'ads-9-2', '0');
-INSERT INTO `tc_ad_positions` VALUES ('30', '1', '首页分层9F右侧广告', '480', '310', '1', 'ads-9-3', '0');
-INSERT INTO `tc_ad_positions` VALUES ('31', '1', '首页分层10F顶部广告', '1200', '120', '1', 'ads-10-1', '0');
-INSERT INTO `tc_ad_positions` VALUES ('32', '1', '首页分层10F左侧广告', '240', '338', '1', 'ads-10-2', '0');
-INSERT INTO `tc_ad_positions` VALUES ('33', '1', '首页分层10F右侧广告', '480', '310', '1', 'ads-10-3', '0');
-INSERT INTO `tc_ad_positions` VALUES ('34', '1', '首页轮播广告', '1920', '420', '1', 'ads-index', '99');
-INSERT INTO `tc_ad_positions` VALUES ('35', '1', '首页顶部广告', '1200', '100', '1', 'index-top-ads', '100');
-INSERT INTO `tc_ad_positions` VALUES ('36', '1', '首页资讯下方广告', '210', '68', '1', 'index-art-bottom', '1');
 
 -- ----------------------------
 -- Table structure for tc_ads
@@ -171,6 +116,61 @@ INSERT INTO `tc_ads` VALUES ('67', '21', 'upload/adspic/2016-10/57fc66d54a25c.jp
 INSERT INTO `tc_ads` VALUES ('68', '21', 'upload/adspic/2016-10/57fc66f0e2c75.jpg', '6F右侧广告2', '', '2016-10-11', '2028-10-19', '621', '0', '1', '1', '2016-10-11 12:13:55');
 INSERT INTO `tc_ads` VALUES ('69', '21', 'upload/adspic/2016-10/57fc671fa9a19.jpg', '6F右侧广告3', '', '2016-10-11', '2026-10-11', '622', '0', '1', '1', '2016-10-11 12:14:29');
 INSERT INTO `tc_ads` VALUES ('70', '21', 'upload/adspic/2016-10/57fc67352f983.jpg', '6F右侧广告4', '', '2016-10-11', '2026-10-11', '623', '0', '1', '1', '2016-10-11 12:14:53');
+
+-- ----------------------------
+-- Table structure for tc_ad_positions
+-- ----------------------------
+DROP TABLE IF EXISTS `tc_ad_positions`;
+CREATE TABLE `tc_ad_positions` (
+  `positionId` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `positionType` tinyint(4) NOT NULL DEFAULT '0' COMMENT '广告类型	1：PC版',
+  `positionName` varchar(100) NOT NULL COMMENT '广告位置名称',
+  `positionWidth` int(11) NOT NULL DEFAULT '0' COMMENT '建议宽度',
+  `positionHeight` int(11) NOT NULL DEFAULT '0' COMMENT '建议高度',
+  `dataFlag` tinyint(4) NOT NULL DEFAULT '1' COMMENT '广告位置代码',
+  `positionCode` varchar(20) DEFAULT NULL COMMENT '有效状态	1:有效 -1:无效',
+  `apSort` int(11) NOT NULL COMMENT '排序号',
+  PRIMARY KEY (`positionId`),
+  KEY `dataFlag` (`positionType`) USING BTREE,
+  KEY `positionCode` (`positionCode`)
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COMMENT='广告位置表';
+
+-- ----------------------------
+-- Records of tc_ad_positions
+-- ----------------------------
+INSERT INTO `tc_ad_positions` VALUES ('4', '1', '首页分层1F顶部广告', '1200', '120', '1', 'ads-1-1', '0');
+INSERT INTO `tc_ad_positions` VALUES ('5', '1', '首页分层1F左侧广告', '240', '338', '1', 'ads-1-2', '0');
+INSERT INTO `tc_ad_positions` VALUES ('6', '1', '首页分层1F右侧广告', '480', '310', '1', 'ads-1-3', '0');
+INSERT INTO `tc_ad_positions` VALUES ('7', '1', '首页分层2F顶部广告', '1200', '120', '1', 'ads-2-1', '0');
+INSERT INTO `tc_ad_positions` VALUES ('8', '1', '首页分层2F左侧广告', '240', '338', '1', 'ads-2-2', '0');
+INSERT INTO `tc_ad_positions` VALUES ('9', '1', '首页分层2F右侧广告', '480', '310', '1', 'ads-2-3', '0');
+INSERT INTO `tc_ad_positions` VALUES ('10', '1', '首页分层3F顶部广告', '1200', '120', '1', 'ads-3-1', '0');
+INSERT INTO `tc_ad_positions` VALUES ('11', '1', '首页分层3F左侧广告', '240', '338', '1', 'ads-3-2', '0');
+INSERT INTO `tc_ad_positions` VALUES ('12', '1', '首页分层3F右侧广告', '480', '310', '1', 'ads-3-3', '0');
+INSERT INTO `tc_ad_positions` VALUES ('13', '1', '首页分层4F顶部广告', '1200', '120', '1', 'ads-4-1', '0');
+INSERT INTO `tc_ad_positions` VALUES ('14', '1', '首页分层4F左侧广告', '240', '338', '1', 'ads-4-2', '0');
+INSERT INTO `tc_ad_positions` VALUES ('15', '1', '首页分层4F右侧广告', '480', '310', '1', 'ads-4-3', '0');
+INSERT INTO `tc_ad_positions` VALUES ('16', '1', '首页分层5F顶部广告', '1200', '120', '1', 'ads-5-1', '0');
+INSERT INTO `tc_ad_positions` VALUES ('17', '1', '首页分层5F左侧广告', '240', '338', '1', 'ads-5-2', '0');
+INSERT INTO `tc_ad_positions` VALUES ('18', '1', '首页分层5F右侧广告', '480', '310', '1', 'ads-5-3', '0');
+INSERT INTO `tc_ad_positions` VALUES ('19', '1', '首页分层6F顶部广告', '1200', '120', '1', 'ads-6-1', '0');
+INSERT INTO `tc_ad_positions` VALUES ('20', '1', '首页分层6F左侧广告', '240', '338', '1', 'ads-6-2', '0');
+INSERT INTO `tc_ad_positions` VALUES ('21', '1', '首页分层6F右侧广告', '480', '310', '1', 'ads-6-3', '0');
+INSERT INTO `tc_ad_positions` VALUES ('22', '1', '首页分层7F顶部广告', '1200', '120', '1', 'ads-7-1', '0');
+INSERT INTO `tc_ad_positions` VALUES ('23', '1', '首页分层7F左侧广告', '240', '338', '1', 'ads-7-2', '0');
+INSERT INTO `tc_ad_positions` VALUES ('24', '1', '首页分层7F右侧广告', '480', '310', '1', 'ads-7-3', '0');
+INSERT INTO `tc_ad_positions` VALUES ('25', '1', '首页分层8F顶部广告', '1200', '120', '1', 'ads-8-1', '0');
+INSERT INTO `tc_ad_positions` VALUES ('26', '1', '首页分层8F左侧广告', '240', '338', '1', 'ads-8-2', '0');
+INSERT INTO `tc_ad_positions` VALUES ('27', '1', '首页分层8F右侧广告', '480', '310', '1', 'ads-8-3', '0');
+INSERT INTO `tc_ad_positions` VALUES ('28', '1', '首页分层9F顶部广告', '1200', '120', '1', 'ads-9-1', '0');
+INSERT INTO `tc_ad_positions` VALUES ('29', '1', '首页分层9F左侧广告', '240', '338', '1', 'ads-9-2', '0');
+INSERT INTO `tc_ad_positions` VALUES ('30', '1', '首页分层9F右侧广告', '480', '310', '1', 'ads-9-3', '0');
+INSERT INTO `tc_ad_positions` VALUES ('31', '1', '首页分层10F顶部广告', '1200', '120', '1', 'ads-10-1', '0');
+INSERT INTO `tc_ad_positions` VALUES ('32', '1', '首页分层10F左侧广告', '240', '338', '1', 'ads-10-2', '0');
+INSERT INTO `tc_ad_positions` VALUES ('33', '1', '首页分层10F右侧广告', '480', '310', '1', 'ads-10-3', '0');
+INSERT INTO `tc_ad_positions` VALUES ('34', '1', '首页轮播广告', '1920', '420', '1', 'ads-index', '99');
+INSERT INTO `tc_ad_positions` VALUES ('35', '1', '首页顶部广告', '1200', '100', '1', 'index-top-ads', '100');
+INSERT INTO `tc_ad_positions` VALUES ('36', '1', '首页资讯下方广告', '210', '68', '1', 'index-art-bottom', '1');
 
 -- ----------------------------
 -- Table structure for tc_areas
@@ -3836,37 +3836,6 @@ INSERT INTO `tc_areas` VALUES ('820300', '820000', '路环岛', '0', '0', 'L', '
 INSERT INTO `tc_areas` VALUES ('820301', '820300', '圣方济各堂区 ', '0', '0', '', '2', '1', null);
 
 -- ----------------------------
--- Table structure for tc_article_cats
--- ----------------------------
-DROP TABLE IF EXISTS `tc_article_cats`;
-CREATE TABLE `tc_article_cats` (
-  `catId` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
-  `parentId` int(11) NOT NULL DEFAULT '0' COMMENT '父ID',
-  `catType` tinyint(4) NOT NULL DEFAULT '0' COMMENT '分类类型	0:普通类型 1:系统菜单',
-  `isShow` tinyint(4) NOT NULL DEFAULT '1' COMMENT '是否显示	0:隐藏 1:显示',
-  `catName` varchar(20) NOT NULL COMMENT '分类名称',
-  `catSort` int(11) NOT NULL DEFAULT '0' COMMENT '排序号',
-  `dataFlag` tinyint(4) NOT NULL DEFAULT '1' COMMENT '删除标志	-1:删除 1:有效',
-  `createTime` datetime NOT NULL COMMENT '创建时间',
-  PRIMARY KEY (`catId`),
-  KEY `isShow` (`catType`,`dataFlag`,`isShow`) USING BTREE,
-  KEY `parentId` (`dataFlag`,`parentId`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='文章分类表';
-
--- ----------------------------
--- Records of tc_article_cats
--- ----------------------------
-INSERT INTO `tc_article_cats` VALUES ('1', '7', '1', '1', '支付方式', '2', '1', '2016-08-16 00:09:50');
-INSERT INTO `tc_article_cats` VALUES ('5', '7', '1', '1', '购物指南', '0', '1', '2016-08-25 09:45:45');
-INSERT INTO `tc_article_cats` VALUES ('6', '7', '1', '1', '商城快讯', '5', '1', '2016-09-06 15:21:09');
-INSERT INTO `tc_article_cats` VALUES ('7', '0', '1', '1', '帮助中心', '6', '1', '2016-09-06 15:21:24');
-INSERT INTO `tc_article_cats` VALUES ('8', '0', '0', '1', '商城快讯', '4', '1', '2016-09-06 15:21:51');
-INSERT INTO `tc_article_cats` VALUES ('9', '7', '1', '1', '售后服务', '1', '1', '2016-09-06 15:22:00');
-INSERT INTO `tc_article_cats` VALUES ('10', '7', '1', '1', '商务合作', '3', '1', '2016-09-06 15:24:35');
-INSERT INTO `tc_article_cats` VALUES ('11', '8', '0', '1', '商城公告', '0', '1', '2016-09-26 23:04:18');
-INSERT INTO `tc_article_cats` VALUES ('12', '8', '0', '1', '促销信息', '0', '1', '2016-09-26 23:04:25');
-
--- ----------------------------
 -- Table structure for tc_articles
 -- ----------------------------
 DROP TABLE IF EXISTS `tc_articles`;
@@ -3922,6 +3891,37 @@ INSERT INTO `tc_articles` VALUES ('30', '6', '配送费用说明', '1', '<p>\n	<
 INSERT INTO `tc_articles` VALUES ('31', '6', '入驻商家配送说明', '1', '<p>\n	<span style=\"font-size:16px;line-height:24px;\">wstmart入驻商家使用自行联系的第三方配送</span>\n</p>\n<p>\n	<br />\n</p>\n<p>\n	<br />\n</p>\n<p>\n	<br />\n</p>\n<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n	<span style=\"font-size:16px;\">详询</span> \n</p>\n<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n	<span style=\"font-size:16px;\">客服QQ：153289970</span> \n</p>\n<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n	<span style=\"font-size:16px;\">用户QQ群：590755485</span> \n</p>\n<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n	<span style=\"font-size:16px;\"><br />\n</span> \n</p>\n<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n	<span style=\"font-size:16px;\">联系我们</span> \n</p>\n<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n	<span style=\"font-size:16px;\"><a href=\"http://www.wstmart.net/\" target=\"_blank\">http://www.wstmart.net</a></span> \n</p>\n<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n	<span style=\"font-size:16px;\"><a href=\"http://bbs.wstmart.com/\" target=\"_blank\">http://bbs.shangtaosoft.com</a></span> \n</p>\n<p>\n	<br />\n</p>', 'wstmart配送', '1', '1', '2016-10-20 10:57:50', '0', '0');
 INSERT INTO `tc_articles` VALUES ('32', '5', '优惠政策', '1', '<p>\n	<span style=\"font-size:18px;\">购物享乐趣</span>\n</p>\n<p>\n	<br />\n</p>\n<p>\n	<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n		<span style=\"font-size:18px;\">详询</span>\n	</p>\n	<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n		<span style=\"font-size:16px;\">客服QQ：153289970</span>\n	</p>\n	<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n		<span style=\"font-size:16px;\">用户QQ群：590755485</span>\n	</p>\n	<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n		<span style=\"font-size:16px;\"><br />\n</span>\n	</p>\n	<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n		<span style=\"font-size:16px;\">联系我们</span>\n	</p>\n	<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n		<span style=\"font-size:16px;\"><a href=\"http://www.wstmart.net/\" target=\"_blank\">http://www.wstmart.net</a></span>\n	</p>\n	<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n		<span style=\"font-size:16px;\"><a href=\"http://bbs.wstmart.com/\" target=\"_blank\">http://bbs.shangtaosoft.com</a></span>\n	</p>\n</p>', 'wstmart', '1', '1', '2016-10-20 11:12:25', '0', '0');
 INSERT INTO `tc_articles` VALUES ('33', '5', '发票制度', '1', '<p>\n	<strong><span style=\"font-size:14px;\">一、 发票开具</span></strong>\n</p>\n<p>\n	<span style=\"font-size:14px;\">1、所有商品发票均由所属销售商家负责开具，且所有开具的发票均为合法有效。</span>\n</p>\n<p>\n	<span style=\"font-size:14px;\">2、顾客在结算过程中可以选择是否开具发票，商家会按照顾客的选择为顾客开具发票。</span>\n</p>\n<p>\n	<span style=\"font-size:14px;\">3、所有商品仅按顾客实付现金金额开具发票，不包括抵用券、返利金额、礼品卡等金额部分。</span>\n</p>\n<p>\n	<span style=\"font-size:14px;\">4、若顾客订购的是数码、手机、电脑、家电类商品，为了保证顾客能充分享受生产厂家提供的售后服务，无论顾客是否选择开具发票，商家均会随单为顾客开具普通发票，发票内容默认为顾客订购的商品全称和型号，且不支持发票内容修改，如给顾客带来不便，敬请谅解；如需将普通发票换开为增值税专用发票（电子发票不支持换开），则必须退回普通发票原件。</span>\n</p>\n<p>\n	<span style=\"font-size:14px;\">5、若顾客选择预付卡或积分方式进行支付，则对于该部分支付金额，顾客仅可选择开具0元发票。</span>\n</p>\n<p>\n	<strong><span style=\"font-size:14px;\">二、普通发票</span></strong>\n</p>\n<p>\n	<span style=\"font-size:14px;\">1.发票抬头：</span>\n</p>\n<p class=\"txt_indent\" style=\"text-indent:2em;\">\n	<span style=\"font-size:14px;\">（1）发票抬头不能为空；</span>\n</p>\n<p class=\"txt_indent\" style=\"text-indent:2em;\">\n	<span style=\"font-size:14px;\">（2）您可填写：\"个人\"、您的姓名、或您的单位名称</span>\n</p>\n<p class=\"txt_indent\" style=\"text-indent:2em;\">\n	<span style=\"font-size:14px;\">（3）由于税务局提供的开票软件字数限制（最多40个字）剩余字数会和纳税人识别号重叠而无法显示，请索要普票时抬头字数不要超过40个</span>\n</p>\n<p>\n	<span style=\"font-size:14px;\">2.发票内容：</span>\n</p>\n<p class=\"txt_indent\" style=\"text-indent:2em;\">\n	<span style=\"font-size:14px;\">（1）1号店自营：可开具的发票内容：酒、饮料、食品、玩具、日用品、装修材料、化妆品、办公用品、学生用品、家居用品、饰品、服装、箱包、精品、家电、劳防用品。您可根据需要选择。</span>\n</p>\n<p class=\"txt_indent\" style=\"text-indent:2em;\">\n	<span style=\"font-size:14px;\">（2）入驻商家：发票内容将开具您所订商品的明细。</span>\n</p>\n<p>\n	<span style=\"font-size:14px;\">3. 如果您在收到货物时请检查发票，并在送货签收单上签字，一旦签字即代表您已收到发票，并且发票无误。对于顾客人为因素引起的发票遗失，我们无法为您补开发票。</span>\n</p>\n<p class=\"txt_indent\" style=\"text-indent:2em;\">\n	<span style=\"font-size:14px;\">请在提交订单页面，在\"索取发票\"前打钩，按提示填写发票抬头、选择发票内容，发票将会随您的订单商品一起送达：</span>\n</p>\n<p class=\"txt_indent\" style=\"text-indent:2em;\">\n	<span style=\"font-size:14px;\"><br />\n</span>\n</p>\n<p class=\"txt_indent\" style=\"text-indent:2em;\">\n	<span style=\"font-size:14px;\">\n	<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n		<span style=\"font-size:16px;\">详询</span>\n	</p>\n	<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n		<span style=\"font-size:16px;\">客服QQ：153289970</span>\n	</p>\n	<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n		<span style=\"font-size:16px;\">用户QQ群：590755485</span>\n	</p>\n	<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n		<span style=\"font-size:16px;\"><br />\n</span>\n	</p>\n	<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n		<span style=\"font-size:16px;\">联系我们</span>\n	</p>\n	<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n		<span style=\"font-size:16px;\"><a href=\"http://www.wstmart.net/\" target=\"_blank\">http://www.wstmart.net</a></span>\n	</p>\n	<p style=\"font-size:13px;color:#666666;font-family:\'microsoft yahei\';text-indent:7px;background-color:#FFFFFF;\">\n		<span style=\"font-size:16px;\"><a href=\"http://bbs.wstmart.com/\" target=\"_blank\">http://bbs.shangtaosoft.com</a></span>\n	</p>\n<br />\n</span>\n</p>', '发票', '1', '1', '2016-10-20 11:16:00', '0', '0');
+
+-- ----------------------------
+-- Table structure for tc_article_cats
+-- ----------------------------
+DROP TABLE IF EXISTS `tc_article_cats`;
+CREATE TABLE `tc_article_cats` (
+  `catId` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `parentId` int(11) NOT NULL DEFAULT '0' COMMENT '父ID',
+  `catType` tinyint(4) NOT NULL DEFAULT '0' COMMENT '分类类型	0:普通类型 1:系统菜单',
+  `isShow` tinyint(4) NOT NULL DEFAULT '1' COMMENT '是否显示	0:隐藏 1:显示',
+  `catName` varchar(20) NOT NULL COMMENT '分类名称',
+  `catSort` int(11) NOT NULL DEFAULT '0' COMMENT '排序号',
+  `dataFlag` tinyint(4) NOT NULL DEFAULT '1' COMMENT '删除标志	-1:删除 1:有效',
+  `createTime` datetime NOT NULL COMMENT '创建时间',
+  PRIMARY KEY (`catId`),
+  KEY `isShow` (`catType`,`dataFlag`,`isShow`) USING BTREE,
+  KEY `parentId` (`dataFlag`,`parentId`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='文章分类表';
+
+-- ----------------------------
+-- Records of tc_article_cats
+-- ----------------------------
+INSERT INTO `tc_article_cats` VALUES ('1', '7', '1', '1', '支付方式', '2', '1', '2016-08-16 00:09:50');
+INSERT INTO `tc_article_cats` VALUES ('5', '7', '1', '1', '购物指南', '0', '1', '2016-08-25 09:45:45');
+INSERT INTO `tc_article_cats` VALUES ('6', '7', '1', '1', '商城快讯', '5', '1', '2016-09-06 15:21:09');
+INSERT INTO `tc_article_cats` VALUES ('7', '0', '1', '1', '帮助中心', '6', '1', '2016-09-06 15:21:24');
+INSERT INTO `tc_article_cats` VALUES ('8', '0', '0', '1', '商城快讯', '4', '1', '2016-09-06 15:21:51');
+INSERT INTO `tc_article_cats` VALUES ('9', '7', '1', '1', '售后服务', '1', '1', '2016-09-06 15:22:00');
+INSERT INTO `tc_article_cats` VALUES ('10', '7', '1', '1', '商务合作', '3', '1', '2016-09-06 15:24:35');
+INSERT INTO `tc_article_cats` VALUES ('11', '8', '0', '1', '商城公告', '0', '1', '2016-09-26 23:04:18');
+INSERT INTO `tc_article_cats` VALUES ('12', '8', '0', '1', '促销信息', '0', '1', '2016-09-26 23:04:25');
 
 -- ----------------------------
 -- Table structure for tc_attributes
@@ -4138,25 +4138,6 @@ INSERT INTO `tc_cat_shops` VALUES ('59', '1', '335');
 INSERT INTO `tc_cat_shops` VALUES ('60', '1', '56');
 
 -- ----------------------------
--- Table structure for tc_data_cats
--- ----------------------------
-DROP TABLE IF EXISTS `tc_data_cats`;
-CREATE TABLE `tc_data_cats` (
-  `catId` int(11) NOT NULL AUTO_INCREMENT,
-  `catName` varchar(255) NOT NULL COMMENT '数据分类名称',
-  PRIMARY KEY (`catId`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='基础数据分类表';
-
--- ----------------------------
--- Records of tc_data_cats
--- ----------------------------
-INSERT INTO `tc_data_cats` VALUES ('1', '订单取消原因');
-INSERT INTO `tc_data_cats` VALUES ('2', '订单投诉原因');
-INSERT INTO `tc_data_cats` VALUES ('3', '上传目录列表');
-INSERT INTO `tc_data_cats` VALUES ('4', '申请退款原因');
-INSERT INTO `tc_data_cats` VALUES ('5', '广告类型');
-
--- ----------------------------
 -- Table structure for tc_datas
 -- ----------------------------
 DROP TABLE IF EXISTS `tc_datas`;
@@ -4205,6 +4186,25 @@ INSERT INTO `tc_datas` VALUES ('29', '4', '快递/物流一直未送达', '5', '
 INSERT INTO `tc_datas` VALUES ('30', '4', '快递/物流无跟踪记录', '6', '0');
 INSERT INTO `tc_datas` VALUES ('31', '4', '其他', '10000', '0');
 INSERT INTO `tc_datas` VALUES ('32', '5', 'PC版', '1', '0');
+
+-- ----------------------------
+-- Table structure for tc_data_cats
+-- ----------------------------
+DROP TABLE IF EXISTS `tc_data_cats`;
+CREATE TABLE `tc_data_cats` (
+  `catId` int(11) NOT NULL AUTO_INCREMENT,
+  `catName` varchar(255) NOT NULL COMMENT '数据分类名称',
+  PRIMARY KEY (`catId`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='基础数据分类表';
+
+-- ----------------------------
+-- Records of tc_data_cats
+-- ----------------------------
+INSERT INTO `tc_data_cats` VALUES ('1', '订单取消原因');
+INSERT INTO `tc_data_cats` VALUES ('2', '订单投诉原因');
+INSERT INTO `tc_data_cats` VALUES ('3', '上传目录列表');
+INSERT INTO `tc_data_cats` VALUES ('4', '申请退款原因');
+INSERT INTO `tc_data_cats` VALUES ('5', '广告类型');
 
 -- ----------------------------
 -- Table structure for tc_express
@@ -4351,6 +4351,20 @@ INSERT INTO `tc_goods` VALUES ('27', '', '', '长白山鲜人参林下参东北�
 INSERT INTO `tc_goods` VALUES ('28', '', '', '青海正宗黑枸杞 野生黑枸杞 特优 500g/瓶', 'view/images/20181008/27.jpg', null, '370.00', '365.00', null, '150', '罐', '', '1', '0', '0', '0', '1', '7_32_319_', '319', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
 INSERT INTO `tc_goods` VALUES ('29', '', '', '马来西亚燕窝 初盏三角燕窝正品', 'view/images/20181008/28.jpg', null, '6.00', '5.00', null, '300', '克', '', '1', '0', '0', '0', '1', '7_33_328_', '328', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
 INSERT INTO `tc_goods` VALUES ('30', '', '', '新鲜鹿茸整枝二杠头茬长白山梅花鹿足干壮腰强肾泡酒包邮', 'view/images/20181008/29.jpg', null, '9.00', '8.50', null, '223', '克', '', '1', '0', '0', '0', '1', '7_34_340_', '340', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
+INSERT INTO `tc_goods` VALUES ('31', '', '', '一串香蕉', 'view/images/20181008/30.jpg', null, '9.00', '8.50', null, '223', '斤', '', '1', '0', '0', '0', '1', '1_8_43_', '43', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
+INSERT INTO `tc_goods` VALUES ('32', '', '', '寻乌蜜橘 2.5kg 新鲜水果', 'view/images/20181008/31.jpg', null, '9.00', '8.50', null, '223', '斤', '', '1', '0', '0', '0', '1', '1_8_40_', '40', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
+INSERT INTO `tc_goods` VALUES ('33', '', '', '水晶皮蛋9枚装 无铅溏心', 'view/images/20181008/32.jpg', null, '25.00', '24.00', null, '223', '件', '', '1', '0', '0', '0', '1', '2_10_85_', '85', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
+INSERT INTO `tc_goods` VALUES ('34', '', '', '北纬66度进口帝王蟹2.8~3.2斤海鲜水产鲜活熟冻皇帝螃蟹雪蟹包', 'view/images/20181008/33.jpg', null, '250.00', '208.00', null, '403', '件', '', '1', '0', '0', '0', '1', '2_11_91_', '91', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
+INSERT INTO `tc_goods` VALUES ('35', '', '', '牛肉味兰花豆200g 休闲炒货', 'view/images/20181008/34.jpg', null, '10.00', '9.90', null, '350', '件', '', '1', '0', '0', '0', '1', '3_12_111_', '111', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
+INSERT INTO `tc_goods` VALUES ('36', '', '', '涨潮-风琴鱿鱼-烤手撕鱿鱼丝120g', 'view/images/20181008/35.jpg', null, '15.00', '11.00', null, '350', '克', '', '1', '0', '0', '0', '1', '3_14_140_', '140', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
+INSERT INTO `tc_goods` VALUES ('37', '', '', '新果50℃冷榨冷炼孕妇系列核桃油', 'view/images/20181008/36.jpg', null, '200.00', '188.00', null, '200', '瓶', '', '1', '0', '0', '0', '1', '4_17_174_', '174', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
+INSERT INTO `tc_goods` VALUES ('38', '', '', '糙米500g 全胚芽玄米活米', 'view/images/20181008/37.jpg', null, '4.00', '3.60', null, '350', '件', '', '1', '0', '0', '0', '1', '4_18_184_', '184', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
+INSERT INTO `tc_goods` VALUES ('39', '', '', '杨氏养生茶—六味强根茶', 'view/images/20181008/38.png', null, '430.00', '420.00', null, '150', '件', '', '1', '0', '0', '0', '1', '5_21_228_', '228', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
+INSERT INTO `tc_goods` VALUES ('40', '', '', '内蒙古特产奶酪乳醇香醇香奶干乳制品手工奶酪条', 'view/images/20181008/39.jpg', null, '10.00', '9.80', null, '200', '件', '', '1', '0', '0', '0', '1', '5_23_253_', '253', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
+INSERT INTO `tc_goods` VALUES ('41', '', '', '西凤酒国脉52度棉柔凤香型白酒500ml', 'view/images/20181008/40.jpg', null, '400.00', '398.00', null, '500', '盒', '', '1', '0', '0', '0', '1', '6_24_262_', '262', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
+INSERT INTO `tc_goods` VALUES ('42', '', '', '红酒 艾伍德酒庄-赤霞珠、梅洛干红葡萄酒', 'view/images/20181008/41.jpg', null, '390.00', '380.00', null, '250', '瓶', '', '1', '0', '0', '0', '1', '6_28_294_', '294', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
+INSERT INTO `tc_goods` VALUES ('43', '', '', '【跨境购】新西兰贺寿利儿童维他命C咀嚼片 70片', 'view/images/20181008/42.png', null, '50.00', '48.00', null, '300', '瓶', '', '1', '0', '0', '0', '1', '7_31_318_', '318', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
+INSERT INTO `tc_goods` VALUES ('44', '', '', '“崛杞”牌黑枸杞', 'view/images/20181008/43.jpg', null, '250.00', '245.00', null, '200', '袋', '', '1', '0', '0', '0', '1', '7_32_319_', '319', null, null, null, '', null, null, '2018-10-08 17:48:30', null, null, null, '', '', '', '1', '2018-10-08 17:49:14');
 
 -- ----------------------------
 -- Table structure for tc_goods_appraises
@@ -6603,6 +6617,78 @@ INSERT INTO `tc_navs` VALUES ('17', '0', '床上家居', 'home/goods/lists/cat/5
 INSERT INTO `tc_navs` VALUES ('18', '0', '养生之道', '2', '1', '1', '5', '2016-09-06 14:24:28');
 
 -- ----------------------------
+-- Table structure for tc_orderids
+-- ----------------------------
+DROP TABLE IF EXISTS `tc_orderids`;
+CREATE TABLE `tc_orderids` (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `rnd` float(16,2) NOT NULL COMMENT '毫秒数',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10000001 DEFAULT CHARSET=utf8 COMMENT='订单ID表';
+
+-- ----------------------------
+-- Records of tc_orderids
+-- ----------------------------
+INSERT INTO `tc_orderids` VALUES ('10000000', '1476879616.00');
+
+-- ----------------------------
+-- Table structure for tc_orders
+-- ----------------------------
+DROP TABLE IF EXISTS `tc_orders`;
+CREATE TABLE `tc_orders` (
+  `orderId` int(11) NOT NULL AUTO_INCREMENT,
+  `orderNo` varchar(20) NOT NULL COMMENT '订单号',
+  `shopId` int(11) NOT NULL COMMENT '门店ID',
+  `userId` int(11) NOT NULL COMMENT '用户ID  	0：为0则说明是闪电购，游客直接下单',
+  `orderStatus` tinyint(4) NOT NULL DEFAULT '-2' COMMENT '订单状态	-3:用户拒收 -2:未付款的订单 -1：用户取消 0:待发货 1:配送中 2:用户确认收货',
+  `goodsMoney` decimal(11,2) NOT NULL COMMENT '	商品总金额	商品总价格--未进行任何折扣的总价格',
+  `deliverType` tinyint(4) NOT NULL DEFAULT '0' COMMENT '收货方式	0:送货上门 1:自提',
+  `deliverMoney` decimal(11,2) NOT NULL DEFAULT '0.00' COMMENT '运费	运费规则按照每家店的规则算',
+  `totalMoney` decimal(11,2) NOT NULL COMMENT '订单总金额	包括运费',
+  `realTotalMoney` decimal(11,2) NOT NULL DEFAULT '0.00' COMMENT '实际订单总金额	进行各种折扣之后的金额',
+  `payType` tinyint(4) NOT NULL DEFAULT '0' COMMENT '支付方式	0:货到付款 1:在线支付',
+  `payFrom` int(11) NOT NULL DEFAULT '0' COMMENT '支付来源	1:支付宝，2：微信',
+  `isPay` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否支付	0:未支付 1:已支付',
+  `areaId` int(11) NOT NULL COMMENT '最后一级区域Id',
+  `areaIdPath` varchar(255) DEFAULT NULL COMMENT '区域Id路径	省级id_市级id_县级Id_ 例如:110000_110100_110101_',
+  `userName` varchar(20) NOT NULL COMMENT '收货人名称',
+  `userAddress` varchar(255) NOT NULL COMMENT '收件人地址',
+  `userPhone` char(11) DEFAULT NULL COMMENT '收件人手机',
+  `orderScore` int(11) NOT NULL DEFAULT '0' COMMENT '所得积分',
+  `isInvoice` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否需要发票	1:需要 0:不需要',
+  `invoiceClient` varchar(255) DEFAULT NULL COMMENT '发票抬头	1:需要 0:不需要',
+  `orderRemarks` varchar(255) DEFAULT NULL COMMENT '订单备注',
+  `orderSrc` tinyint(4) NOT NULL DEFAULT '0' COMMENT '订单来源	0:商城 1:微信 2:手机版 3:安卓App 4:苹果App',
+  `needPay` decimal(11,2) DEFAULT '0.00' COMMENT '需缴费用',
+  `isRefund` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否退款	0:否 1：是',
+  `isAppraise` tinyint(4) DEFAULT '0' COMMENT '是否点评	0:未点评 1:已点评',
+  `cancelReason` int(11) DEFAULT '0' COMMENT '取消原因ID',
+  `rejectReason` int(11) DEFAULT '0' COMMENT '拒收原因ID',
+  `rejectOtherReason` varchar(255) DEFAULT NULL COMMENT '拒收原因',
+  `isClosed` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否订单已完结	0：未完结 1:已完结',
+  `goodsSearchKeys` text,
+  `orderunique` varchar(50) NOT NULL COMMENT '订单流水号',
+  `receiveTime` datetime DEFAULT NULL COMMENT '收货时间',
+  `deliveryTime` datetime DEFAULT NULL COMMENT '发货时间',
+  `expressId` int(11) DEFAULT NULL COMMENT '快递公司ID',
+  `expressNo` varchar(20) DEFAULT NULL COMMENT '快递号',
+  `tradeNo` varchar(100) DEFAULT NULL COMMENT '在线支付交易流水',
+  `dataFlag` tinyint(4) NOT NULL DEFAULT '1' COMMENT '订单有效标志	-1：删除 1:有效',
+  `createTime` datetime NOT NULL COMMENT '下单时间',
+  `settlementId` int(11) DEFAULT '0' COMMENT '是否结算，大于0的话则是结算ID',
+  `commissionFee` decimal(11,2) DEFAULT '0.00' COMMENT '订单应收佣金',
+  PRIMARY KEY (`orderId`),
+  KEY `shopId` (`shopId`,`dataFlag`),
+  KEY `userId` (`userId`,`dataFlag`),
+  KEY `isRefund` (`isRefund`),
+  KEY `orderStatus` (`orderStatus`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单表';
+
+-- ----------------------------
+-- Records of tc_orders
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for tc_order_complains
 -- ----------------------------
 DROP TABLE IF EXISTS `tc_order_complains`;
@@ -6681,78 +6767,6 @@ CREATE TABLE `tc_order_refunds` (
 
 -- ----------------------------
 -- Records of tc_order_refunds
--- ----------------------------
-
--- ----------------------------
--- Table structure for tc_orderids
--- ----------------------------
-DROP TABLE IF EXISTS `tc_orderids`;
-CREATE TABLE `tc_orderids` (
-  `id` bigint(11) NOT NULL AUTO_INCREMENT,
-  `rnd` float(16,2) NOT NULL COMMENT '毫秒数',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10000001 DEFAULT CHARSET=utf8 COMMENT='订单ID表';
-
--- ----------------------------
--- Records of tc_orderids
--- ----------------------------
-INSERT INTO `tc_orderids` VALUES ('10000000', '1476879616.00');
-
--- ----------------------------
--- Table structure for tc_orders
--- ----------------------------
-DROP TABLE IF EXISTS `tc_orders`;
-CREATE TABLE `tc_orders` (
-  `orderId` int(11) NOT NULL AUTO_INCREMENT,
-  `orderNo` varchar(20) NOT NULL COMMENT '订单号',
-  `shopId` int(11) NOT NULL COMMENT '门店ID',
-  `userId` int(11) NOT NULL COMMENT '用户ID  	0：为0则说明是闪电购，游客直接下单',
-  `orderStatus` tinyint(4) NOT NULL DEFAULT '-2' COMMENT '订单状态	-3:用户拒收 -2:未付款的订单 -1：用户取消 0:待发货 1:配送中 2:用户确认收货',
-  `goodsMoney` decimal(11,2) NOT NULL COMMENT '	商品总金额	商品总价格--未进行任何折扣的总价格',
-  `deliverType` tinyint(4) NOT NULL DEFAULT '0' COMMENT '收货方式	0:送货上门 1:自提',
-  `deliverMoney` decimal(11,2) NOT NULL DEFAULT '0.00' COMMENT '运费	运费规则按照每家店的规则算',
-  `totalMoney` decimal(11,2) NOT NULL COMMENT '订单总金额	包括运费',
-  `realTotalMoney` decimal(11,2) NOT NULL DEFAULT '0.00' COMMENT '实际订单总金额	进行各种折扣之后的金额',
-  `payType` tinyint(4) NOT NULL DEFAULT '0' COMMENT '支付方式	0:货到付款 1:在线支付',
-  `payFrom` int(11) NOT NULL DEFAULT '0' COMMENT '支付来源	1:支付宝，2：微信',
-  `isPay` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否支付	0:未支付 1:已支付',
-  `areaId` int(11) NOT NULL COMMENT '最后一级区域Id',
-  `areaIdPath` varchar(255) DEFAULT NULL COMMENT '区域Id路径	省级id_市级id_县级Id_ 例如:110000_110100_110101_',
-  `userName` varchar(20) NOT NULL COMMENT '收货人名称',
-  `userAddress` varchar(255) NOT NULL COMMENT '收件人地址',
-  `userPhone` char(11) DEFAULT NULL COMMENT '收件人手机',
-  `orderScore` int(11) NOT NULL DEFAULT '0' COMMENT '所得积分',
-  `isInvoice` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否需要发票	1:需要 0:不需要',
-  `invoiceClient` varchar(255) DEFAULT NULL COMMENT '发票抬头	1:需要 0:不需要',
-  `orderRemarks` varchar(255) DEFAULT NULL COMMENT '订单备注',
-  `orderSrc` tinyint(4) NOT NULL DEFAULT '0' COMMENT '订单来源	0:商城 1:微信 2:手机版 3:安卓App 4:苹果App',
-  `needPay` decimal(11,2) DEFAULT '0.00' COMMENT '需缴费用',
-  `isRefund` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否退款	0:否 1：是',
-  `isAppraise` tinyint(4) DEFAULT '0' COMMENT '是否点评	0:未点评 1:已点评',
-  `cancelReason` int(11) DEFAULT '0' COMMENT '取消原因ID',
-  `rejectReason` int(11) DEFAULT '0' COMMENT '拒收原因ID',
-  `rejectOtherReason` varchar(255) DEFAULT NULL COMMENT '拒收原因',
-  `isClosed` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否订单已完结	0：未完结 1:已完结',
-  `goodsSearchKeys` text,
-  `orderunique` varchar(50) NOT NULL COMMENT '订单流水号',
-  `receiveTime` datetime DEFAULT NULL COMMENT '收货时间',
-  `deliveryTime` datetime DEFAULT NULL COMMENT '发货时间',
-  `expressId` int(11) DEFAULT NULL COMMENT '快递公司ID',
-  `expressNo` varchar(20) DEFAULT NULL COMMENT '快递号',
-  `tradeNo` varchar(100) DEFAULT NULL COMMENT '在线支付交易流水',
-  `dataFlag` tinyint(4) NOT NULL DEFAULT '1' COMMENT '订单有效标志	-1：删除 1:有效',
-  `createTime` datetime NOT NULL COMMENT '下单时间',
-  `settlementId` int(11) DEFAULT '0' COMMENT '是否结算，大于0的话则是结算ID',
-  `commissionFee` decimal(11,2) DEFAULT '0.00' COMMENT '订单应收佣金',
-  PRIMARY KEY (`orderId`),
-  KEY `shopId` (`shopId`,`dataFlag`),
-  KEY `userId` (`userId`,`dataFlag`),
-  KEY `isRefund` (`isRefund`),
-  KEY `orderStatus` (`orderStatus`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单表';
-
--- ----------------------------
--- Records of tc_orders
 -- ----------------------------
 
 -- ----------------------------
@@ -7029,6 +7043,66 @@ CREATE TABLE `tc_settlements` (
 -- ----------------------------
 -- Records of tc_settlements
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for tc_shops
+-- ----------------------------
+DROP TABLE IF EXISTS `tc_shops`;
+CREATE TABLE `tc_shops` (
+  `shopId` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `shopSn` varchar(20) NOT NULL COMMENT '门店编号',
+  `userId` int(11) NOT NULL COMMENT '门店所有人ID',
+  `areaIdPath` varchar(255) NOT NULL COMMENT '区域路径',
+  `areaId` int(11) NOT NULL COMMENT '最终所属区域ID',
+  `isSelf` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否自营	1:自营 0:非自营',
+  `shopName` varchar(100) NOT NULL COMMENT '门店名称',
+  `shopkeeper` varchar(50) NOT NULL COMMENT '店主',
+  `telephone` varchar(20) NOT NULL COMMENT '店主手机号',
+  `shopCompany` varchar(255) NOT NULL COMMENT '公司名称',
+  `shopImg` varchar(150) NOT NULL COMMENT '门店图标	',
+  `shopTel` varchar(40) NOT NULL COMMENT '门店电话',
+  `shopQQ` varchar(50) DEFAULT NULL COMMENT 'QQ号',
+  `shopWangWang` varchar(50) DEFAULT NULL COMMENT '旺旺号',
+  `shopAddress` varchar(255) NOT NULL COMMENT '门店地址',
+  `bankId` int(11) NOT NULL COMMENT '银行ID',
+  `bankNo` varchar(20) NOT NULL COMMENT '银行卡号',
+  `bankUserName` varchar(50) NOT NULL COMMENT '银行卡所有人名称',
+  `isInvoice` tinyint(4) NOT NULL DEFAULT '0' COMMENT '能否开发票	1:能 0:不能',
+  `invoiceRemarks` varchar(255) DEFAULT NULL COMMENT '发票说明',
+  `serviceStartTime` time NOT NULL DEFAULT '08:30:00' COMMENT '服务营业时间',
+  `serviceEndTime` time NOT NULL DEFAULT '22:30:00' COMMENT '服务营业时间',
+  `freight` int(11) DEFAULT '0' COMMENT '默认运费',
+  `shopAtive` tinyint(4) NOT NULL DEFAULT '1' COMMENT '门店状态	1:营业中 0：休息中',
+  `shopStatus` tinyint(4) NOT NULL DEFAULT '1' COMMENT '门店状态	-2:已停止 -1:拒绝 0：未审核 1:已审核',
+  `statusDesc` varchar(255) DEFAULT NULL COMMENT '状态说明	一般用于停止和拒绝说明',
+  `dataFlag` tinyint(4) NOT NULL DEFAULT '1' COMMENT '删除标志	-1:删除 1:有效',
+  `createTime` datetime NOT NULL COMMENT '创建时间',
+  `shopMoney` decimal(11,2) DEFAULT '0.00' COMMENT '商家钱包',
+  `lockMoney` decimal(11,2) DEFAULT '0.00' COMMENT '冻结金额',
+  `noSettledOrderNum` int(11) DEFAULT '0' COMMENT '未结算的订单数',
+  `noSettledOrderFee` decimal(11,2) DEFAULT '0.00' COMMENT '未结算的订单佣金',
+  `paymentMoney` decimal(11,2) DEFAULT '0.00' COMMENT '需缴纳的佣金',
+  `bankAreaId` int(11) DEFAULT '0' COMMENT '银行账号开卡地区',
+  `bankAreaIdPath` varchar(100) DEFAULT NULL COMMENT '银行账号开卡地区ID路径',
+  PRIMARY KEY (`shopId`),
+  KEY `shopStatus` (`shopStatus`,`dataFlag`) USING BTREE,
+  KEY `areaIdPath` (`areaIdPath`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='店铺表';
+
+-- ----------------------------
+-- Records of tc_shops
+-- ----------------------------
+INSERT INTO `tc_shops` VALUES ('1', 'S000000001', '1', '440000_440100_440106_', '440106', '1', 'WSTMart自营超市', 'wstmart', '13888888888', 'WSTMart自营超市', 'upload/shops/2016-10/5800ac97d0c24.png', '13888888888', '153289970', null, '燕岭路89号燕侨大厦', '24', '2343243124312412', '是暗室逢灯', '0', '', '08:30:00', '22:30:00', '5', '1', '1', '', '1', '2016-10-08 10:27:28', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
+INSERT INTO `tc_shops` VALUES ('2', 'S000000002', '3', '440000_440100_440106_', '440106', '0', '新鲜鲜果旗舰店', '新鲜鲜果', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57f8a7f3ef8ea.jpg', '020-85289921', '153289970', null, '燕岭路89号燕侨大厦', '24', '234234234324', '说法', '0', '', '08:30:00', '22:30:00', '5', '1', '1', '', '1', '2016-10-08 16:02:44', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
+INSERT INTO `tc_shops` VALUES ('3', 'S000000003', '4', '440000_440100_440106_', '440106', '0', '海源水果蔬菜店', '海源', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57f8f801ced69.jpg', '18902295525', '153289970', null, '燕岭路89号燕侨大厦', '24', '234234234234324', '地方', '0', '', '08:30:00', '22:30:00', '4', '1', '1', '', '1', '2016-10-08 21:44:57', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
+INSERT INTO `tc_shops` VALUES ('4', 'S000000004', '7', '440000_440100_440106_', '440106', '0', '维达自营旗舰店', '维达', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57fa2a9dba7c2.jpg', '020-85289921', '153289970', null, '燕岭路89号燕侨大厦', '24', '234234243234242', '水电费', '0', '', '08:30:00', '22:30:00', '4', '1', '1', '', '1', '2016-10-09 19:32:17', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
+INSERT INTO `tc_shops` VALUES ('5', 'S000000005', '8', '440000_440100_440106_', '440106', '0', '乐居家具日用旗舰店', '商淘', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57fa3fd1377e1.jpg', '18902295525', '153289970', null, '燕岭路89号燕侨大厦', '24', '23424234234', '234是', '1', '仔细核对，开错无补', '08:30:00', '22:30:00', '0', '1', '1', '', '1', '2016-10-09 21:03:01', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
+INSERT INTO `tc_shops` VALUES ('6', 'S000000006', '9', '440000_440100_440106_', '440106', '0', 'wstmart酒水旗舰店', '酒水', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57faf4a944a87.jpg', '18902295525', '153289970', null, '燕岭路89号燕侨大厦', '24', '234242322', '撒旦法', '0', '', '08:30:00', '22:30:00', '0', '1', '1', '', '1', '2016-10-10 09:53:50', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
+INSERT INTO `tc_shops` VALUES ('7', 'S000000007', '10', '440000_440100_440106_', '440106', '0', 'wstmart粮油食品旗舰店', '粮油食品', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57fb0185b1d6d.jpg', '020-85289921', '153289970', null, '燕岭路89号燕侨大厦', '24', '2423234242', '的', '0', '', '08:30:00', '22:30:00', '0', '1', '1', '', '1', '2016-10-10 10:49:35', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
+INSERT INTO `tc_shops` VALUES ('8', 'S000000008', '11', '440000_440100_440106_', '440106', '0', 'wstmart三只松鼠官方旗舰店', '松鼠', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57fb39ff7f5e2.jpg', '020-85289921', '153289970', null, '燕岭路89号燕侨大厦', '24', '242342423', '4阿萨法', '0', '', '08:30:00', '22:30:00', '0', '1', '1', '', '1', '2016-10-10 14:50:07', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
+INSERT INTO `tc_shops` VALUES ('9', 'S000000009', '12', '440000_440100_440106_', '440106', '0', 'Sisley希思黎国际专营店', '希思黎', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57fb4c1a9d7f8.jpg', '020-85289921', '153289970', null, '燕岭路89号燕侨大厦', '24', '324242323', '发送', '0', '', '08:30:00', '22:30:00', '0', '1', '1', '', '1', '2016-10-10 16:07:38', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
+INSERT INTO `tc_shops` VALUES ('10', 'S000000010', '13', '440000_440100_440106_', '440106', '0', '奥蒂斯特保健旗舰店', '奥蒂斯特', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57fb77a90c799.png', '020-85289921', '153289970', null, '燕岭路89号燕侨大厦', '24', '2343423432', '是的', '0', '', '08:30:00', '22:30:00', '0', '1', '1', '', '1', '2016-10-10 19:15:34', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
+INSERT INTO `tc_shops` VALUES ('11', 'S000000011', '14', '440000_440100_440106_', '440106', '0', '华为荣耀旗舰店', '荣耀', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57fc85b7c6bb4.jpg', '020-85289921', '153289970', null, '燕岭路89号燕侨大厦', '24', '3242323423423', '阿萨德', '0', '', '08:30:00', '22:30:00', '0', '1', '1', '', '1', '2016-10-11 14:25:24', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
 
 -- ----------------------------
 -- Table structure for tc_shop_accreds
@@ -7345,66 +7419,6 @@ INSERT INTO `tc_shop_scores` VALUES ('10', '10', '0', '0', '0', '0', '0', '0', '
 INSERT INTO `tc_shop_scores` VALUES ('11', '11', '0', '0', '0', '0', '0', '0', '0', '0');
 
 -- ----------------------------
--- Table structure for tc_shops
--- ----------------------------
-DROP TABLE IF EXISTS `tc_shops`;
-CREATE TABLE `tc_shops` (
-  `shopId` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
-  `shopSn` varchar(20) NOT NULL COMMENT '门店编号',
-  `userId` int(11) NOT NULL COMMENT '门店所有人ID',
-  `areaIdPath` varchar(255) NOT NULL COMMENT '区域路径',
-  `areaId` int(11) NOT NULL COMMENT '最终所属区域ID',
-  `isSelf` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否自营	1:自营 0:非自营',
-  `shopName` varchar(100) NOT NULL COMMENT '门店名称',
-  `shopkeeper` varchar(50) NOT NULL COMMENT '店主',
-  `telephone` varchar(20) NOT NULL COMMENT '店主手机号',
-  `shopCompany` varchar(255) NOT NULL COMMENT '公司名称',
-  `shopImg` varchar(150) NOT NULL COMMENT '门店图标	',
-  `shopTel` varchar(40) NOT NULL COMMENT '门店电话',
-  `shopQQ` varchar(50) DEFAULT NULL COMMENT 'QQ号',
-  `shopWangWang` varchar(50) DEFAULT NULL COMMENT '旺旺号',
-  `shopAddress` varchar(255) NOT NULL COMMENT '门店地址',
-  `bankId` int(11) NOT NULL COMMENT '银行ID',
-  `bankNo` varchar(20) NOT NULL COMMENT '银行卡号',
-  `bankUserName` varchar(50) NOT NULL COMMENT '银行卡所有人名称',
-  `isInvoice` tinyint(4) NOT NULL DEFAULT '0' COMMENT '能否开发票	1:能 0:不能',
-  `invoiceRemarks` varchar(255) DEFAULT NULL COMMENT '发票说明',
-  `serviceStartTime` time NOT NULL DEFAULT '08:30:00' COMMENT '服务营业时间',
-  `serviceEndTime` time NOT NULL DEFAULT '22:30:00' COMMENT '服务营业时间',
-  `freight` int(11) DEFAULT '0' COMMENT '默认运费',
-  `shopAtive` tinyint(4) NOT NULL DEFAULT '1' COMMENT '门店状态	1:营业中 0：休息中',
-  `shopStatus` tinyint(4) NOT NULL DEFAULT '1' COMMENT '门店状态	-2:已停止 -1:拒绝 0：未审核 1:已审核',
-  `statusDesc` varchar(255) DEFAULT NULL COMMENT '状态说明	一般用于停止和拒绝说明',
-  `dataFlag` tinyint(4) NOT NULL DEFAULT '1' COMMENT '删除标志	-1:删除 1:有效',
-  `createTime` datetime NOT NULL COMMENT '创建时间',
-  `shopMoney` decimal(11,2) DEFAULT '0.00' COMMENT '商家钱包',
-  `lockMoney` decimal(11,2) DEFAULT '0.00' COMMENT '冻结金额',
-  `noSettledOrderNum` int(11) DEFAULT '0' COMMENT '未结算的订单数',
-  `noSettledOrderFee` decimal(11,2) DEFAULT '0.00' COMMENT '未结算的订单佣金',
-  `paymentMoney` decimal(11,2) DEFAULT '0.00' COMMENT '需缴纳的佣金',
-  `bankAreaId` int(11) DEFAULT '0' COMMENT '银行账号开卡地区',
-  `bankAreaIdPath` varchar(100) DEFAULT NULL COMMENT '银行账号开卡地区ID路径',
-  PRIMARY KEY (`shopId`),
-  KEY `shopStatus` (`shopStatus`,`dataFlag`) USING BTREE,
-  KEY `areaIdPath` (`areaIdPath`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='店铺表';
-
--- ----------------------------
--- Records of tc_shops
--- ----------------------------
-INSERT INTO `tc_shops` VALUES ('1', 'S000000001', '1', '440000_440100_440106_', '440106', '1', 'WSTMart自营超市', 'wstmart', '13888888888', 'WSTMart自营超市', 'upload/shops/2016-10/5800ac97d0c24.png', '13888888888', '153289970', null, '燕岭路89号燕侨大厦', '24', '2343243124312412', '是暗室逢灯', '0', '', '08:30:00', '22:30:00', '5', '1', '1', '', '1', '2016-10-08 10:27:28', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
-INSERT INTO `tc_shops` VALUES ('2', 'S000000002', '3', '440000_440100_440106_', '440106', '0', '新鲜鲜果旗舰店', '新鲜鲜果', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57f8a7f3ef8ea.jpg', '020-85289921', '153289970', null, '燕岭路89号燕侨大厦', '24', '234234234324', '说法', '0', '', '08:30:00', '22:30:00', '5', '1', '1', '', '1', '2016-10-08 16:02:44', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
-INSERT INTO `tc_shops` VALUES ('3', 'S000000003', '4', '440000_440100_440106_', '440106', '0', '海源水果蔬菜店', '海源', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57f8f801ced69.jpg', '18902295525', '153289970', null, '燕岭路89号燕侨大厦', '24', '234234234234324', '地方', '0', '', '08:30:00', '22:30:00', '4', '1', '1', '', '1', '2016-10-08 21:44:57', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
-INSERT INTO `tc_shops` VALUES ('4', 'S000000004', '7', '440000_440100_440106_', '440106', '0', '维达自营旗舰店', '维达', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57fa2a9dba7c2.jpg', '020-85289921', '153289970', null, '燕岭路89号燕侨大厦', '24', '234234243234242', '水电费', '0', '', '08:30:00', '22:30:00', '4', '1', '1', '', '1', '2016-10-09 19:32:17', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
-INSERT INTO `tc_shops` VALUES ('5', 'S000000005', '8', '440000_440100_440106_', '440106', '0', '乐居家具日用旗舰店', '商淘', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57fa3fd1377e1.jpg', '18902295525', '153289970', null, '燕岭路89号燕侨大厦', '24', '23424234234', '234是', '1', '仔细核对，开错无补', '08:30:00', '22:30:00', '0', '1', '1', '', '1', '2016-10-09 21:03:01', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
-INSERT INTO `tc_shops` VALUES ('6', 'S000000006', '9', '440000_440100_440106_', '440106', '0', 'wstmart酒水旗舰店', '酒水', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57faf4a944a87.jpg', '18902295525', '153289970', null, '燕岭路89号燕侨大厦', '24', '234242322', '撒旦法', '0', '', '08:30:00', '22:30:00', '0', '1', '1', '', '1', '2016-10-10 09:53:50', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
-INSERT INTO `tc_shops` VALUES ('7', 'S000000007', '10', '440000_440100_440106_', '440106', '0', 'wstmart粮油食品旗舰店', '粮油食品', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57fb0185b1d6d.jpg', '020-85289921', '153289970', null, '燕岭路89号燕侨大厦', '24', '2423234242', '的', '0', '', '08:30:00', '22:30:00', '0', '1', '1', '', '1', '2016-10-10 10:49:35', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
-INSERT INTO `tc_shops` VALUES ('8', 'S000000008', '11', '440000_440100_440106_', '440106', '0', 'wstmart三只松鼠官方旗舰店', '松鼠', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57fb39ff7f5e2.jpg', '020-85289921', '153289970', null, '燕岭路89号燕侨大厦', '24', '242342423', '4阿萨法', '0', '', '08:30:00', '22:30:00', '0', '1', '1', '', '1', '2016-10-10 14:50:07', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
-INSERT INTO `tc_shops` VALUES ('9', 'S000000009', '12', '440000_440100_440106_', '440106', '0', 'Sisley希思黎国际专营店', '希思黎', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57fb4c1a9d7f8.jpg', '020-85289921', '153289970', null, '燕岭路89号燕侨大厦', '24', '324242323', '发送', '0', '', '08:30:00', '22:30:00', '0', '1', '1', '', '1', '2016-10-10 16:07:38', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
-INSERT INTO `tc_shops` VALUES ('10', 'S000000010', '13', '440000_440100_440106_', '440106', '0', '奥蒂斯特保健旗舰店', '奥蒂斯特', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57fb77a90c799.png', '020-85289921', '153289970', null, '燕岭路89号燕侨大厦', '24', '2343423432', '是的', '0', '', '08:30:00', '22:30:00', '0', '1', '1', '', '1', '2016-10-10 19:15:34', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
-INSERT INTO `tc_shops` VALUES ('11', 'S000000011', '14', '440000_440100_440106_', '440106', '0', '华为荣耀旗舰店', '荣耀', '18902295525', '广州商淘信息科技有限公司', 'upload/shops/2016-10/57fc85b7c6bb4.jpg', '020-85289921', '153289970', null, '燕岭路89号燕侨大厦', '24', '3242323423423', '阿萨德', '0', '', '08:30:00', '22:30:00', '0', '1', '1', '', '1', '2016-10-11 14:25:24', '0.00', '0.00', '0', '0.00', '0.00', '0', '440000_440100_440106_');
-
--- ----------------------------
 -- Table structure for tc_spec_cats
 -- ----------------------------
 DROP TABLE IF EXISTS `tc_spec_cats`;
@@ -7644,6 +7658,75 @@ INSERT INTO `tc_sys_configs` VALUES ('64', '热搜广告词(店铺)', 'adsShopWo
 INSERT INTO `tc_sys_configs` VALUES ('65', '未付款订单有效期', 'autoCancelNoPayDays', '24');
 
 -- ----------------------------
+-- Table structure for tc_users
+-- ----------------------------
+DROP TABLE IF EXISTS `tc_users`;
+CREATE TABLE `tc_users` (
+  `USER_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `LOGIN_NAME` varchar(20) NOT NULL COMMENT '账号',
+  `LOGIN_SECRET` int(11) NOT NULL COMMENT '安全码',
+  `LOGIN_PWD` varchar(50) NOT NULL COMMENT '密码',
+  `USER_TYPE` tinyint(4) NOT NULL DEFAULT '0' COMMENT '用户类型0:普通会员 1:门店用户',
+  `USER_SEX` tinyint(4) DEFAULT '0' COMMENT '性别	0:保密 1：男 2：女',
+  `USER_NAME` varchar(20) DEFAULT NULL COMMENT '用户名称',
+  `TRUE_NAME` varchar(100) DEFAULT NULL COMMENT '真实姓名',
+  `BRITHDAY` date DEFAULT NULL COMMENT '生日',
+  `USER_PHOTO` varchar(150) DEFAULT '' COMMENT '会员头像',
+  `USER_QQ` varchar(20) DEFAULT NULL COMMENT '会员qq',
+  `USER_PHONE` char(11) DEFAULT '' COMMENT '手机',
+  `USER_EMAIL` varchar(50) DEFAULT '' COMMENT '邮箱',
+  `USER_SCORE` int(11) DEFAULT '0' COMMENT '用户积分',
+  `USER_TOTAL_SCORE` int(11) DEFAULT '0' COMMENT '用户历史消费积分	跟会员等级有关',
+  `LAST_IP` varchar(16) DEFAULT NULL COMMENT '最后登录IP',
+  `LAST_TIME` datetime DEFAULT NULL COMMENT '最后登录时间',
+  `USER_FROM` tinyint(4) DEFAULT '0' COMMENT '第三方标识	0:系统本身；1:QQ登录',
+  `USER_MONEY` decimal(11,2) DEFAULT '0.00' COMMENT '用户钱包金额',
+  `LOCK_MONEY` decimal(11,2) DEFAULT '0.00' COMMENT '冻结金额',
+  `USER_STATUS` tinyint(4) NOT NULL DEFAULT '1' COMMENT '账号状态	0:停用 1:启用',
+  `DATA_FLAG` tinyint(4) NOT NULL DEFAULT '1' COMMENT '删除标志	-1:删除 1:有效',
+  `CREATE_TIME` datetime NOT NULL COMMENT '创建时间',
+  `PAY_PWD` varchar(100) DEFAULT NULL COMMENT '支付密码',
+  PRIMARY KEY (`USER_ID`),
+  KEY `userStatus` (`USER_STATUS`,`DATA_FLAG`),
+  KEY `loginName` (`LOGIN_NAME`),
+  KEY `userPhone` (`USER_PHONE`),
+  KEY `userEmail` (`USER_EMAIL`),
+  KEY `userType` (`USER_TYPE`,`DATA_FLAG`)
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COMMENT='会员表';
+
+-- ----------------------------
+-- Records of tc_users
+-- ----------------------------
+INSERT INTO `tc_users` VALUES ('1', 'wstmart', '5937', '33c67f436e38cfa964f1fde58a5213cc', '1', '0', null, null, null, '', null, '', '', '0', '0', '113.109.180.6', '2016-10-17 10:04:44', '0', '0.00', '0.00', '1', '1', '2016-10-08 10:27:28', null);
+INSERT INTO `tc_users` VALUES ('2', 'test', '8860', 'bf9156c6c4cc320de14c4a3fd2839616', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.22.173.168', '2016-10-11 19:05:05', '0', '0.00', '0.00', '1', '1', '2016-10-08 11:20:42', null);
+INSERT INTO `tc_users` VALUES ('3', '新鲜鲜果旗舰店', '9096', '4a0eda0f97c3da3e6d9ce42256c3d887', '1', '1', '新鲜鲜果', null, null, '', '23234', '18902295525', 'sadf@qq.com', '0', '2', '116.22.12.53', '2016-10-14 22:01:10', '0', '0.00', '0.00', '1', '1', '2016-10-08 16:02:44', null);
+INSERT INTO `tc_users` VALUES ('4', 'haiyuan', '7413', '760c16148d35bf403e455fd7aafc3f35', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.12.172', '2016-10-09 10:59:56', '0', '0.00', '0.00', '1', '1', '2016-10-08 21:44:57', null);
+INSERT INTO `tc_users` VALUES ('5', 'maysh1009', '6326', '9df7f105ab4f096958e74c2008733c65', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.22.12.172', '2016-10-09 11:06:53', '0', '0.00', '0.00', '1', '1', '2016-10-09 11:06:53', null);
+INSERT INTO `tc_users` VALUES ('6', 'zhangfaguang', '5152', 'f59eac75fafe3a5dae279d5510c5ff71', '0', '0', null, null, null, '', '', '', '', '0', '0', '60.13.219.25', '2016-10-09 19:00:02', '0', '0.00', '0.00', '1', '1', '2016-10-09 19:00:02', null);
+INSERT INTO `tc_users` VALUES ('7', 'vda123', '6640', 'e6b43a8ec3abf125e4808c08b2f7682b', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.12.53', '2016-10-14 22:12:07', '0', '0.00', '0.00', '1', '1', '2016-10-09 19:32:17', null);
+INSERT INTO `tc_users` VALUES ('8', 'weisheng', '9840', '2d52a8859152143a6ae3099af02f50f7', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.12.172', '2016-10-09 21:27:48', '0', '0.00', '0.00', '1', '1', '2016-10-09 21:03:01', null);
+INSERT INTO `tc_users` VALUES ('9', 'jiushui', '7789', '55d4131f13d29a8fd716a44858c0d3e6', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.12.172', '2016-10-10 09:54:16', '0', '0.00', '0.00', '1', '1', '2016-10-10 09:53:50', null);
+INSERT INTO `tc_users` VALUES ('10', 'liangyou', '8964', '15335b0063ff9974df4b8afaded54bd1', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.12.172', '2016-10-10 16:45:07', '0', '0.00', '0.00', '1', '1', '2016-10-10 10:49:35', null);
+INSERT INTO `tc_users` VALUES ('11', 'songshu', '7576', '21d917b9434892bb0846d7c0d905e94a', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.12.172', '2016-10-10 14:50:29', '0', '0.00', '0.00', '1', '1', '2016-10-10 14:50:07', null);
+INSERT INTO `tc_users` VALUES ('12', 'sisley', '5139', '4b53be1961c187abf4258c5d0a6cae29', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.12.172', '2016-10-10 16:08:27', '0', '0.00', '0.00', '1', '1', '2016-10-10 16:07:38', null);
+INSERT INTO `tc_users` VALUES ('13', 'aodisite', '7761', 'fdcd139ac6b01fd12bfff41aee70a196', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.173.168', '2016-10-11 11:41:41', '0', '0.00', '0.00', '1', '1', '2016-10-10 19:15:34', null);
+INSERT INTO `tc_users` VALUES ('14', 'honor1', '7412', '43225a3e24aa6cb309db9e295d552759', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.173.168', '2016-10-11 14:26:47', '0', '0.00', '0.00', '1', '1', '2016-10-11 14:25:24', null);
+INSERT INTO `tc_users` VALUES ('15', 'ceshi1011', '4323', '8c697ca89e74b22a4dc53352a3d66aa6', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.22.173.168', '2016-10-11 18:55:57', '0', '0.00', '0.00', '1', '1', '2016-10-11 18:55:57', null);
+INSERT INTO `tc_users` VALUES ('16', 'ceshi1010', '1063', '8e37f5001b9bca610bbd699b908ab0de', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.22.173.168', '2016-10-11 19:02:07', '0', '0.00', '0.00', '1', '1', '2016-10-11 19:02:07', null);
+INSERT INTO `tc_users` VALUES ('17', 'test1', '3454', 'e42e0ac9893c62802af5e47433bd86b2', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.22.173.168', '2016-10-11 19:11:18', '0', '0.00', '0.00', '1', '1', '2016-10-11 19:10:47', null);
+INSERT INTO `tc_users` VALUES ('18', 'ceshi111', '9440', 'a8725a52ea26d65956f201c3b7059679', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.22.173.168', '2016-10-11 19:12:32', '0', '0.00', '0.00', '1', '1', '2016-10-11 19:11:22', null);
+INSERT INTO `tc_users` VALUES ('19', 'hushichun', '5513', '6a6ae583b6001aad3ed5aacfc184a0ce', '0', '0', null, null, null, '', '', '', '', '0', '0', '113.208.116.106', '2016-10-12 16:04:42', '0', '0.00', '0.00', '1', '1', '2016-10-12 16:04:42', null);
+INSERT INTO `tc_users` VALUES ('20', 'dfdfdsf', '1189', '0058d330018760ca1c4e79a69fb151e0', '0', '0', null, null, null, '', '', '', '', '0', '0', '113.107.234.101', '2016-10-12 16:59:32', '0', '0.00', '0.00', '1', '1', '2016-10-12 16:59:32', null);
+INSERT INTO `tc_users` VALUES ('21', 'maysh1013', '6825', '2a46c2a5fd65a633db3ab2720e03b9d0', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.22.12.53', '2016-10-14 20:42:17', '0', '0.00', '0.00', '1', '1', '2016-10-13 18:01:02', null);
+INSERT INTO `tc_users` VALUES ('22', 'test@qq.com', '2974', '7615c6b6cd874f8f33ce73e39f6e57dc', '0', '0', null, null, null, '', '', '', '', '0', '0', '49.223.185.240', '2016-10-13 20:23:55', '0', '0.00', '0.00', '1', '1', '2016-10-13 20:23:55', null);
+INSERT INTO `tc_users` VALUES ('23', 'ro1058029', '4245', 'e93bbc57ca254c5bcb535f2892d28437', '0', '0', null, null, null, '', '', '', '', '0', '0', '61.140.122.29', '2016-10-14 10:42:49', '0', '0.00', '0.00', '1', '1', '2016-10-14 01:57:25', null);
+INSERT INTO `tc_users` VALUES ('24', 'zzzzzzzzzz', '7647', '32c3db12927569bebee24e8d32dae5b4', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.25.76.27', '2016-10-14 11:29:13', '0', '0.00', '0.00', '1', '1', '2016-10-14 11:29:13', null);
+INSERT INTO `tc_users` VALUES ('25', 'Marky', '3994', 'c19d1870ad5242a37c5c72cc863d6ee0', '0', '1', 'Marky', 'Marky', '1989-01-08', 'upload/users/2016-10/5800dde7459e5.jpg', '', '', '', '0', '0', '113.119.38.118', '2016-10-15 10:10:26', '0', '0.00', '0.00', '1', '1', '2016-10-14 21:22:17', null);
+INSERT INTO `tc_users` VALUES ('26', 'haihai', '9980', 'd3f5e693f5038b3366d3b6e9e9a40c04', '0', '0', null, null, null, '', '', '', '', '0', '0', '27.38.29.11', '2016-10-16 23:20:42', '0', '0.00', '0.00', '1', '1', '2016-10-16 23:20:42', null);
+INSERT INTO `tc_users` VALUES ('27', 'demotest', '3752', '2fa0e6e9dd780c6c8db86be3eec83227', '0', '0', null, null, null, '', '', '', '', '0', '0', '123.161.250.74', '2016-10-17 10:46:42', '0', '0.00', '0.00', '1', '1', '2016-10-17 10:46:42', null);
+INSERT INTO `tc_users` VALUES ('28', 'testgq', '9660', 'ec72d43233595fd8754fc8ec52c656e7', '0', '0', null, null, null, '', '', '', '', '0', '0', '112.226.160.141', '2016-10-17 14:19:26', '0', '0.00', '0.00', '1', '1', '2016-10-17 12:54:35', null);
+
+-- ----------------------------
 -- Table structure for tc_user_address
 -- ----------------------------
 DROP TABLE IF EXISTS `tc_user_address`;
@@ -7718,72 +7801,3 @@ CREATE TABLE `tc_user_scores` (
 -- ----------------------------
 -- Records of tc_user_scores
 -- ----------------------------
-
--- ----------------------------
--- Table structure for tc_users
--- ----------------------------
-DROP TABLE IF EXISTS `tc_users`;
-CREATE TABLE `tc_users` (
-  `USER_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `LOGIN_NAME` varchar(20) NOT NULL COMMENT '账号',
-  `LOGIN_SECRET` int(11) NOT NULL COMMENT '安全码',
-  `LOGIN_PWD` varchar(50) NOT NULL COMMENT '密码',
-  `USER_TYPE` tinyint(4) NOT NULL DEFAULT '0' COMMENT '用户类型0:普通会员 1:门店用户',
-  `USER_SEX` tinyint(4) DEFAULT '0' COMMENT '性别	0:保密 1：男 2：女',
-  `USER_NAME` varchar(20) DEFAULT NULL COMMENT '用户名称',
-  `TRUE_NAME` varchar(100) DEFAULT NULL COMMENT '真实姓名',
-  `BRITHDAY` date DEFAULT NULL COMMENT '生日',
-  `USER_PHOTO` varchar(150) DEFAULT '' COMMENT '会员头像',
-  `USER_QQ` varchar(20) DEFAULT NULL COMMENT '会员qq',
-  `USER_PHONE` char(11) DEFAULT '' COMMENT '手机',
-  `USER_EMAIL` varchar(50) DEFAULT '' COMMENT '邮箱',
-  `USER_SCORE` int(11) DEFAULT '0' COMMENT '用户积分',
-  `USER_TOTAL_SCORE` int(11) DEFAULT '0' COMMENT '用户历史消费积分	跟会员等级有关',
-  `LAST_IP` varchar(16) DEFAULT NULL COMMENT '最后登录IP',
-  `LAST_TIME` datetime DEFAULT NULL COMMENT '最后登录时间',
-  `USER_FROM` tinyint(4) DEFAULT '0' COMMENT '第三方标识	0:系统本身；1:QQ登录',
-  `USER_MONEY` decimal(11,2) DEFAULT '0.00' COMMENT '用户钱包金额',
-  `LOCK_MONEY` decimal(11,2) DEFAULT '0.00' COMMENT '冻结金额',
-  `USER_STATUS` tinyint(4) NOT NULL DEFAULT '1' COMMENT '账号状态	0:停用 1:启用',
-  `DATA_FLAG` tinyint(4) NOT NULL DEFAULT '1' COMMENT '删除标志	-1:删除 1:有效',
-  `CREATE_TIME` datetime NOT NULL COMMENT '创建时间',
-  `PAY_PWD` varchar(100) DEFAULT NULL COMMENT '支付密码',
-  PRIMARY KEY (`USER_ID`),
-  KEY `userStatus` (`USER_STATUS`,`DATA_FLAG`),
-  KEY `loginName` (`LOGIN_NAME`),
-  KEY `userPhone` (`USER_PHONE`),
-  KEY `userEmail` (`USER_EMAIL`),
-  KEY `userType` (`USER_TYPE`,`DATA_FLAG`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COMMENT='会员表';
-
--- ----------------------------
--- Records of tc_users
--- ----------------------------
-INSERT INTO `tc_users` VALUES ('1', 'wstmart', '5937', '33c67f436e38cfa964f1fde58a5213cc', '1', '0', null, null, null, '', null, '', '', '0', '0', '113.109.180.6', '2016-10-17 10:04:44', '0', '0.00', '0.00', '1', '1', '2016-10-08 10:27:28', null);
-INSERT INTO `tc_users` VALUES ('2', 'test', '8860', 'bf9156c6c4cc320de14c4a3fd2839616', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.22.173.168', '2016-10-11 19:05:05', '0', '0.00', '0.00', '1', '1', '2016-10-08 11:20:42', null);
-INSERT INTO `tc_users` VALUES ('3', '新鲜鲜果旗舰店', '9096', '4a0eda0f97c3da3e6d9ce42256c3d887', '1', '1', '新鲜鲜果', null, null, '', '23234', '18902295525', 'sadf@qq.com', '0', '2', '116.22.12.53', '2016-10-14 22:01:10', '0', '0.00', '0.00', '1', '1', '2016-10-08 16:02:44', null);
-INSERT INTO `tc_users` VALUES ('4', 'haiyuan', '7413', '760c16148d35bf403e455fd7aafc3f35', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.12.172', '2016-10-09 10:59:56', '0', '0.00', '0.00', '1', '1', '2016-10-08 21:44:57', null);
-INSERT INTO `tc_users` VALUES ('5', 'maysh1009', '6326', '9df7f105ab4f096958e74c2008733c65', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.22.12.172', '2016-10-09 11:06:53', '0', '0.00', '0.00', '1', '1', '2016-10-09 11:06:53', null);
-INSERT INTO `tc_users` VALUES ('6', 'zhangfaguang', '5152', 'f59eac75fafe3a5dae279d5510c5ff71', '0', '0', null, null, null, '', '', '', '', '0', '0', '60.13.219.25', '2016-10-09 19:00:02', '0', '0.00', '0.00', '1', '1', '2016-10-09 19:00:02', null);
-INSERT INTO `tc_users` VALUES ('7', 'vda123', '6640', 'e6b43a8ec3abf125e4808c08b2f7682b', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.12.53', '2016-10-14 22:12:07', '0', '0.00', '0.00', '1', '1', '2016-10-09 19:32:17', null);
-INSERT INTO `tc_users` VALUES ('8', 'weisheng', '9840', '2d52a8859152143a6ae3099af02f50f7', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.12.172', '2016-10-09 21:27:48', '0', '0.00', '0.00', '1', '1', '2016-10-09 21:03:01', null);
-INSERT INTO `tc_users` VALUES ('9', 'jiushui', '7789', '55d4131f13d29a8fd716a44858c0d3e6', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.12.172', '2016-10-10 09:54:16', '0', '0.00', '0.00', '1', '1', '2016-10-10 09:53:50', null);
-INSERT INTO `tc_users` VALUES ('10', 'liangyou', '8964', '15335b0063ff9974df4b8afaded54bd1', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.12.172', '2016-10-10 16:45:07', '0', '0.00', '0.00', '1', '1', '2016-10-10 10:49:35', null);
-INSERT INTO `tc_users` VALUES ('11', 'songshu', '7576', '21d917b9434892bb0846d7c0d905e94a', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.12.172', '2016-10-10 14:50:29', '0', '0.00', '0.00', '1', '1', '2016-10-10 14:50:07', null);
-INSERT INTO `tc_users` VALUES ('12', 'sisley', '5139', '4b53be1961c187abf4258c5d0a6cae29', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.12.172', '2016-10-10 16:08:27', '0', '0.00', '0.00', '1', '1', '2016-10-10 16:07:38', null);
-INSERT INTO `tc_users` VALUES ('13', 'aodisite', '7761', 'fdcd139ac6b01fd12bfff41aee70a196', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.173.168', '2016-10-11 11:41:41', '0', '0.00', '0.00', '1', '1', '2016-10-10 19:15:34', null);
-INSERT INTO `tc_users` VALUES ('14', 'honor1', '7412', '43225a3e24aa6cb309db9e295d552759', '1', '0', null, null, null, '', null, '', '', '0', '0', '116.22.173.168', '2016-10-11 14:26:47', '0', '0.00', '0.00', '1', '1', '2016-10-11 14:25:24', null);
-INSERT INTO `tc_users` VALUES ('15', 'ceshi1011', '4323', '8c697ca89e74b22a4dc53352a3d66aa6', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.22.173.168', '2016-10-11 18:55:57', '0', '0.00', '0.00', '1', '1', '2016-10-11 18:55:57', null);
-INSERT INTO `tc_users` VALUES ('16', 'ceshi1010', '1063', '8e37f5001b9bca610bbd699b908ab0de', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.22.173.168', '2016-10-11 19:02:07', '0', '0.00', '0.00', '1', '1', '2016-10-11 19:02:07', null);
-INSERT INTO `tc_users` VALUES ('17', 'test1', '3454', 'e42e0ac9893c62802af5e47433bd86b2', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.22.173.168', '2016-10-11 19:11:18', '0', '0.00', '0.00', '1', '1', '2016-10-11 19:10:47', null);
-INSERT INTO `tc_users` VALUES ('18', 'ceshi111', '9440', 'a8725a52ea26d65956f201c3b7059679', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.22.173.168', '2016-10-11 19:12:32', '0', '0.00', '0.00', '1', '1', '2016-10-11 19:11:22', null);
-INSERT INTO `tc_users` VALUES ('19', 'hushichun', '5513', '6a6ae583b6001aad3ed5aacfc184a0ce', '0', '0', null, null, null, '', '', '', '', '0', '0', '113.208.116.106', '2016-10-12 16:04:42', '0', '0.00', '0.00', '1', '1', '2016-10-12 16:04:42', null);
-INSERT INTO `tc_users` VALUES ('20', 'dfdfdsf', '1189', '0058d330018760ca1c4e79a69fb151e0', '0', '0', null, null, null, '', '', '', '', '0', '0', '113.107.234.101', '2016-10-12 16:59:32', '0', '0.00', '0.00', '1', '1', '2016-10-12 16:59:32', null);
-INSERT INTO `tc_users` VALUES ('21', 'maysh1013', '6825', '2a46c2a5fd65a633db3ab2720e03b9d0', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.22.12.53', '2016-10-14 20:42:17', '0', '0.00', '0.00', '1', '1', '2016-10-13 18:01:02', null);
-INSERT INTO `tc_users` VALUES ('22', 'test@qq.com', '2974', '7615c6b6cd874f8f33ce73e39f6e57dc', '0', '0', null, null, null, '', '', '', '', '0', '0', '49.223.185.240', '2016-10-13 20:23:55', '0', '0.00', '0.00', '1', '1', '2016-10-13 20:23:55', null);
-INSERT INTO `tc_users` VALUES ('23', 'ro1058029', '4245', 'e93bbc57ca254c5bcb535f2892d28437', '0', '0', null, null, null, '', '', '', '', '0', '0', '61.140.122.29', '2016-10-14 10:42:49', '0', '0.00', '0.00', '1', '1', '2016-10-14 01:57:25', null);
-INSERT INTO `tc_users` VALUES ('24', 'zzzzzzzzzz', '7647', '32c3db12927569bebee24e8d32dae5b4', '0', '0', null, null, null, '', '', '', '', '0', '0', '116.25.76.27', '2016-10-14 11:29:13', '0', '0.00', '0.00', '1', '1', '2016-10-14 11:29:13', null);
-INSERT INTO `tc_users` VALUES ('25', 'Marky', '3994', 'c19d1870ad5242a37c5c72cc863d6ee0', '0', '1', 'Marky', 'Marky', '1989-01-08', 'upload/users/2016-10/5800dde7459e5.jpg', '', '', '', '0', '0', '113.119.38.118', '2016-10-15 10:10:26', '0', '0.00', '0.00', '1', '1', '2016-10-14 21:22:17', null);
-INSERT INTO `tc_users` VALUES ('26', 'haihai', '9980', 'd3f5e693f5038b3366d3b6e9e9a40c04', '0', '0', null, null, null, '', '', '', '', '0', '0', '27.38.29.11', '2016-10-16 23:20:42', '0', '0.00', '0.00', '1', '1', '2016-10-16 23:20:42', null);
-INSERT INTO `tc_users` VALUES ('27', 'demotest', '3752', '2fa0e6e9dd780c6c8db86be3eec83227', '0', '0', null, null, null, '', '', '', '', '0', '0', '123.161.250.74', '2016-10-17 10:46:42', '0', '0.00', '0.00', '1', '1', '2016-10-17 10:46:42', null);
-INSERT INTO `tc_users` VALUES ('28', 'testgq', '9660', 'ec72d43233595fd8754fc8ec52c656e7', '0', '0', null, null, null, '', '', '', '', '0', '0', '112.226.160.141', '2016-10-17 14:19:26', '0', '0.00', '0.00', '1', '1', '2016-10-17 12:54:35', null);

@@ -64,12 +64,12 @@
     ORDER BY SALE_TIME DESC
   </select>
 
-  <update id="gooodsId" parameterType="java.lang.String">
+  <update id="deleteByGoodsId" parameterType="java.lang.String">
     UPDATE  tc_goods
     SET DATA_FLAG='-1'
     WHERE 1=1
      <if test="goodsId != null and goodsId != ''">
-       GOODS_ID=#{goodsId,jdbcType=VARCHAR}
+       AND GOODS_ID=#{goodsId,jdbcType=VARCHAR}
      </if>
   </update>
 </mapper>

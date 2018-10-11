@@ -854,6 +854,7 @@
 							<div class="shopTitle ">
 								<h4>${data.parentCatsDetails.catName}</h4>
 								<div class="today-brands ">
+									<!--循环显示商品的二级分类-->
 									<c:forEach items="${data.goodsCats}" var="goodsCat">
 										<a href="# ">${goodsCat.catName}</a>
 									</c:forEach>
@@ -873,6 +874,7 @@
 								</a>
 							</div>
 							<div class="am-u-sm-7 am-u-md-5 am-u-lg-4">
+								<!--显示第二列的两个较大级的商品-->
 								<c:forEach items="${data.goods}" var="goods" begin="0" end="1">
 									<div class="text-two">
 										<div class="outer-con ">
@@ -888,7 +890,8 @@
 								</c:forEach>
 							</div>
 							<div class="am-u-sm-12 am-u-md-4 ">
-								<c:forEach items="${data.goods}" var="goods" begin="2">
+								<!--显示四个小商品信息-->
+								<c:forEach items="${data.goods}" var="goods" begin="2" end="5">
 									<div class="am-u-sm-3 am-u-md-6 text-three">
 										<div class="outer-con ">
 											<div class="title ">
