@@ -1,6 +1,7 @@
 package com.ishop.service.goods;
 
 import com.ishop.pojo.TcGoods;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -18,4 +19,11 @@ public interface TcGoodsService {
      */
     boolean deleteById(String id);
 
+    /**
+     * 根据商品id来修改商品上下架状态
+     * @Param goodsId 商品id
+     *         status  待修改的状态
+     * @return 返回修改的结果
+     */
+    boolean edisGoodsSale(String goodsId,String status );
 }

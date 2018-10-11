@@ -33,5 +33,17 @@ public class TcGoodsServiceImpl implements TcGoodsService{
             boolean flg = tcGoodsMapper.deleteByGoodsId(id);
             return flg;
         }
+
+
+    /**
+     * 根据商品id来修改商品上下架状态
+     * @Param goodsId 商品id
+     *         status  待修改的状态
+     * @return 返回修改的结果
+     */
+    public boolean edisGoodsSale(String goodsId, String status) {
+        boolean flg = tcGoodsMapper.edisGoodsSale(goodsId, status);
+        return flg;
+    }
 }
 

@@ -30,11 +30,11 @@ new Table({
             formatter : function(value, row, index) {
                 var result='';
                     if(row.issale==1){
-                        result += '<a href="#" mce_href="#" class="btn btn-outline btn-primary btn-xs" onclick="edit(\''
-                            + row.goodsId + '\')">上架</a> ';
+                        result += "<a href='#' mce_href='#' class='btn btn-outline btn-primary btn-xs'"+ "onclick=\"edisGoodsSale("
+                            + row.goodsId + ",0)\">上架</a> ";
                     }else{
-                        result += '<a href="#" mce_href="#" class="btn btn-outline btn-warning btn-xs" onclick="edit(\''
-                            + row.goodsId + '\')">下架</a> ';
+                        result += "<a href='#' mce_href='#' class='btn btn-outline btn-warning btn-xs'"+" onclick=\"edisGoodsSale("
+                            + row.goodsId + ",1)\">下架</a> ";
                     }
                 return result;
             }
@@ -81,4 +81,21 @@ new Table({
         },function(){});
 
     }
+
+
+//商品上下架的状态
+function edisGoodsSale(goodsId,status) {
+    $.post("/goods/issale",{goodsId:goodsId,status:status},function (data) {
+        if (data.rspCode=='success'){
+            if(status==1){
+                parent.layer.msg("上架成功");
+            }else{
+                parent.layer.msg("下架成功");
+            }
+            $(".goodsTable").bootstrapTable('refresh',{"url":url});
+        } else {
+            alert(data.rspDesc);
+        }
+    })
+}
 

@@ -59,4 +59,27 @@ public class GoodsController extends BaseController {
         }
 
     }
+
+    /**
+     * 商品上下架
+     * @param
+     * @return 返回商品的状态
+     */
+    @RequestMapping(value = "issale")
+    @ResponseBody
+    public Object issale(@RequestParam Map<String,String> map){
+        try{
+            String goodsId = map.get("goodsId");
+            String status = map.get("status");
+
+
+            if(StringUtils.isBlank(goodsId)||StringUtils.isBlank(status)){
+                return renderError("数据有误");
+            }
+            tcGoodsService.edisGoodsSale(goodsId,status);
+            return renderSuccess();
+        }catch(Exception e){
+            return renderException(e);
+        }
+    }
 }
