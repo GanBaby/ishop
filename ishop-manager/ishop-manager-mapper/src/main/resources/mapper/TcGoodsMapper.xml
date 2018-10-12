@@ -57,7 +57,7 @@
     SELECT <include refid="goodsKeySql"></include>
     FROM tc_goods
     WHERE DATA_FLAG='1'
-    ORDER BY GOODS_ID DESC
+    ORDER BY GOODS_ID ASC
   </select>
 
   <select id="getRecomGoodsLikeOneCatId" resultMap="BaseResultMap" parameterType="java.lang.Integer">

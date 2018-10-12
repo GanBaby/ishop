@@ -32,7 +32,13 @@
                         </a>
                     </div>
                 </div>
-
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div id="toolbar" class="form-inline pull-right col-md-6 col-sm-6 col-xs-6">
+                        <label for="goodsName">商品名称:</label>
+                        <input type="text" class="form-control" id="goodsName">
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </div>
+                </div>
                <div class="ibox-content">
                     <table class="table table-striped table-bordered table-hover goodsTable">
                     </table>

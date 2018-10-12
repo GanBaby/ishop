@@ -23,6 +23,10 @@ Plugins.table = function(option) {
     this.pageList = null==option||option.pageList==null?[10,15,20]:option.pageList;//可选的每页的数据，默认是[10,15,20]
     this.toolTag = null==option||option.toolTag==null?null:option.toolTag;//工具组标签
     this.columns = null==option||option.columns==null?null:option.columns;//每列的数据值
+    this.showColumns = null==option||option.showColumns==null?false:option.showColumns;// 显示所有的列
+    this.striped = null==option||option.striped==null?true:option.striped;// 隔行变色
+    this.sortName = null==option||option.sortName==null?"":option.sortName;//排序字段
+    this.sortOrder = null==option||option.sortOrder==null?true:option.sortOrder;//是否启用排序
 
     $(this.tag).bootstrapTable({
         url : this.url,    //数据请求路径
@@ -39,10 +43,15 @@ Plugins.table = function(option) {
         locale:this.locale,//中文支持
         pageSize : this.pageSize,//每页数据
         pageList : this.pageList,//可选的每页的数据
+        columns : this.columns,//每列的数据值
+        showColumns : this.showColumns,// 显示所有的列
+        striped : this.striped,// 隔行变色
+        sortName : this.sortName,//排序字段
+        sortOrder : this.sortOrder,//是否启用排序
         queryParams : function(params) {//自定义参数，这里的参数是传给后台的，我这是是分页用的
             //这里的params是table提供的
             var data={
-                offset : params.offset/10,//从数据库第几条记录开始
+                offset : params.offset/params.limit+1,//从数据库第几条记录开始(当前页)
                 pageSize : params.limit//找多少条
             }
             if(this.toolTag!=null){
@@ -51,8 +60,7 @@ Plugins.table = function(option) {
                 });
             }
             return data
-        },
-        columns : this.columns
+        }
     });
 }
 

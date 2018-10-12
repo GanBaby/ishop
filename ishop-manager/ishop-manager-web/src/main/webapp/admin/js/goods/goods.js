@@ -80,7 +80,7 @@ Plugins.table({
                     parent.layer.msg(data.rspDesc);
                     $(".goodsTable").bootstrapTable('refresh',{"url":url});
                 }else{
-                    alert(data.rspDesc);
+                    Plugins.toastr({status:"error",center:data.rspDesc});
                 }
             })
         });

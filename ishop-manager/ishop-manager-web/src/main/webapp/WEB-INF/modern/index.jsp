@@ -754,7 +754,7 @@
 
 					<div class="am-g am-g-fixed recommendation">
 						<div class="clock am-u-sm-3">
-							<img src="${pageContext.request.contextPath}/modern/images/2016.png "></img>
+							<img src="${pageContext.request.contextPath}/modern/images/2018.png "></img>
 							<p>今日<br>推荐</p>
 						</div>
 						<div class="am-u-sm-4 am-u-lg-3 ">
