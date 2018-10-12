@@ -18,8 +18,8 @@ public class TcGoodsServiceImpl implements TcGoodsService{
          * 获取所有商品列表
          * @return 返回获取的商品列表
          */
-        public List<TcGoods> selectList() {
-            List<TcGoods> resultList = tcGoodsMapper.selectList();
+        public List<TcGoods> selectList(String goodsName) {
+            List<TcGoods> resultList = tcGoodsMapper.selectList(goodsName);
             return resultList;
         }
 

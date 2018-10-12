@@ -28,43 +28,65 @@ Plugins.table = function(option) {
     this.sortName = null==option||option.sortName==null?"":option.sortName;//排序字段
     this.sortOrder = null==option||option.sortOrder==null?true:option.sortOrder;//是否启用排序
 
+    var _this = this;
+
     $(this.tag).bootstrapTable({
-        url : this.url,    //数据请求路径
-        pagination:this.pagination, //开启分页
-        sidePagination:this.sidePagination, //服务器端分页
-        method : this.method,      //请求类型
-        toolbar:this.toolbar, //工具按钮用哪个容器
-        search:this.search,//是否显示表格搜索
-        clickToSelect:this.clickToSelect,//是否启用点击选中行
-        height:this.height,//行高，如果没有设置height属性，表格自动调整
-        uniqueId:this.uniqueId,//每一行的唯一标识符，一般为主键列
-        showToggle:this.showToggle,//是否显示详细视图和列表视图的切换按钮
-        cardView:this.cardView,//是否显示详细视图
-        locale:this.locale,//中文支持
-        pageSize : this.pageSize,//每页数据
-        pageList : this.pageList,//可选的每页的数据
-        columns : this.columns,//每列的数据值
-        showColumns : this.showColumns,// 显示所有的列
-        striped : this.striped,// 隔行变色
-        sortName : this.sortName,//排序字段
-        sortOrder : this.sortOrder,//是否启用排序
+        url : _this.url,    //数据请求路径
+        pagination:_this.pagination, //开启分页
+        sidePagination:_this.sidePagination, //服务器端分页
+        method : _this.method,      //请求类型
+        toolbar:_this.toolbar, //工具按钮用哪个容器
+        search:_this.search,//是否显示表格搜索
+        clickToSelect:_this.clickToSelect,//是否启用点击选中行
+        height:_this.height,//行高，如果没有设置height属性，表格自动调整
+        uniqueId:_this.uniqueId,//每一行的唯一标识符，一般为主键列
+        showToggle:_this.showToggle,//是否显示详细视图和列表视图的切换按钮
+        cardView:_this.cardView,//是否显示详细视图
+        locale:_this.locale,//中文支持
+        pageSize : _this.pageSize,//每页数据
+        pageList : _this.pageList,//可选的每页的数据
+        columns : _this.columns,//每列的数据值
+        showColumns : _this.showColumns,// 显示所有的列
+        striped : _this.striped,// 隔行变色
+        sortName : _this.sortName,//排序字段
+        sortOrder : _this.sortOrder,//是否启用排序
         queryParams : function(params) {//自定义参数，这里的参数是传给后台的，我这是是分页用的
             //这里的params是table提供的
             var data={
                 offset : params.offset/params.limit+1,//从数据库第几条记录开始(当前页)
                 pageSize : params.limit//找多少条
             }
-            if(this.toolTag!=null){
-                this.toolTag.each(function(item){
-                    data.put(item,$(item));
+            if(_this.toolTag!=null){
+                $(_this.toolTag).each(function(index,value){
+                    data[value.substr(1)]=$(value).val();
                 });
             }
             return data
         }
     });
+
+    //添加事件
+    if(_this.toolTag!=null){
+        //给搜索按钮添加事件
+        $(".searchBtn").on("click",
+            function(){
+                $(_this.tag).bootstrapTable('refresh',{"url":_this.url});
+            }
+        );
+        //给搜索框标签添加回车事件
+        $(_this.toolTag).each(function(index,value){
+            $(value).keypress(function(e){
+                var eCode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
+                if (eCode == 13){
+                    $(_this.tag).bootstrapTable('refresh',{"url":_this.url});
+                }
+            })
+        });
+
+    }
+
 }
-
-
+//================================================我是可爱的分割线=================================================================
 /**
  * toastr通知插件封装
  * @param option 参数

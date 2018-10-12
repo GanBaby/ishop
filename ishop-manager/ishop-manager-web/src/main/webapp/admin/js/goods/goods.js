@@ -2,6 +2,7 @@ var url="/goods/select";
 Plugins.table({
     tag:".goodsTable",
     url:url,
+    toolTag:["#goodsName"],
     columns : [
         {
             field : 'goodsId',

@@ -29,11 +29,13 @@ public class GoodsController extends BaseController {
         String pageSize = param.get("pageSize");
         //当前页数
         String offset = param.get("offset");
+        //获取搜索的商品名称
+        String goodsName = param.get("goodsName");
         if(StringUtils.isEmpty(pageSize)||StringUtils.isEmpty(offset)){
             return renderError("数据错误");
         }
         Page<Map<String,String>> page = PageHelper.startPage(Integer.parseInt(offset), Integer.parseInt(pageSize));
-        List<TcGoods> list=tcGoodsService.selectList();
+        List<TcGoods> list=tcGoodsService.selectList(goodsName);
         PageUtil pageUtil = new PageUtil(page.getTotal(), list);
         return pageUtil;
     }

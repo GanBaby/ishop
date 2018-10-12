@@ -1,15 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ASUS
-  Date: 2018/10/8
-  Time: 14:42
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="utf-8" language="java"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
@@ -33,10 +27,12 @@
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div id="toolbar" class="form-inline pull-right col-md-6 col-sm-6 col-xs-6">
-                        <label for="goodsName">商品名称:</label>
-                        <input type="text" class="form-control" id="goodsName">
-                        <button type="submit" class="btn btn-default">搜索</button>
+                    <div id="toolbar" class="form-inline">
+                        <div class="form-group">
+                            <label for="goodsName">商品名称:</label>
+                            <input type="text" class="form-control" id="goodsName">
+                        </div>
+                        <button type="submit" class="btn btn-success searchBtn">搜索</button>
                     </div>
                 </div>
                <div class="ibox-content">

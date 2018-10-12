@@ -57,6 +57,9 @@
     SELECT <include refid="goodsKeySql"></include>
     FROM tc_goods
     WHERE DATA_FLAG='1'
+    <if test="goodsName != null and goodsName != ''">
+      AND GOODS_NAME LIKE CONCAT('%',#{goodsName},'%')
+    </if>
     ORDER BY GOODS_ID ASC
   </select>
 
