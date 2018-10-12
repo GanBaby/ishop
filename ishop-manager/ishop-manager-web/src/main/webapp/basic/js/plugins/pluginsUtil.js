@@ -70,7 +70,7 @@ Plugins.table = function(option) {
         //给搜索按钮添加事件
         $(".searchBtn").on("click",
             function(){
-                $(_this.tag).bootstrapTable('refresh',{"url":_this.url});
+                table.refresh();
             }
         );
         //给搜索框标签添加回车事件
@@ -78,13 +78,20 @@ Plugins.table = function(option) {
             $(value).keypress(function(e){
                 var eCode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
                 if (eCode == 13){
-                    $(_this.tag).bootstrapTable('refresh',{"url":_this.url});
+                    table.refresh();
                 }
             })
         });
-
     }
 
+    //返回插件的常用功能事件
+    var table = {
+        refresh:function(){
+            // $(_this.tag).bootstrapTable('refresh',{"url":_this.url});
+            $(_this.tag).bootstrapTable('refresh',{silent: true}); //静默方式刷新数据
+        }
+    }
+    return table;
 }
 //================================================我是可爱的分割线=================================================================
 /**

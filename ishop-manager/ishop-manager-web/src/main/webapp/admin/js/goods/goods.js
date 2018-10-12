@@ -1,5 +1,5 @@
 var url="/goods/select";
-Plugins.table({
+var table = Plugins.table({
     tag:".goodsTable",
     url:url,
     toolTag:["#goodsName"],
@@ -68,28 +68,27 @@ Plugins.table({
         } ]
 });
 
-
 //删除商品的方法
-    function delGoods(goodsId){
-        //询问框
-        parent.layer.confirm('您确定要删除这个商品吗?',{
-            btn:['确定','取消'],//按钮
-            shade:false //不显示遮罩
-        },function(){
-            $.post("/goods/delete",{goodsId:goodsId},function(data){
-                if(data.rspCode=='success'){
-                    parent.layer.msg(data.rspDesc);
-                    $(".goodsTable").bootstrapTable('refresh',{"url":url});
-                }else{
-                    Plugins.toastr({status:"error",center:data.rspDesc});
-                }
-            })
-        });
+function delGoods(goodsId){
+    //询问框
+    parent.layer.confirm('您确定要删除这个商品吗?',{
+        btn:['确定','取消'],//按钮
+        shade:false //不显示遮罩
+    },function(){
+        $.post("/goods/delete",{goodsId:goodsId},function(data){
+            if(data.rspCode=='success'){
+                parent.layer.msg(data.rspDesc);
+                //刷新表格
+                table.refresh();
+            }else{
+                Plugins.toastr({status:"error",center:data.rspDesc});
+            }
+        })
+    });
 
-    }
+}
 
-
-//商品上下架的状态
+//商品上下架的方法
 function edisGoodsSale(goodsId,status) {
     $.post("/goods/issale",{goodsId:goodsId,status:status},function (data) {
         if (data.rspCode=='success'){
@@ -98,11 +97,11 @@ function edisGoodsSale(goodsId,status) {
             }else{
                 parent.layer.msg("下架成功");
             }
-            $(".goodsTable").bootstrapTable('refresh',{"url":url});
+            //刷新表格
+            table.refresh();
         } else {
            Plugins.toastr({status:"error",center:data.rspDesc});
         }
     })
-
 }
 

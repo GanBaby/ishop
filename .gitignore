@@ -15,3 +15,4 @@
 **/.project
 **/.settings/
 **/generatorConfig.properties
+/ishop-manager/ishop-manager-web/src/main/resources/resource/db.properties
