@@ -24,9 +24,9 @@ public class TcUserServiceImpl implements TcUserService {
      * 查询所有会员信息集合，并把集合中的数据进行包装
      * @return 返回包装后的集合数据
      */
-    public List<Map<String,String>> selectList() {
-        List<TcUsers> list = tcUsersMapper.selectAll();
-       List<Map<String,String>> mapsList = (List<Map<String,String>>)new TcUserWarpper(list).warp();
+    public List<Map<String,Object>> selectList() {
+       List<TcUsers> list = tcUsersMapper.selectAll();
+       List<Map<String,Object>> mapsList = (List<Map<String,Object>>)new TcUserWarpper(list).warp();
        return mapsList;
     }
 }

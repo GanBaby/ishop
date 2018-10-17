@@ -13,6 +13,6 @@ public interface TcUserService {
      * 查询所有会员信息集合，并把集合中的数据进行包装
      * @return 返回包装后的集合数据
      */
-    public List<Map<String,String>> selectList();
+    public List<Map<String,Object>> selectList();
 
 }

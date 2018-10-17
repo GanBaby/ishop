@@ -2,7 +2,7 @@ var url="/goods/select";
 var table = Plugins.table({
     tag:".goodsTable",
     url:url,
-    toolTag:["#goodsName"],
+    toolTag:["#nameSearch"],
     columns : [
         {
             field : 'goodsId',
@@ -35,23 +35,34 @@ var table = Plugins.table({
             formatter : function(value, row, index) {
                 var result="";
                     if(row.issale==1){
-                        result += "<a href='#' mce_href='#' class='btn btn-outline btn-primary btn-xs'"+ "onclick=\"edisGoodsSale("
+                        result += "<a href='#' mce_href='#' class='btn btn-outline btn-primary btn-xs'"+ "onclick=\"editGoodsSale("
                             + row.goodsId + ",0)\">上架</a> ";
                     }else{
-                        result += "<a href='#' mce_href='#' class='btn btn-outline btn-warning btn-xs'"+" onclick=\"edisGoodsSale("
+                        result += "<a href='#' mce_href='#' class='btn btn-outline btn-warning btn-xs'"+" onclick=\"editGoodsSale("
                             + row.goodsId + ",1)\">下架</a> ";
                     }
                 return result;
             }
         },
         {
-            field : 'isHot',
-            title : '热销',
-            align : 'center'
+            field : 'isRecom',
+            title : '是否推荐',
+            align : 'center',
+            formatter : function(value, row, index) {
+                var result="";
+                if(row.isrecom==1){
+                    result += "<a href='#' mce_href='#' class='btn btn-outline btn-primary btn-xs'"+ "onclick=\"editGoodsIsrecom("
+                        + row.goodsId + ",0)\">推荐</a> ";
+                }else{
+                    result += "<a href='#' mce_href='#' class='btn btn-outline btn-warning btn-xs'"+" onclick=\"editGoodsIsrecom("
+                        + row.goodsId + ",1)\">正常</a> ";
+                }
+                return result;
+            }
         },
         {
-            field : 'goodsCatId',
-            title : '商品最后一级商品分类ID',
+            field : 'goodsCatidPath',
+            title : '商品分类路径',
             align : 'center'
         },
         {
@@ -81,7 +92,7 @@ function delGoods(goodsId){
                 //刷新表格
                 table.refresh();
             }else{
-                Plugins.toastr({status:"error",center:data.rspDesc});
+                Plugins.toastr({status:"error",center:"系统出错了，请联系管理员"});
             }
         })
     });
@@ -89,7 +100,7 @@ function delGoods(goodsId){
 }
 
 //商品上下架的方法
-function edisGoodsSale(goodsId,status) {
+function editGoodsSale(goodsId,status) {
     $.post("/goods/issale",{goodsId:goodsId,status:status},function (data) {
         if (data.rspCode=='success'){
             if(status==1){
@@ -100,7 +111,24 @@ function edisGoodsSale(goodsId,status) {
             //刷新表格
             table.refresh();
         } else {
-           Plugins.toastr({status:"error",center:data.rspDesc});
+           Plugins.toastr({status:"error",center:"系统出错了，请联系管理员"});
+        }
+    })
+}
+
+//商品修改热销状态的方法
+function editGoodsIsrecom(goodsId,status) {
+    $.post("/goods/isrecom",{goodsId:goodsId,status:status},function (data) {
+        if (data.rspCode=='success'){
+            if(status==1){
+                parent.layer.msg("商品修改为推荐状态");
+            }else{
+                parent.layer.msg("商品修改为正常状态");
+            }
+            //刷新表格
+            table.refresh();
+        }else {
+            Plugins.toastr({status:"error",center:"系统出错了，请联系管理员"});
         }
     })
 }

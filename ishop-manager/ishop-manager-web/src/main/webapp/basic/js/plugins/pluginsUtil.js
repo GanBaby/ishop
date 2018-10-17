@@ -83,7 +83,6 @@ Plugins.table = function(option) {
             })
         });
     }
-
     //返回插件的常用功能事件
     var table = {
         refresh:function(){

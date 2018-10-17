@@ -35,7 +35,7 @@ public class GoodsController extends BaseController {
             return renderError("数据错误");
         }
         Page<Map<String,String>> page = PageHelper.startPage(Integer.parseInt(offset), Integer.parseInt(pageSize));
-        List<TcGoods> list=tcGoodsService.selectList(goodsName);
+        List<Map<String,Object>> list=tcGoodsService.selectList(goodsName);
         PageUtil pageUtil = new PageUtil(page.getTotal(), list);
         return pageUtil;
     }
@@ -64,7 +64,9 @@ public class GoodsController extends BaseController {
 
     /**
      * 商品上下架
-     * @param
+     * @param map
+     *         goodsId 商品id
+     *         status  要修改的状态
      * @return 返回商品的状态
      */
     @RequestMapping(value = "issale")
@@ -74,14 +76,38 @@ public class GoodsController extends BaseController {
             String goodsId = map.get("goodsId");
             String status = map.get("status");
 
-
             if(StringUtils.isBlank(goodsId)||StringUtils.isBlank(status)){
                 return renderError("数据有误");
             }
-            tcGoodsService.edisGoodsSale(goodsId,status);
+            tcGoodsService.editGoodsSale(goodsId,status);
             return renderSuccess();
         }catch(Exception e){
             return renderException(e);
         }
     }
+
+    /**
+     * 商品推荐
+     * @param map
+     *         goodsId 商品id
+     *         status  要修改的状态
+     * @return
+     */
+    @RequestMapping(value = "isrecom")
+    @ResponseBody
+    public Object isrecom(@RequestParam Map<String, String> map){
+        try{
+            String goodsId = map.get("goodsId");
+            String status = map.get("status");
+
+            if(StringUtils.isBlank(goodsId)||StringUtils.isBlank(status)){
+                return renderError("数据有误");
+            }
+            tcGoodsService.editGoodsRecom(goodsId, status);
+            return renderSuccess();
+        }catch (Exception e){
+            return renderException(e);
+        }
+    }
+
 }

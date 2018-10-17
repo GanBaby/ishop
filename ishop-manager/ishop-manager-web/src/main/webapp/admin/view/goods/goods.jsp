@@ -29,8 +29,8 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div id="toolbar" class="form-inline">
                         <div class="form-group">
-                            <label for="goodsName">商品名称:</label>
-                            <input type="text" class="form-control" id="goodsName">
+                            <label for="nameSearch">商品名称:</label>
+                            <input type="text" class="form-control" id="nameSearch">
                         </div>
                         <button type="submit" class="btn btn-success searchBtn">搜索</button>
                     </div>
@@ -45,6 +45,48 @@
         </div>
     </div>
 </div>
+
+<!-- 修改模态窗 -->
+<div class="modal fade" id="modifyModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">修改商品信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label >商品ID:</label>
+                        <input type="text" class="form-control" id="goodsId">
+                    </div>
+                    <div class="form-group">
+                        <label>商品编号:</label>
+                        <input type="text" class="form-control" id="goodsNo">
+                    </div>
+                    <div class="form-group">
+                        <label>商品名称:</label>
+                        <input type="text" class="form-control" id="goodsName">
+                    </div>
+                    <div class="form-group">
+                        <label>商品图片:</label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control" id="goodsImg">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>当前状态:</label>
+                        <select class="form-control" id="status"></select>
+                    </div>
+                </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button class="btn btn-primary" id="saveModify">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- 动态引入全局js与css -->
 <jsp:include page="${pageContext.request.contextPath}/admin/view/main/admin_main.jsp" flush="true"/>
 <!--页面的js文件-->

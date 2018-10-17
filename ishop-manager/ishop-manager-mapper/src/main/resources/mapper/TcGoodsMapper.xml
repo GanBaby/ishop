@@ -83,9 +83,18 @@
      </if>
   </update>
 
-  <update id="edisGoodsSale" parameterType="java.lang.String">
+  <update id="editGoodsSale" parameterType="java.lang.String">
     UPDATE tc_goods
     SET ISSALE=#{status,jdbcType=VARCHAR}
+    WHERE  1=1
+    <if test="goodsId !=null and goodsId != ''">
+      AND GOODS_ID=#{goodsId,jdbcType=VARCHAR}
+    </if>
+  </update>
+
+  <update id="editGoodsRecom" parameterType="java.lang.String">
+    UPDATE tc_goods
+    SET ISRECOM=#{status,jdbcType=VARCHAR}
     WHERE  1=1
     <if test="goodsId !=null and goodsId != ''">
       AND GOODS_ID=#{goodsId,jdbcType=VARCHAR}

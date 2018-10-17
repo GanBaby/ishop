@@ -15,4 +15,11 @@ public interface TcGoodsCatsMapper extends Mapper<TcGoodsCats> {
      */
     List<TcGoodsCats> selectByParentId(@Param(value="parentId") int parentId);
 
+    /**
+     * 根据商品分类id的数组获取商品分类名称列表
+     * @param catArr 商品分类id数组
+     * @return 返回获取的商品分类数组
+     */
+    List<String> selectCatNames(@Param(value="catArr")String[] catArr);
+
 }

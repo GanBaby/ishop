@@ -46,7 +46,7 @@ public class UserController extends BaseController {
                 return renderError("数据错误");
             }
             Page<Map<String,String>> page = PageHelper.startPage(Integer.parseInt(offset), Integer.parseInt(pageSize));
-            List list = tcUserServiceImpl.selectList();
+            List<Map<String,Object>> list = tcUserServiceImpl.selectList();
             PageUtil pageUtil = new PageUtil(page.getTotal(), list);
             return pageUtil;
         }catch(Exception e){

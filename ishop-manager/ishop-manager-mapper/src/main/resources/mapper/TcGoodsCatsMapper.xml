@@ -28,5 +28,16 @@
     AND DATA_FLAG='1' AND IS_SHOW='1' ORDER BY CAT_SORT ASC
   </select>
 
+  <select id="selectCatNames" resultType="java.lang.String" parameterType="java.lang.String">
+    SELECT CAT_NAME catName
+    FROM tc_goods_cats
+    WHERE 1=1
+    <if test="catArr != null">
+      AND CAT_ID IN
+      <foreach collection="catArr" index="index" item="item" open="(" separator="," close=")">
+        #{item}
+      </foreach>
+    </if>
+  </select>
 
 </mapper>

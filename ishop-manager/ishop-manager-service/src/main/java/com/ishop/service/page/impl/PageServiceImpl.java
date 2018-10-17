@@ -18,7 +18,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Created by 甘银道 on 2018/10/9
  */
-@Service
+@Service(value = "pageService")
 public class PageServiceImpl implements PageService {
 
 
