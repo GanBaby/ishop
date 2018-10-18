@@ -47,7 +47,7 @@
 </div>
 
 <!-- 修改模态窗 -->
-<div class="modal fade" id="modifyModal">
+<div class="modal fade" id="editModifyModal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -55,38 +55,79 @@
                 <h4 class="modal-title">修改商品信息</h4>
             </div>
             <div class="modal-body">
-                <div class="form-inline">
+                <form class="form-horizontal" id="validateForm">
                     <div class="form-group">
-                        <label >商品ID:</label>
-                        <input type="text" class="form-control" id="goodsId">
-                    </div>
-                    <div class="form-group">
-                        <label>商品编号:</label>
-                        <input type="text" class="form-control" id="goodsNo">
-                    </div>
-                    <div class="form-group">
-                        <label>商品名称:</label>
-                        <input type="text" class="form-control" id="goodsName">
-                    </div>
-                    <div class="form-group">
-                        <label>商品图片:</label>
+                        <label for="editGoodsNo" class="col-sm-2 control-label">商品编号:</label>
                         <div class="col-sm-10">
-                            <input type="file" class="form-control" id="goodsImg">
+                            <input type="text" class="form-control" id="editGoodsNo" name="editGoodsNo" minlength="5" required>
                         </div>
                     </div>
+
                     <div class="form-group">
-                        <label>当前状态:</label>
-                        <select class="form-control" id="status"></select>
+                        <label for="editGoodsName" class="col-sm-2 control-label">商品名称:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="editGoodsName" name="editGoodsName" required>
+                        </div>
                     </div>
-                </div>
-            <div class="modal-footer">
-                <button class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button class="btn btn-primary" id="saveModify">保存</button>
+
+                    <div class="form-group">
+                        <label for="editGoodsImg" class="col-sm-2 control-label">商品图片:</label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control" id="editGoodsImg" name="editGoodsImg" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editSale" class="col-sm-2 control-label">当前状态:</label>
+                        <div class="col-sm-10">
+                            <select type="text" class="form-control" id="editSale" name="editSale" required>
+                                <option value="">请选择</option>
+                                <option value="1">上架</option>
+                                <option value="0">下架</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editRecom" class="col-sm-2 control-label">是否推荐:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="editRecom" name="editRecom" required>
+                                <option value="">请选择</option>
+                                <option value="1">推荐</option>
+                                <option value="0">正常</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            <label for="oneCatName" class="control-label">一级分类:</label>
+                            <select class="form-control" id="oneCatName" name="oneCatName" required>
+                                <option value="1">测试</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="twoCatName" class="control-label">二级分类:</label>
+                            <select class="form-control" id="twoCatName" name="twoCatName" required>
+                                <option value="1">测试</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="threeCatName" class="control-label">三级分类:</label>
+                            <select class="form-control" id="threeCatName" name="threeCatName" required>
+                                <option value="1">测试</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button class="btn btn-primary" id="saveModify">保存</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
-
 <!-- 动态引入全局js与css -->
 <jsp:include page="${pageContext.request.contextPath}/admin/view/main/admin_main.jsp" flush="true"/>
 <!--页面的js文件-->

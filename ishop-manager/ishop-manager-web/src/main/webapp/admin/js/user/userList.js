@@ -1,5 +1,5 @@
 Plugins.table({
-    tag:".userListTable",
+    el:".userListTable",
     url:"/user/selectList",
     columns : [
         {

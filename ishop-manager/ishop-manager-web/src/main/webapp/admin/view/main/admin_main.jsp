@@ -22,6 +22,7 @@
 
 
 
+
     <!-- 全局js -->
     <script src="${pageContext.request.contextPath}/admin/H+/js/jquery.min.js?v=2.1.4"></script>
     <script src="${pageContext.request.contextPath}/admin/H+/js/bootstrap.min.js?v=3.3.6"></script>
@@ -38,6 +39,9 @@
     <script src="${pageContext.request.contextPath}/admin/H+/js/plugins/layer/layer.min.js"></script>
     <!-- Toastr script 通知插件js -->
     <script src="${pageContext.request.contextPath}/admin/H+/js/plugins/toastr/toastr.min.js"></script>
+    <!-- jQuery Validation plugin javascript-->
+    <script src="${pageContext.request.contextPath}/admin/H+/js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="${pageContext.request.contextPath}/admin/H+/js/plugins/validate/messages_zh.min.js"></script>
 
     <!-- 自定义js -->
     <script src="${pageContext.request.contextPath}/admin/H+/js/hplus.js?v=4.1.0"></script>
@@ -47,9 +51,12 @@
     <script src="${pageContext.request.contextPath}/admin/H+/js/plugins/pace/pace.min.js"></script>
     <!--- 时间工具插件 -->
     <script src="${pageContext.request.contextPath}/basic/js/dateUtil/moment.js"></script>
+    <!--underscore.js插件-->
+    <script src="${pageContext.request.contextPath}/basic/js/underscore/underscore.js"></script>
     <!--常用工具js-->
     <script src="${pageContext.request.contextPath}/basic/js/plugins/pluginsUtil.js"></script>
     <script src="${pageContext.request.contextPath}/basic/js/common/commonUtil.js"></script>
+
 
     <input id="PageContext" type="hidden" value="${pageContext.request.contextPath}" />
 
