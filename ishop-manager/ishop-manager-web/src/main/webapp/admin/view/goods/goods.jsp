@@ -57,6 +57,13 @@
             <div class="modal-body">
                 <form class="form-horizontal" id="validateForm">
                     <div class="form-group">
+                        <label for="editGoodsNo" class="col-sm-2 control-label">商品ID</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="editGoodsId" name="editGoodsId" required readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <label for="editGoodsNo" class="col-sm-2 control-label">商品编号:</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="editGoodsNo" name="editGoodsNo" minlength="5" required>
@@ -100,24 +107,24 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-sm-4">
-                            <label for="oneCatName" class="control-label">一级分类:</label>
-                            <select class="form-control" id="oneCatName" name="oneCatName" required>
-                                <option value="1">测试</option>
-                            </select>
+                       <%-- <div class="col-sm-4">
+                            <label for="editOneCatName" class="control-label">一级分类:</label>
+                            <select class="form-control" id="editOneCatName" name="editOneCatName" required></select>
                         </div>
                         <div class="col-sm-4">
-                            <label for="twoCatName" class="control-label">二级分类:</label>
-                            <select class="form-control" id="twoCatName" name="twoCatName" required>
-                                <option value="1">测试</option>
-                            </select>
+                            <label for="editTwoCatName" class="control-label">二级分类:</label>
+                            <select class="form-control" id="editTwoCatName" name="editTwoCatName" required></select>
                         </div>
                         <div class="col-sm-4">
-                            <label for="threeCatName" class="control-label">三级分类:</label>
-                            <select class="form-control" id="threeCatName" name="threeCatName" required>
-                                <option value="1">测试</option>
-                            </select>
-                        </div>
+                            <label for="editThreeCatName" class="control-label">三级分类:</label>
+                            <select class="form-control" id="editThreeCatName" name="editThreeCatName" required></select>
+                        </div>--%>
+                           <div class="col-sm-4">
+                               <label for="catNameTree" class="control-label">商品分类:</label>
+                               <div class="col-sm-10">
+                                   <div id="catNameTree" name="catNameTree" required> </div>
+                               </div>
+                           </div>
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-default" data-dismiss="modal">关闭</button>

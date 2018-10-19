@@ -14,11 +14,25 @@ public interface TcGoodsService {
     List<Map<String,Object>> selectList(String goodsName);
 
     /**
+     * 根据商品的id获取商品信息
+     * @param goodsId 查询的商品的id
+     * @return 返回获取的商品信息
+     */
+    TcGoods selectById(String goodsId);
+
+    /**
      * 根据商品id删除商品
      * @param id 删除的商品id
      * @return 返回删除的结果
      */
     boolean deleteById(String id);
+
+    /**
+     * 获取商品之前获取商品信息的方法
+     * @param goodsId 商品id
+     * @return 返回获取的信息数据
+     */
+    Map<String,Object> editBefore(String goodsId);
 
     /**
      * 根据商品id来修改商品上下架状态

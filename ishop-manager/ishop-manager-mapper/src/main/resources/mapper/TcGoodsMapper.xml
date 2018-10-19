@@ -41,7 +41,7 @@
     <result column="GALLERY" jdbcType="LONGVARCHAR" property="gallery" />
   </resultMap>
 
-  <sql id="goodsKeySql">
+  <sql id="keySql">
     GOODS_ID goodsId, GOODS_SN goodsSn, PRODUCT_NO productNo, GOODS_NAME goodsName,
     GOODS_IMG goodsImg, SHOP_ID shopId, MARKET_PRICE marketPrice, SHOP_PRICE shopPrice,
     WARN_STOCK warnStock, GOODS_STOCK goodsStock, GOODS_UNIT goodsUnit, ISSALE issale,
@@ -53,8 +53,8 @@
     GOODS_TIPS goodsTips, GOODS_DESC goodsDesc, GALLERY gallery
   </sql>
 
-  <select id="selectList" resultMap="BaseResultMap">
-    SELECT <include refid="goodsKeySql"></include>
+  <select id="selectList" resultMap="BaseResultMap" parameterType="java.lang.String">
+    SELECT <include refid="keySql"></include>
     FROM tc_goods
     WHERE DATA_FLAG='1'
     <if test="goodsName != null and goodsName != ''">
@@ -63,8 +63,17 @@
     ORDER BY GOODS_ID ASC
   </select>
 
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.String">
+    SELECT <include refid="keySql"></include>
+    FROM tc_goods
+    WHERE 1=1
+    <if test="goodsId != null and goodsId != ''">
+      AND GOODS_ID = #{goodsId,jdbcType=VARCHAR}
+    </if>
+  </select>
+
   <select id="getRecomGoodsLikeOneCatId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
-    SELECT <include refid="goodsKeySql"></include>
+    SELECT <include refid="keySql"></include>
     FROM tc_goods
     WHERE 1=1
     <if test="oneCatId != null and oneCatId != ''">

@@ -9,17 +9,21 @@
     <result column="PARENT_ID" jdbcType="INTEGER" property="parentId" />
     <result column="CAT_NAME" jdbcType="VARCHAR" property="catName" />
     <result column="IS_SHOW" jdbcType="TINYINT" property="isShow" />
-    <result column="IS_FLOOR" jdbcType="TINYINT" property="isFloor" />
+    <result column="FLOOR" jdbcType="TINYINT" property="floor" />
     <result column="CAT_SORT" jdbcType="INTEGER" property="catSort" />
     <result column="DATA_FLAG" jdbcType="TINYINT" property="dataFlag" />
     <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
     <result column="COMMISSION_RATE" jdbcType="DECIMAL" property="commissionRate" />
   </resultMap>
 
+  <sql id="keySql">
+         CAT_ID catId, PARENT_ID parentId, CAT_NAME catName,
+         IS_SHOW isShow, FLOOR floor, CAT_SORT catSort,
+         DATA_FLAG dataFlag, CREATE_TIME createTime, COMMISSION_RATE commissionRate
+  </sql>
+
   <select id="selectByParentId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
-    SELECT CAT_ID catId, PARENT_ID parentId, CAT_NAME catName,
-           IS_SHOW isShow, IS_FLOOR isFloor, CAT_SORT catSort,
-           DATA_FLAG dataFlag, CREATE_TIME createTime, COMMISSION_RATE commissionRate
+    SELECT <include refid="keySql"></include>
     FROM tc_goods_cats
     WHERE 1=1
     <if test="parentId != null and parentId != ''">
@@ -37,6 +41,15 @@
       <foreach collection="catArr" index="index" item="item" open="(" separator="," close=")">
         #{item}
       </foreach>
+    </if>
+  </select>
+
+  <select id="selectCatByFloor" resultType="java.util.Map">
+    SELECT <include refid="keySql"></include>
+    FROM tc_goods_cats
+    WHERE 1=1
+    <if test="floor != null and floor != ''">
+      AND FLOOR=#{floor,jdbcType=VARCHAR}
     </if>
   </select>
 

@@ -19,8 +19,8 @@ public class TcGoodsWarpper extends BaseWarpper{
      */
     private static TcGoodsCatsService tcGoodsCatsService = (TcGoodsCatsService)SpringBeanUtil.getBean("tcGoodsCatsService");
 
-    public TcGoodsWarpper(List<TcGoods> list){
-        super(list);
+    public TcGoodsWarpper(Object obj){
+        super(obj);
     }
 
     @Override

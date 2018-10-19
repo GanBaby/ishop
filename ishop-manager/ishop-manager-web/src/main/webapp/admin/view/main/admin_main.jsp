@@ -10,6 +10,8 @@
     <link href="${pageContext.request.contextPath}/admin/H+/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
     <!-- 字体图标 -->
     <link href="${pageContext.request.contextPath}/admin/H+/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <!-- jsTree依赖样式 -->
+    <link href="${pageContext.request.contextPath}/admin/H+/css/plugins/jsTree/style.min.css" rel="stylesheet">
     <!-- 动画的css -->
     <link href="${pageContext.request.contextPath}/admin/H+/css/animate.css" rel="stylesheet">
     <!-- H+的CSS样式 -->
@@ -42,6 +44,8 @@
     <!-- jQuery Validation plugin javascript-->
     <script src="${pageContext.request.contextPath}/admin/H+/js/plugins/validate/jquery.validate.min.js"></script>
     <script src="${pageContext.request.contextPath}/admin/H+/js/plugins/validate/messages_zh.min.js"></script>
+    <!-- jsTree plugin javascript 树形视图插件 -->
+    <script src="${pageContext.request.contextPath}/admin/H+/js/plugins/jsTree/jstree.min.js"></script>
 
     <!-- 自定义js -->
     <script src="${pageContext.request.contextPath}/admin/H+/js/hplus.js?v=4.1.0"></script>

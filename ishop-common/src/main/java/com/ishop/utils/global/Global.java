@@ -4,7 +4,7 @@ package com.ishop.utils.global;
  * 返回结果状态类
  * Created by 甘银道 on 2018/9/20
  */
-public class Global {
+public class Global implements GoodsGlobal{
 
     public static final String SUCCESS = "success";
     public static final String SUCCESS_MESSAGE = "操作成功";

@@ -36,8 +36,8 @@ public class TcGoodsCats {
     /**
      * 是否显示楼层	0:不显示 1:显示
      */
-    @Column(name = "IS_FLOOR")
-    private Byte isFloor;
+    @Column(name = "FLOOR")
+    private Byte floor;
 
     /**
      * 排序号
@@ -136,21 +136,17 @@ public class TcGoodsCats {
     }
 
     /**
-     * 获取是否显示楼层	0:不显示 1:显示
-     *
-     * @return IS_FLOOR - 是否显示楼层	0:不显示 1:显示
+     * @return FLOOR - 楼层
      */
-    public Byte getIsFloor() {
-        return isFloor;
+    public Byte getFloor() {
+        return floor;
     }
 
     /**
-     * 设置是否显示楼层	0:不显示 1:显示
-     *
-     * @param isFloor 是否显示楼层	0:不显示 1:显示
+     * @param floor 楼层
      */
-    public void setIsFloor(Byte isFloor) {
-        this.isFloor = isFloor;
+    public void setFloor(Byte floor) {
+        this.floor = floor;
     }
 
     /**
