@@ -149,9 +149,7 @@ function openEdit(goodsId){
            //使用jsTree树形视图插件\
             $('#catNameTree').jstree({
                 'core': {
-                    'data': [
-
-                    ]
+                    'data': [data.entity.jsTreeData]
                 }
             });
 

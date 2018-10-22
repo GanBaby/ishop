@@ -14,7 +14,7 @@ public interface TcGoodsCatsMapper extends Mapper<TcGoodsCats> {
      * @param parentId 一级分类
      * @return 返回获取的二级分类
      */
-    List<TcGoodsCats> selectByParentId(@Param(value="parentId") String parentId);
+    List<Map<String,String>> selectByParentId(@Param(value="parentId") String parentId);
 
     /**
      * 根据商品分类id的数组获取商品分类名称列表

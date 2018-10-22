@@ -42,7 +42,7 @@ public class PageServiceImpl implements PageService {
             Map<String,Object> map = new ConcurrentHashMap<>();
             map.put("parentCatsDetails",item);
             //根据id获取二级分类数据列表
-            List<TcGoodsCats> goodsCats = tcGoodsCatsMapper.selectByParentId(item.getCatId());
+            List<Map<String,String>> goodsCats = tcGoodsCatsMapper.selectByParentId(String.valueOf(item.getCatId()));
             map.put("goodsCats",goodsCats);
             //获取推荐商品
             List<TcGoods> goods = tcGoodsMapper.getRecomGoodsLikeOneCatId(item.getCatId());

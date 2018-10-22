@@ -29,6 +29,6 @@ public interface TcGoodsCatsService {
      * @param parentId 父分类的id
      * @return 返回获取的子分类集合
      */
-    List<TcGoodsCats> selectByParentId(String parentId);
+    List<Map<String,String>> selectByParentId(String parentId);
 
 }

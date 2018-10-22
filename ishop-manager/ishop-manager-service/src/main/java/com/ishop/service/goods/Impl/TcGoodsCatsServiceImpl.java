@@ -1,7 +1,6 @@
 package com.ishop.service.goods.Impl;
 
 import com.ishop.mapper.TcGoodsCatsMapper;
-import com.ishop.pojo.TcGoodsCats;
 import com.ishop.service.goods.TcGoodsCatsService;
 import org.springframework.stereotype.Service;
 
@@ -43,8 +42,8 @@ public class TcGoodsCatsServiceImpl implements TcGoodsCatsService {
      * @param parentId 父分类的id
      * @return 返回获取的子分类集合
      */
-    public List<TcGoodsCats> selectByParentId(String parentId) {
-        List<TcGoodsCats> resultList = tcGoodsCatsMapper.selectByParentId(parentId);
+    public List<Map<String,String>> selectByParentId(String parentId) {
+        List<Map<String,String>> resultList = tcGoodsCatsMapper.selectByParentId(parentId);
         return resultList;
     }
 }

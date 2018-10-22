@@ -4,6 +4,7 @@ import com.ishop.pojo.TcGoods;
 import com.ishop.pojo.TcGoodsCats;
 import com.ishop.service.goods.TcGoodsCatsService;
 import com.ishop.service.goods.TcGoodsService;
+import com.ishop.utils.global.Global;
 import com.ishop.utils.plugin.jsTree.JsTreeState;
 import com.ishop.utils.plugin.jsTree.JsTreeUtil;
 import com.ishop.warpper.TcGoodsWarpper;
@@ -68,19 +69,18 @@ public class TcGoodsServiceImpl implements TcGoodsService{
         List<JsTreeUtil> treeList = new ArrayList<>();
         JsTreeUtil nodeParent = new JsTreeUtil();
         nodeParent.setText("商品分类");
-
-
-/*        //获取一级分类的数据集合
-        List<Map<String, Object>> oneCatList = tcGoodsCatsService.selectCatByFloor(Global.ONE_FLOOR);
-        //获取二级分类的数据集合
+        //获取一级分类的数据集合
+        List<Map<String, String>> oneCatList = tcGoodsCatsService.selectCatByFloor(Global.ONE_FLOOR);
+        JsTreeUtil resultJsTree = initTreeData(nodeParent, oneCatList);
+/*        //获取二级分类的数据集合
         List<Map<String, Object>> twoCatList = tcGoodsCatsService.selectCatByFloor(Global.TWO_FLOOR);
         //获取三级分类的数据集合
         List<Map<String, Object>> threeCatList = tcGoodsCatsService.selectCatByFloor(Global.THREE_FLOOR);*/
         //将数据放入map集合中
         Map<String,Object> resultMap = new ConcurrentHashMap<>();
         resultMap.put("tcGoods",tcGoods);
-/*        resultMap.put("oneCatList",oneCatList);
-        resultMap.put("twoCatList",twoCatList);
+        resultMap.put("jsTreeData",resultJsTree);
+/*        resultMap.put("twoCatList",twoCatList);
         resultMap.put("threeCatList",threeCatList);*/
         return resultMap;
     }
@@ -115,28 +115,31 @@ public class TcGoodsServiceImpl implements TcGoodsService{
     private JsTreeUtil initTreeData(JsTreeUtil jsTreeUtil,List<Map<String, String>> catList){
 
         //获取子节点对象
-        List<JsTreeUtil> children = jsTreeUtil.getChildren();
+        List<JsTreeUtil> children = new ArrayList<>();
         //获取节点状态对象
         JsTreeState state = jsTreeUtil.getState();
-        //判空
-        if(catList.size()>0&&catList != null){
-            //循环将集合放进树形插件
-            catList.forEach((item)-> {
-                JsTreeUtil treeChild = new JsTreeUtil();
-                treeChild.setText(item.get("catName"));
-                treeChild.setId(item.get("catId"));
-                treeChild.setParentId(item.get("parentId"));
-                if(item.get("floor").equals("3")){
-                    treeChild.setIcon("none");
-                }
-                //获取当前分类的id
-                String catId = item.get("id");
-                List<TcGoodsCats> tcGoodsCats = tcGoodsCatsService.selectByParentId(catId);
+        state.setOpened(false);
+        state.setDisabled(false);
+        state.setSelected(false);
 
-                children.add(treeChild);
-            });
+        if( "3".equals(jsTreeUtil.getFloor())){
+            jsTreeUtil.setIcon("none");
         }
 
+        //循环将集合放进树形插件
+            for(int i=0;i<catList.size();i++){
+                Map<String,String> item = catList.get(i);
+                JsTreeUtil treeChild = new JsTreeUtil();
+                treeChild.setText(item.get("catName"));
+                treeChild.setId(String.valueOf(item.get("catId")));
+                treeChild.setFloor(String.valueOf(item.get("floor")));
+                treeChild.setParentId(String.valueOf(item.get("parentId")));
+                List<Map<String,String>> tcGoodsCats = tcGoodsCatsService.selectByParentId(String.valueOf(item.get("catId")));
+                initTreeData(treeChild, tcGoodsCats);
+                children.add(treeChild);
+            }
+        jsTreeUtil.setChildren(children);
+        return jsTreeUtil;
     }
 
 }
