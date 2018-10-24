@@ -107,18 +107,6 @@
                     </div>
 
                     <div class="form-group">
-                       <%-- <div class="col-sm-4">
-                            <label for="editOneCatName" class="control-label">一级分类:</label>
-                            <select class="form-control" id="editOneCatName" name="editOneCatName" required></select>
-                        </div>
-                        <div class="col-sm-4">
-                            <label for="editTwoCatName" class="control-label">二级分类:</label>
-                            <select class="form-control" id="editTwoCatName" name="editTwoCatName" required></select>
-                        </div>
-                        <div class="col-sm-4">
-                            <label for="editThreeCatName" class="control-label">三级分类:</label>
-                            <select class="form-control" id="editThreeCatName" name="editThreeCatName" required></select>
-                        </div>--%>
                            <div class="col-sm-4">
                                <label for="catNameTree" class="control-label">商品分类:</label>
                                <div class="col-sm-10">
