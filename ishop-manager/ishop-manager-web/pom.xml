@@ -32,6 +32,12 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+        <!--spring-test-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <scope>test</scope>
+        </dependency>
         <!-- JSP相关 -->
         <dependency>
             <groupId>jstl</groupId>
