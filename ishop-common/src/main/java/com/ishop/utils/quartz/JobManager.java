@@ -16,7 +16,7 @@ public class JobManager {
     private Logger log = Logger.getLogger(JobManager.class);
 
     /**
-     * SchedulerFactory使用获取Scheduler
+     * SchedulerFactory使用获取Scheduler.
      *
      * @return
      * @throws Exception
