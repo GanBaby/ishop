@@ -2,9 +2,7 @@ package com.ishop.utils.quartz;
 
 
 import org.apache.log4j.Logger;
-import org.quartz.Job;
-import org.quartz.Scheduler;
-import org.quartz.SchedulerFactory;
+import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
