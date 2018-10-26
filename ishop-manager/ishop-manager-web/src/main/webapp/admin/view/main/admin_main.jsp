@@ -1,6 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
     <!--[if lt IE 9]>
     <meta http-equiv="refresh" content="0;ie.html"/>
     <![endif]-->
@@ -63,6 +61,3 @@
 
 
     <input id="PageContext" type="hidden" value="${pageContext.request.contextPath}" />
-
-</head>
-</html>

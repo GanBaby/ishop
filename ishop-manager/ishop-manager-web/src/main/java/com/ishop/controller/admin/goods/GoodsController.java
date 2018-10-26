@@ -2,12 +2,14 @@ package com.ishop.controller.admin.goods;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.ishop.pojo.TcGoods;
 import com.ishop.service.goods.TcGoodsService;
 import com.ishop.utils.controller.BaseController;
 import com.ishop.utils.util.PageUtil;
 import com.ishop.utils.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -65,19 +67,20 @@ public class GoodsController extends BaseController {
 
     /**
      * 修改商品信息
-     * @param goodsId 修改的商品id
+     * @param goods 修改的商品信息
      * @return 返回修改的结果
      */
-/*    @RequestMapping(value = "edit")
+    @RequestMapping(value = "edit")
     @ResponseBody
-    public Object editGoods(String goodsId){
+    public Object editGoods(@RequestBody TcGoods goods){
         try{
-
+            System.out.println(goods);
+            return goods;
         }catch(Exception e){
             return renderException(e);
         }
 
-    }*/
+    }
 
     /**
      * 删除商品

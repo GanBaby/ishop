@@ -102,7 +102,19 @@ function openEdit(goodsId){
 
 //确认修改的方法
 function edit(){
-    console.log("你提交了表单");
+
+    //封装修改的数据对象信息
+    var goods = {
+        editGoodsId:$("#editGoodsId").val(),
+        editGoodsNo:$("#editGoodsNo").val(),
+        editGoodsName:$("#editGoodsName").val(),
+        editSale:$("#editSale").val(),
+        editRecom:$("#editRecom").val()
+    }
+
+    $.post("/goods/edit",{goods:JSON.stringify(goods)},function(data){
+        console.info(data);
+    })
 }
 
 //初始化表格
